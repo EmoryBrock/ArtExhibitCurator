@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
+import ArtworkDetail from './components/ArtworkDetail'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <main>
       <Hero />
+      <ArtworkDetail />
       <About />
       </main>
     </>
