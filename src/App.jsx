@@ -2,7 +2,8 @@ import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
-import ArtworkDetail from './components/ArtworkDetail'
+import Results from './components/Results'
+import ArtworkListCard from './components/ArtworkListCard'
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <Header />
       <main>
       <Hero />
-      <ArtworkDetail />
+      {/* <ArtworkListCard /> */}
+      {/* <Results /> */}
       <About />
       </main>
     </>
