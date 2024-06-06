@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
 import Results from './components/Results'
+import ArtworkListCard from './components/ArtworkListCard'
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <Header />
       <main>
       <Hero />
-      <Results />
+      {/* <ArtworkListCard /> */}
+      {/* <Results /> */}
       <About />
       </main>
     </>
