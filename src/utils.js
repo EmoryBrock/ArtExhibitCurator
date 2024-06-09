@@ -11,3 +11,8 @@ export const RandomArtID = async () => {
     return randomArtID
 }
 
+export const mappedFetchedData = (inputIds) => {
+    let fetchedData = {}
+
+    
+} 
