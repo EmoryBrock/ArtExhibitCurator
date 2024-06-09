@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import {FaSearch} from 'react-icons/fa'
 import { getMETArtDetails, getMETArtID } from '../api'
+import SearchResults from './SearchResults'
 
 
 export default function SearchBar() {
     const [query,setQuery] = useState("vincent+von+gogh")
-    const [results, setResults] = useState(null)
+    const [results, setResults] = useState([])
     const [totalResults, setTotalResults] = useState(0)
 
     const handleSearch = async () => {
@@ -15,17 +16,17 @@ export default function SearchBar() {
             const detailsPromises = queryArtIds.objectIDs.map(id => getMETArtDetails(id));
             const detailsResponses = await Promise.allSettled(detailsPromises);
 
-            console.log('detailsResponses:', detailsResponses);  // Debugging log
+            // console.log('detailsResponses:', detailsResponses);  // Debugging log
 
             const successfulDetails = detailsResponses
                 .filter(result => result.status === 'fulfilled' && result.value)
                 .map(result => {
-                    console.log('fulfilled result value:', result.value) //debug of filtered data
+                    // console.log('fulfilled result value:', result.value) //debug of filtered data
                     return result.value;  // Safely accessing data
                     })          
 
-            console.log('Successful details:', successfulDetails);  // Debugging log
-            console.log('Successful details #:', successfulDetails.length);  // Debugging log
+            // console.log('Successful details:', successfulDetails);  // Debugging log
+            // console.log('Successful details #:', successfulDetails.length);  // Debugging log
             setResults(successfulDetails.filter(Boolean));  // Remove any undefined elements
             setTotalResults(successfulDetails.filter(Boolean).length)
         }  catch (error) {
@@ -44,15 +45,11 @@ export default function SearchBar() {
             />
             <button onClick={handleSearch}>Search</button>
             
-            {results && (
+            {results && results.length > 0 ? (
                 <div>
-                    <p>Your search returned {totalResults} results</p>
-                    {(Array.isArray(results) || results != null) ? results.map(result => (
-                        <div key={result.objectID}>{result.objectID}</div>
-                    )) : (
-                        <p>No results found.</p>
-                    )}
+                    <SearchResults results={results} totalResults={totalResults}/>
                 </div>
+            ) : ( <></>
             )}
         </div>
     )
