@@ -8,6 +8,7 @@ export default function SearchBar() {
     const [query,setQuery] = useState("vincent+von+gogh")
     const [results, setResults] = useState([])
     const [totalResults, setTotalResults] = useState(0)
+    const [isLoading, setIsLoading] = useState(false)
 
     const handleSearch = async () => {
         try {
@@ -45,12 +46,17 @@ export default function SearchBar() {
             />
             <button onClick={handleSearch}>Search</button>
             
-            {results && results.length > 0 ? (
-                <div>
-                    <SearchResults results={results} totalResults={totalResults}/>
-                </div>
-            ) : ( <p>No results found.</p>  // Provide some feedback if no results are found
-        )}
+            {isLoading ? (
+                <p>Retrieving data...</p>  // Display loading message
+            ) : (
+                results && results.length > 0 ? (
+                    <div>
+                        <SearchResults results={results} totalResults={totalResults} />
+                    </div>
+                ) : (
+                    <p>No results found.</p>
+                )
+            )}
         </div>
-    )
+    );
 }

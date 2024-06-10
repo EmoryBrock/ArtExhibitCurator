@@ -41,7 +41,7 @@ export default function SearchResults({ results = [], totalResults = 0 }) { // D
                   </div>
               </div>
           ) : (
-              <p>No results found.</p>
+              <></>
           )}
       </div>
   );

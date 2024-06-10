@@ -4,8 +4,12 @@ const metArtAPI = axios.create({
     baseURL: "https://collectionapi.metmuseum.org/public/collection/v1"
 })
 
-// const chicagoArtAPI = axios.create({
-//     baseURL: 
+// const clevelandArtAPI = axios.create({
+//     baseURL: "https://openaccess-api.clevelandart.org/api/artworks"
+//     (/?title for search against title)
+//     (/?artist for artist)
+//     https://openaccess-api.clevelandart.org/api/artworks/{id} (specific artwork)      
+//
 // })
 
 export const getMETArtID = (searchTerm) => {
