@@ -49,8 +49,8 @@ export default function SearchBar() {
                 <div>
                     <SearchResults results={results} totalResults={totalResults}/>
                 </div>
-            ) : ( <></>
-            )}
+            ) : ( <p>No results found.</p>  // Provide some feedback if no results are found
+        )}
         </div>
     )
 }
