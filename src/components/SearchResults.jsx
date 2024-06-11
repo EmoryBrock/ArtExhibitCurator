@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
+import { convertMETData } from '../utils';
 
-export default function SearchResults({ results = [], totalResults = 0 }) { // Destructure props
+export default function SearchResults({ results = [convertMETData(testSuccessData.results), totalResults = 0 }) { // Destructure props
   // console.log(totalResults, "search results length");
   // console.log(results, "search results imported data");
 
