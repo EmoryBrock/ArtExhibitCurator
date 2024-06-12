@@ -7,12 +7,7 @@ import { getAuth } from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAiJgXdxnreQrb81KNsMcsx4kQ5WLR3h_s",
-  authDomain: "artcurator-6a39c.firebaseapp.com",
-  projectId: "artcurator-6a39c",
-  storageBucket: "artcurator-6a39c.appspot.com",
-  messagingSenderId: "120857779015",
-  appId: "1:120857779015:web:28f2c9093d894f4db14a62"
+
 };
 
 // Initialize Firebase
