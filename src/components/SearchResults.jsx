@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import { convertMETData } from '../utils';
 
-export default function SearchResults({ results = [convertMETData(testSuccessData.results), totalResults = 0 }) { // Destructure props
-  // console.log(totalResults, "search results length");
-  // console.log(results, "search results imported data");
+
+export default function SearchResults({ results = [], totalResults = 0 }) { // Destructure props
+    console.log('SearchResults props:', { results, totalResults });
+
 
   const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 20;  // Adjust as needed
@@ -24,8 +24,8 @@ export default function SearchResults({ results = [convertMETData(testSuccessDat
                   <p>Your search returned {totalResults} artworks</p>
                   <ul>
                       {currentResults.map(result => (
-                          <li key={result.objectID}>
-                              {result.objectID}
+                          <li key={result.id}>
+                              {result.title}
                           </li>
                       ))}
                   </ul>

@@ -24,7 +24,7 @@ export const convertMETData = (METFetchedData) => {
         objFormat.artistName = artwork.artistDisplayName;
         objFormat.medium = artwork.medium;
         objFormat.date = artwork.objectDate;
-        objFormat.type = artwork.objectNae
+        objFormat.type = artwork.objectName
         objFormat.source = "MET"
 
         convertedData.push(objFormat);
@@ -56,6 +56,6 @@ export const convertCLEData = (CLEFetchedData) => {
 }
 
 
-export const combinedFetchedDatatoRender = (obj1, obj2) => {
+export const combinedFetchedDataToRender = (obj1, obj2) => {
     return { ...(obj1 ?? {}), ...(obj2 ?? {}) };
 }

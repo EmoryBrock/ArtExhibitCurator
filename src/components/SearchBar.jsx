@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {FaSearch} from 'react-icons/fa'
 import { getMETArtDetails, getMETArtID } from '../api'
 import SearchResults from './SearchResults'
+import { combinedFetchedDataToRender, convertMETData } from '../utils'
 
 
 export default function SearchBar() {
@@ -11,28 +12,28 @@ export default function SearchBar() {
     const [isLoading, setIsLoading] = useState(false)
 
     const handleSearch = async () => {
+        setIsLoading(true);
         try {
             const queryArtIds = await getMETArtID({ query }.query);
-
             const detailsPromises = queryArtIds.objectIDs.map(id => getMETArtDetails(id));
             const detailsResponses = await Promise.allSettled(detailsPromises);
-
-            // console.log('detailsResponses:', detailsResponses);  // Debugging log
-
             const successfulDetails = detailsResponses
                 .filter(result => result.status === 'fulfilled' && result.value)
-                .map(result => {
-                    // console.log('fulfilled result value:', result.value) //debug of filtered data
-                    return result.value;  // Safely accessing data
-                    })          
-
-            // console.log('Successful details:', successfulDetails);  // Debugging log
-            // console.log('Successful details #:', successfulDetails.length);  // Debugging log
-            setResults(successfulDetails.filter(Boolean));  // Remove any undefined elements
-            setTotalResults(successfulDetails.filter(Boolean).length)
-        }  catch (error) {
-            console.error('Error fetching data', error)
-            console.error('Error details:', error.response || error.message)
+                .map(result => result.value);
+    
+            let configDataSet1 = convertMETData(successfulDetails.filter(Boolean));
+            let configDataSet2 = {};
+            let dataToRender = combinedFetchedDataToRender(configDataSet1, configDataSet2);
+    
+            console.log(dataToRender, "data to pass to child");
+            console.log(dataToRender.length, "data object length")
+            setResults(dataToRender);
+            setTotalResults(Object.keys(dataToRender).length);
+        } catch (error) {
+            console.error('Error fetching data', error);
+            console.error('Error details:', error.response || error.message);
+        } finally {
+            setIsLoading(false);
         }
     };
 
