@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { db } from "./firebaseConfig";
+import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 
@@ -8,7 +8,7 @@ export default function UserProfile() {
   const [formData, setFormData] = useState({
     username: "",
     fullname: "",
-    email: "",
+    // email: "",
   });
 
   const handleChange = (e) => {
@@ -24,7 +24,7 @@ export default function UserProfile() {
     try {
       const docRef = await addDoc(collection(db, "users"), {
         username: formData.username,
-        email: formData.email,
+        // email: formData.email,
         fullname: formData.fullname,
       });
       console.log("Document written with ID: ", docRef.id);
@@ -49,7 +49,7 @@ export default function UserProfile() {
             />
           </label>
         </div>
-        <div>
+        {/* <div>
           <label>
             Email:
             <input
@@ -60,12 +60,12 @@ export default function UserProfile() {
               required
             />
           </label>
-        </div>
+        </div> */}
         <div>
           <label>
             Full Name:
             <input
-              type="fullnamed"              
+              type="text"              
               name="fullname"
               value={formData.fullname}
               onChange={handleChange}
