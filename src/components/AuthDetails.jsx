@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { auth } from '../firebase';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { logOut } from '../firebase';
+import { onAuthStateChanged, signOut, getAuth } from 'firebase/auth';
 
 export default function AuthDetails() {
   const [authUser, setAuthUser] = useState(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(getAuth(), (user) => {
       setAuthUser(user ? user : null);
     });
 
@@ -16,7 +16,7 @@ export default function AuthDetails() {
   }, []);
 
   const userSignOut = () => {
-    signOut(auth)
+    logOut()
       .then(() => {
         console.log("Logout successful");
       })

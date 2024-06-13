@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { auth } from '../../firebase'
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signUp } from '../../firebase'
+
 
 export default function NewUserRegister() {
   const [email, setEmail] = useState("");
@@ -8,7 +8,7 @@ export default function NewUserRegister() {
 
     const newUserAccount = (e) => {
       e.preventDefault()
-      createUserWithEmailAndPassword(auth,email,password)
+      signUp(email,password)
       .then((userCredential) => {
         console.log(userCredential)
       }).catch( error => {
@@ -20,7 +20,7 @@ export default function NewUserRegister() {
   return (
     <div className="sign-up--container">
       <form onSubmit={newUserAccount}>
-        <h2>Create ArtiQuest Account</h2>
+        <h2>Create New Account</h2>
         <input type="email" placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}>

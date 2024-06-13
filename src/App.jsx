@@ -7,6 +7,7 @@ import ArtworkListCard from './components/ArtworkListCard'
 import SignIn from './components/auth/SignIn'
 import NewUserRegister from './components/auth/NewUserRegister'
 import AuthDetails from './components/AuthDetails'
+import UserProfile from './components/UserProfile'
 
 
  function App() {
@@ -20,6 +21,7 @@ import AuthDetails from './components/AuthDetails'
       <SignIn />
       <NewUserRegister />
       <AuthDetails />
+      <UserProfile />
       <About />
       </main>
     </>

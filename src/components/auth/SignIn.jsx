@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { auth } from '../../firebase'
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { logIn } from '../../firebase'
+
 
 export default function SingIn() {
   const [email, setEmail] = useState("");
@@ -8,7 +8,7 @@ export default function SingIn() {
 
     const signIn = (e) => {
       e.preventDefault()
-      signInWithEmailAndPassword(auth,email,password)
+      logIn(email, password)
       .then((userCredential) => {
         console.log(userCredential)
       }).catch( error => {
