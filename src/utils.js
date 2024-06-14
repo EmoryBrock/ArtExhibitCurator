@@ -34,7 +34,11 @@ export const convertMETData = (METFetchedData) => {
 }
 
 export const convertCLEData = (CLEFetchedData) => {
-    const artInfoData = CLEFetchedData[0].data
+    const artInfoData = CLEFetchedData.data
+    
+    console.log(artInfoData, "data set")
+    console.log(artInfoData[0].images.web.url, "accessing the images obj in data")
+
     let convertedData = []
 
     artInfoData.forEach(artwork => {
@@ -42,8 +46,8 @@ export const convertCLEData = (CLEFetchedData) => {
         
         objFormat.id = artwork.id;
         objFormat.title = artwork.title;
-        objFormat.imageSmall = artwork.images.web.url;
-        objFormat.imageBig = artwork.images.print.url;
+        objFormat.imageSmall = artwork.images && artwork.images.web ? artwork.images.web.url : '';
+        objFormat.imageBig = artwork.images && artwork.images.print ? artwork.images.print.url : '';
         objFormat.artistName = artwork.creators && artwork.creators.length > 0 ? artwork.creators[0].description : 'Unknown Artist';
         objFormat.medium = artwork.technique;
         objFormat.date = artwork.creation_date;
@@ -52,14 +56,14 @@ export const convertCLEData = (CLEFetchedData) => {
 
         convertedData.push(objFormat);
     });
-
+    console.log(convertedData, "conversion of CLE data")
     return convertedData;
 }
 
 
 export const combinedFetchedDataToRender = (obj1, obj2) => {
-    console.log(obj1, "dataset 1 in utils")
-    console.log(obj2, "dataset 2 in utils")
+    // console.log(obj1, "dataset 1 in utils")
+    // console.log(obj2, "dataset 2 in utils")
   
     const combinedObj = [].concat(obj1, obj2)
 

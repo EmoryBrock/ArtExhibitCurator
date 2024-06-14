@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { getMETArtDetails, getMETArtID } from "../api";
+import { getCLEArtDetailsGeneral, getMETArtDetails, getMETArtID } from "../api";
 import SearchResults from "./SearchResults";
 import { combinedFetchedDataToRender, convertCLEData, convertMETData } from "../utils";
 import { ClevelandDataTest } from "../data/testClevelandData.js";
@@ -14,20 +14,31 @@ export default function SearchBar() {
   const handleSearch = async () => {
     setIsLoading(true);
     try {
-      const queryArtIds = await getMETArtID({ query }.query);
-      const detailsPromises = queryArtIds.objectIDs
+      // API1 call
+      const queryString = query.split(' ').join('+')
+      const queryArtIdsMET = await getMETArtID(queryString);
+      const detailsPromisesMET = queryArtIdsMET.objectIDs
         .slice(0, 5)
         .map((id) => getMETArtDetails(id)); //shorten response for development
-      const detailsResponses = await Promise.allSettled(detailsPromises);
-      const successfulDetails = detailsResponses
+      const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
+      const successfulDetailsMET = detailsResponsesMET
         .filter((result) => result.status === "fulfilled" && result.value)
         .map((result) => result.value);
 
-      let configDataSet1 = convertMETData(successfulDetails.filter(Boolean));
-      let configDataSet2 = convertCLEData(ClevelandDataTest);
+      let configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+
+
+      //API2 call
+
+      const detailsResponseCLE = await getCLEArtDetailsGeneral(query)
+      let configDataSet2 = convertCLEData(detailsResponseCLE);
+
+      // console.log(configDataSet2, "converted dataset2")
+      
+      //Combined returned data from API calls
       let dataToRender = combinedFetchedDataToRender(
         configDataSet1,
-        configDataSet2
+        configDataSet2.slice(0,10) //limiter for development
       );
 
       setResults(dataToRender);
