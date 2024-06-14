@@ -1,6 +1,4 @@
-//https://openaccess-api.clevelandart.org/api/artworks/?artists=vincent+van+gogh
-// images  -> data.images.web.url
-
+export const ClevelandDataTest =[
 {
     "info": {
       "total": 5,
@@ -2483,3 +2481,4 @@
       }
     ]
   }
+]
