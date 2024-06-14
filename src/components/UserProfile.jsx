@@ -1,10 +1,10 @@
 import React from 'react'
-import user from '../data/user'
 
 
 export default function UserProfile() {
   return (
-    <div>Welcome {user.userName}
+    <div>
+      <p></p>Welcome user
 
       this stores NAME, EMAIL, PASSWORD, Saved Collections
     </div>

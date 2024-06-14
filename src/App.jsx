@@ -1,10 +1,9 @@
 import './App.css'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Results from './components/Results'
-import ArtworkListCard from './components/ArtworkListCard'
+import Home from './components/Home'
 import Search from './components/Search'
+import UserProfile from './components/UserProfile'
+import {Route, Routes} from 'react-router-dom'
 
 function App() {
 
@@ -12,11 +11,11 @@ function App() {
     <>
       <Header />
       <main>
-      {/* <Hero /> */}
-      {/* <ArtworkListCard /> */}
-      {/* <Results /> */}
-      <Search />
-      <About />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/search' element={<Search />} />
+          <Route path='/user' element={<UserProfile />} />
+        </Routes>
       </main>
     </>
   )

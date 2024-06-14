@@ -25,15 +25,11 @@ export default function SearchBar() {
 
       let configDataSet1 = convertMETData(successfulDetails.filter(Boolean));
       let configDataSet2 = convertCLEData(ClevelandDataTest);
-    //   console.log(configDataSet1, "1st data set")
-    //   console.log(configDataSet2, "2nd data set")
       let dataToRender = combinedFetchedDataToRender(
         configDataSet1,
         configDataSet2
       );
 
-    //   console.log(dataToRender, "data to pass to child");
-    //   console.log(dataToRender.length, "data object length");
       setResults(dataToRender);
       setTotalResults(Object.keys(dataToRender).length);
     } catch (error) {
