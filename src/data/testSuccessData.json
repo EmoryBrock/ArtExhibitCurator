@@ -1,0 +1,5073 @@
+{
+    "results": [
+      {
+        "objectID": 436535,
+        "isHighlight": true,
+        "accessionNumber": "1993.132",
+        "accessionYear": "1993",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1567.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-004.jpg",
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-003.jpg",
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-002.jpg",
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-001.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Wheat Field with Cypresses",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1889",
+        "objectBeginDate": 1889,
+        "objectEndDate": 1889,
+        "medium": "Oil on canvas",
+        "dimensions": "28 7/8 × 36 3/4 in. (73.2 × 93.4 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 73.34264,
+              "Width": 93.4
+            }
+          },
+          {
+            "elementName": "Glazing",
+            "elementDescription": "See Notes in Description",
+            "elementMeasurements": {
+              "Height": 75.24765,
+              "Width": 94.93269
+            }
+          }
+        ],
+        "creditLine": "Purchase, The Annenberg Foundation Gift, 1993",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-03-29T10:36:46.263Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436535",
+        "tags": [
+          {
+            "term": "Landscapes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163"
+          },
+          {
+            "term": "Cypresses",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300343641",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q146911"
+          },
+          {
+            "term": "Summer",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300133099",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1313"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q18689458",
+        "isTimelineWork": true,
+        "GalleryNumber": "822"
+      },
+      {
+        "objectID": 436528,
+        "isHighlight": true,
+        "accessionNumber": "58.187",
+        "accessionYear": "1958",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP346474.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP346474.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Irises",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1890",
+        "objectBeginDate": 1890,
+        "objectEndDate": 1890,
+        "medium": "Oil on canvas",
+        "dimensions": "29 x 36 1/4 in. (73.7 x 92.1 cm)",
+        "measurements": [
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 8.89,
+              "Height": 97.1552,
+              "Width": 115.5702
+            }
+          },
+          {
+            "elementName": "Other",
+            "elementDescription": "plexi",
+            "elementMeasurements": {
+              "Height": 73.66015,
+              "Width": 91.916435
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 73.7,
+              "Width": 92.1
+            }
+          }
+        ],
+        "creditLine": "Gift of Adele R. Levy, 1958",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-04-30T04:55:16.79Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436528",
+        "tags": [
+          {
+            "term": "Still Life",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015638",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q170571"
+          },
+          {
+            "term": "Flowers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132399",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q506"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911667",
+        "isTimelineWork": true,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 436533,
+        "isHighlight": false,
+        "accessionNumber": "1992.374",
+        "accessionYear": "1992",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT1947.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1947.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Shoes",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1888",
+        "objectBeginDate": 1888,
+        "objectEndDate": 1888,
+        "medium": "Oil on canvas",
+        "dimensions": "18 x 21 3/4 in. (45.7 x 55.2 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 45.7201,
+              "Width": 55.2451
+            }
+          }
+        ],
+        "creditLine": "Purchase, The Annenberg Foundation Gift, 1992",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-31T04:54:53.58Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436533",
+        "tags": [
+          {
+            "term": "Still Life",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015638",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q170571"
+          },
+          {
+            "term": "Shoes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300046065",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q22676"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911520",
+        "isTimelineWork": true,
+        "GalleryNumber": "822"
+      },
+      {
+        "objectID": 437984,
+        "isHighlight": false,
+        "accessionNumber": "1996.435",
+        "accessionYear": "1996",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-19279-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-19279-001.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "La Berceuse (Woman Rocking a Cradle; Augustine-Alix Pellicot Roulin, 1851–1930)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1889",
+        "objectBeginDate": 1889,
+        "objectEndDate": 1889,
+        "medium": "Oil on canvas",
+        "dimensions": "36 1/2 x 29 in. (92.7 x 73.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 92.7,
+              "Weight": 21.772657,
+              "Width": 73.7
+            }
+          }
+        ],
+        "creditLine": "The Walter H. and Leonore Annenberg Collection, Gift of Walter H. and Leonore Annenberg, 1996, Bequest of Walter H. Annenberg, 2002",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-17T04:51:53.097Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437984",
+        "tags": [
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Flowers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132399",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q506"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911437",
+        "isTimelineWork": true,
+        "GalleryNumber": "822"
+      },
+      {
+        "objectID": 436532,
+        "isHighlight": true,
+        "accessionNumber": "67.187.70a",
+        "accessionYear": "1967",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT1502_cropped2.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1502_cropped2.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Self-Portrait with a Straw Hat (obverse: The Potato Peeler)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1887",
+        "objectBeginDate": 1887,
+        "objectEndDate": 1887,
+        "medium": "Oil on canvas",
+        "dimensions": "16 x 12 1/2 in. (40.6 x 31.8 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 40.6,
+              "Width": 31.8
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 6.0325,
+              "Height": 52.7051,
+              "Width": 43.1801
+            }
+          }
+        ],
+        "creditLine": "Bequest of Miss Adelaide Milton de Groot (1876-1967), 1967",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-03T04:52:11Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436532",
+        "tags": [
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Self-portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300124534",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q192110"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911684",
+        "isTimelineWork": true,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 436529,
+        "isHighlight": false,
+        "accessionNumber": "51.112.3",
+        "accessionYear": "1951",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT1396.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1396.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1888–89",
+        "objectBeginDate": 1888,
+        "objectEndDate": 1889,
+        "medium": "Oil on canvas",
+        "dimensions": "36 × 29 in. (91.4 × 73.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Glazing",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 92.07519,
+              "Width": 73.66015
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 91.4,
+              "Width": 73.7
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 10.16,
+              "Height": 114.3002,
+              "Width": 97.1552
+            }
+          }
+        ],
+        "creditLine": "Bequest of Sam A. Lewisohn, 1951",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-17T04:51:53.097Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436529",
+        "tags": [
+          {
+            "term": "Books",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300028051",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q571"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q17519173",
+        "isTimelineWork": true,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 459123,
+        "isHighlight": true,
+        "accessionNumber": "1975.1.231",
+        "accessionYear": "1975",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/rl/original/DT3154.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/rl/web-large/DT3154.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/rl/original/ep1975.1.231.bw.R.jpg",
+          "https://images.metmuseum.org/CRDImages/rl/original/RLC1.jpg",
+          "https://images.metmuseum.org/CRDImages/rl/original/2489.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "Robert Lehman Collection",
+        "objectName": "Painting",
+        "title": "Madame Roulin and Her Baby",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1888",
+        "objectBeginDate": 1888,
+        "objectEndDate": 1888,
+        "medium": "Oil on canvas",
+        "dimensions": "25 × 20 in. (63.5 × 50.8 cm)\r\nFramed: 37 3/8 × 32 in. (94.9 × 81.3 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 63.5,
+              "Width": 50.8
+            }
+          },
+          {
+            "elementName": "Framed",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 94.93269,
+              "Width": 81.28016
+            }
+          }
+        ],
+        "creditLine": "Robert Lehman Collection, 1975",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-25T04:55:29.727Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/459123",
+        "tags": [
+          {
+            "term": "Infants",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300189561",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q998"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Mothers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025932",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7560"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q17024776",
+        "isTimelineWork": false,
+        "GalleryNumber": "955"
+      },
+      {
+        "objectID": 436524,
+        "isHighlight": false,
+        "accessionNumber": "49.41",
+        "accessionYear": "1949",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP229743.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP229743.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Sunflowers",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1887",
+        "objectBeginDate": 1887,
+        "objectEndDate": 1887,
+        "medium": "Oil on canvas",
+        "dimensions": "17 x 24 in. (43.2 x 61 cm)",
+        "measurements": [
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 6.35,
+              "Height": 66.6751,
+              "Width": 85.0902
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 43.2,
+              "Width": 61
+            }
+          }
+        ],
+        "creditLine": "Rogers Fund, 1949",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-06-05T04:53:47.46Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436524",
+        "tags": [
+          {
+            "term": "Still Life",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015638",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q170571"
+          },
+          {
+            "term": "Sunflowers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300404749",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q171497"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q9213165",
+        "isTimelineWork": false,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 436526,
+        "isHighlight": false,
+        "accessionNumber": "64.165.2",
+        "accessionYear": "1964",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP124808.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP124808.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "First Steps, after Millet",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1890",
+        "objectBeginDate": 1890,
+        "objectEndDate": 1890,
+        "medium": "Oil on canvas",
+        "dimensions": "28 1/2 x 35 7/8 in. (72.4 x 91.1 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 72.4,
+              "Width": 91.1
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 8.89,
+              "Height": 95.2502,
+              "Width": 113.0302
+            }
+          }
+        ],
+        "creditLine": "Gift of George N. and Helen M. Richard, 1964",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-12-21T04:58:22.41Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436526",
+        "tags": [
+          {
+            "term": "Gardens",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008090",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1107656"
+          },
+          {
+            "term": "Children",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025945",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7569"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q11816717",
+        "isTimelineWork": true,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 436534,
+        "isHighlight": false,
+        "accessionNumber": "1993.400.5",
+        "accessionYear": "1993",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP346475.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP346475.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Roses",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1890",
+        "objectBeginDate": 1890,
+        "objectEndDate": 1890,
+        "medium": "Oil on canvas",
+        "dimensions": "36 5/8 x 29 1/8 in. (93 x 74 cm)",
+        "measurements": [
+          {
+            "elementName": "Glazing",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 93.66269,
+              "Width": 75.24765
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 93,
+              "Width": 74
+            }
+          }
+        ],
+        "creditLine": "The Walter H. and Leonore Annenberg Collection, Gift of Walter H. and Leonore Annenberg, 1993, Bequest of Walter H. Annenberg, 2002",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-04-03T04:53:58.48Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436534",
+        "tags": [
+          {
+            "term": "Roses",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300266246",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q102231"
+          },
+          {
+            "term": "Still Life",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015638",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q170571"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19904856",
+        "isTimelineWork": true,
+        "GalleryNumber": "822"
+      },
+      {
+        "objectID": 438722,
+        "isHighlight": false,
+        "accessionNumber": "67.187.70b",
+        "accessionYear": "1967",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT1503.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1503.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161947,
+            "role": "Artist",
+            "name": "Vincent van Gogh",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Potato Peeler (reverse: Self-Portrait with a Straw Hat)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Vincent van Gogh",
+        "artistDisplayBio": "Dutch, Zundert 1853–1890 Auvers-sur-Oise",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gogh, Vincent van",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1853",
+        "artistEndDate": "1890",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5582",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+        "objectDate": "1885",
+        "objectBeginDate": 1885,
+        "objectEndDate": 1885,
+        "medium": "Oil on canvas",
+        "dimensions": "16 x 12 1/2 in. (40.6 x 31.8 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 40.6,
+              "Width": 31.8
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 6.0325,
+              "Height": 52.7051,
+              "Width": 43.1801
+            }
+          }
+        ],
+        "creditLine": "Bequest of Miss Adelaide Milton de Groot (1876-1967), 1967",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-18T04:55:33.33Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/438722",
+        "tags": [
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q20167246",
+        "isTimelineWork": true,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 749639,
+        "isHighlight": true,
+        "accessionNumber": "2017.250",
+        "accessionYear": "2017",
+        "isPublicDomain": false,
+        "primaryImage": "",
+        "primaryImageSmall": "",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 164340,
+            "role": "Artist",
+            "name": "Franz von Stuck",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500006652",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q45006",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Inferno",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Franz von Stuck",
+        "artistDisplayBio": "German, Tettenweis 1863–1928 Munich",
+        "artistSuffix": "",
+        "artistAlphaSort": "Stuck, Franz von",
+        "artistNationality": "German",
+        "artistBeginDate": "1863",
+        "artistEndDate": "1928",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q45006",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500006652",
+        "objectDate": "1908",
+        "objectBeginDate": 1908,
+        "objectEndDate": 1908,
+        "medium": "Oil on canvas",
+        "dimensions": "50 3/4 × 82 1/2 in. (128.9 × 209.6 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 128.90526,
+              "Width": 209.55042
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 7.620015,
+              "Height": 163.83032,
+              "Width": 218.75793
+            }
+          }
+        ],
+        "creditLine": "Purchase, Bequest of Julia W. Emmons, by exchange; Walter and Leonore Annenberg Acquisitions Endowment Fund; Charles Hack and the Hearn Family Trust and Mugrabi Family Gifts; Louis V. Bell, Harris Brisbane Dick, Fletcher, and Rogers Funds and Joseph Pulitzer Bequest; Pfeiffer Fund; Theodocia and Joseph Arkus and several members of The Chairman's Council Gifts, 2017",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-19T04:55:11.483Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/749639",
+        "tags": [
+          {
+            "term": "Male Nudes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300189568",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q40446"
+          },
+          {
+            "term": "Female Nudes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300189568",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q40446"
+          },
+          {
+            "term": "Snakes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300250870",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q2102"
+          },
+          {
+            "term": "Demons",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300379730",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q177413"
+          },
+          {
+            "term": "Hell",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300185657",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q564"
+          }
+        ],
+        "objectWikidata_URL": "",
+        "isTimelineWork": false,
+        "GalleryNumber": "829"
+      },
+      {
+        "objectID": 437432,
+        "isHighlight": false,
+        "accessionNumber": "61.101.13",
+        "accessionYear": "1961",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-25036-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-25036-001.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162302,
+            "role": "Artist",
+            "name": "Auguste Renoir",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115467",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q39931",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Tilla Durieux (Ottilie Godeffroy, 1880–1971)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Auguste Renoir",
+        "artistDisplayBio": "French, Limoges 1841–1919 Cagnes-sur-Mer",
+        "artistSuffix": "",
+        "artistAlphaSort": "Renoir, Auguste",
+        "artistNationality": "French",
+        "artistBeginDate": "1841",
+        "artistEndDate": "1919",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q39931",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115467",
+        "objectDate": "1914",
+        "objectBeginDate": 1914,
+        "objectEndDate": 1914,
+        "medium": "Oil on canvas",
+        "dimensions": "36 1/4 x 29 in. (92.1 x 73.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 92.1,
+              "Width": 73.7
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 12.7,
+              "Height": 127.0003,
+              "Width": 106.6802
+            }
+          },
+          {
+            "elementName": "Glazing",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 92.71018,
+              "Length": 74.29515
+            }
+          }
+        ],
+        "creditLine": "Bequest of Stephen C. Clark, 1960",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-06-05T04:53:47.46Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437432",
+        "tags": [
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q1321055",
+        "isTimelineWork": true,
+        "GalleryNumber": "824"
+      },
+      {
+        "objectID": 437097,
+        "isHighlight": true,
+        "accessionNumber": "60.71.12",
+        "accessionYear": "1960",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP124093.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP124093.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 164909,
+            "role": "Artist",
+            "name": "Jean-François Millet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500012529",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q148458",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Haystacks: Autumn",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Jean-François Millet",
+        "artistDisplayBio": "French, Gruchy 1814–1875 Barbizon",
+        "artistSuffix": "",
+        "artistAlphaSort": "Millet, Jean-François",
+        "artistNationality": "French",
+        "artistBeginDate": "1814",
+        "artistEndDate": "1875",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q148458",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500012529",
+        "objectDate": "ca. 1874",
+        "objectBeginDate": 1869,
+        "objectEndDate": 1875,
+        "medium": "Oil on canvas",
+        "dimensions": "33 1/2 x 43 3/8 in. (85.1 x 110.2 cm)",
+        "measurements": [
+          {
+            "elementName": "Other",
+            "elementDescription": "Plexi",
+            "elementMeasurements": {
+              "Depth": 0.47625095,
+              "Height": 86.99517,
+              "Width": 111.76022
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 85.1,
+              "Width": 110.2
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 12.7,
+              "Height": 116.8402,
+              "Width": 142.8753
+            }
+          }
+        ],
+        "creditLine": "Bequest of Lillian S. Timken, 1959",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2022-11-18T04:46:35.8Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437097",
+        "tags": [
+          {
+            "term": "Autumn",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300133093",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1314"
+          },
+          {
+            "term": "Haystacks",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300435325",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q62577"
+          },
+          {
+            "term": "Sheep",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300250284",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7368"
+          },
+          {
+            "term": "Landscapes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911604",
+        "isTimelineWork": true,
+        "GalleryNumber": "802"
+      },
+      {
+        "objectID": 437133,
+        "isHighlight": true,
+        "accessionNumber": "67.241",
+        "accessionYear": "1967",
+        "isPublicDomain": false,
+        "primaryImage": "",
+        "primaryImageSmall": "",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162135,
+            "role": "Artist",
+            "name": "Claude Monet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Garden at Sainte-Adresse",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Claude Monet",
+        "artistDisplayBio": "French, Paris 1840–1926 Giverny",
+        "artistSuffix": "",
+        "artistAlphaSort": "Monet, Claude",
+        "artistNationality": "French",
+        "artistBeginDate": "1840",
+        "artistEndDate": "1926",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+        "objectDate": "1867",
+        "objectBeginDate": 1867,
+        "objectEndDate": 1867,
+        "medium": "Oil on canvas",
+        "dimensions": "38 5/8 x 51 1/8 in. (98.1 x 129.9 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 98.1,
+              "Width": 129.9
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 12.7,
+              "Height": 133.3503,
+              "Width": 166.3703
+            }
+          }
+        ],
+        "creditLine": "Purchase, special contributions and funds given or bequeathed by friends of the Museum, 1967",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-01-13T04:57:36.57Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437133",
+        "tags": [
+          {
+            "term": "Gardens",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008090",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1107656"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Seas",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008694",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q165"
+          },
+          {
+            "term": "Boats",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300178749",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q35872"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q432253",
+        "isTimelineWork": true,
+        "GalleryNumber": "818"
+      },
+      {
+        "objectID": 437394,
+        "isHighlight": true,
+        "accessionNumber": "61.198",
+        "accessionYear": "1961",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-30758-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-30758-001.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162297,
+            "role": "Artist",
+            "name": "Rembrandt (Rembrandt van Rijn)",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500011051",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5598",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Aristotle with a Bust of Homer",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Rembrandt (Rembrandt van Rijn)",
+        "artistDisplayBio": "Dutch, Leiden 1606–1669 Amsterdam",
+        "artistSuffix": "",
+        "artistAlphaSort": "Rembrandt (Rembrandt van Rijn)",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1606",
+        "artistEndDate": "1669",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5598",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500011051",
+        "objectDate": "1653",
+        "objectBeginDate": 1653,
+        "objectEndDate": 1653,
+        "medium": "Oil on canvas",
+        "dimensions": "56 1/2 x 53 3/4 in. (143.5 x 136.5 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 143.5,
+              "Width": 136.5
+            }
+          },
+          {
+            "elementName": "Other",
+            "elementDescription": "Picture + Frame (F.61.198)",
+            "elementMeasurements": {
+              "Weight": 65.31797
+            }
+          }
+        ],
+        "creditLine": "Purchase, special contributions and funds given or bequeathed by friends of the Museum, 1961",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-04-26T04:52:10.83Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437394",
+        "tags": [
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q2404992",
+        "isTimelineWork": true,
+        "GalleryNumber": "616"
+      },
+      {
+        "objectID": 437131,
+        "isHighlight": true,
+        "accessionNumber": "64.210",
+        "accessionYear": "1964",
+        "isPublicDomain": false,
+        "primaryImage": "",
+        "primaryImageSmall": "",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162135,
+            "role": "Artist",
+            "name": "Claude Monet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Bodmer Oak, Fontainebleau Forest",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Claude Monet",
+        "artistDisplayBio": "French, Paris 1840–1926 Giverny",
+        "artistSuffix": "",
+        "artistAlphaSort": "Monet, Claude",
+        "artistNationality": "French",
+        "artistBeginDate": "1840",
+        "artistEndDate": "1926",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+        "objectDate": "1865",
+        "objectBeginDate": 1865,
+        "objectEndDate": 1865,
+        "medium": "Oil on canvas",
+        "dimensions": "37 7/8 x 50 7/8 in. (96.2 x 129.2 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 96.2,
+              "Width": 129.2
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 10.16,
+              "Height": 120.6502,
+              "Width": 153.6703
+            }
+          }
+        ],
+        "creditLine": "Gift of Sam Salz and Bequest of Julia W. Emmons, by exchange, 1964",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-11-21T04:57:17.933Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437131",
+        "tags": [
+          {
+            "term": "Forests",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300387598",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q4421"
+          },
+          {
+            "term": "Oaks",
+            "AAT_URL": null,
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3245263"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19905237",
+        "isTimelineWork": true,
+        "GalleryNumber": "818"
+      },
+      {
+        "objectID": 437127,
+        "isHighlight": true,
+        "accessionNumber": "29.100.113",
+        "accessionYear": "1929",
+        "isPublicDomain": false,
+        "primaryImage": "",
+        "primaryImageSmall": "",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162135,
+            "role": "Artist",
+            "name": "Claude Monet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Bridge over a Pond of Water Lilies",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Claude Monet",
+        "artistDisplayBio": "French, Paris 1840–1926 Giverny",
+        "artistSuffix": "",
+        "artistAlphaSort": "Monet, Claude",
+        "artistNationality": "French",
+        "artistBeginDate": "1840",
+        "artistEndDate": "1926",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+        "objectDate": "1899",
+        "objectBeginDate": 1899,
+        "objectEndDate": 1899,
+        "medium": "Oil on canvas",
+        "dimensions": "36 1/2 x 29 in. (92.7 x 73.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 92.7,
+              "Width": 73.7
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 11.43,
+              "Height": 127.0003,
+              "Width": 109.2202
+            }
+          },
+          {
+            "elementName": "Glazing",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 95.25019,
+              "Width": 77.15266
+            }
+          }
+        ],
+        "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-03-29T10:36:46.263Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437127",
+        "tags": [
+          {
+            "term": "Bridges",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300386855",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q12280"
+          },
+          {
+            "term": "Ponds",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008688",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3253281"
+          },
+          {
+            "term": "Water Lilies",
+            "AAT_URL": null,
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3347071"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19905213",
+        "isTimelineWork": true,
+        "GalleryNumber": "819"
+      },
+      {
+        "objectID": 436964,
+        "isHighlight": true,
+        "accessionNumber": "89.21.3",
+        "accessionYear": "1889",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP273977.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP273977.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-davis_letter.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 162094,
+            "role": "Artist",
+            "name": "Edouard Manet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Young Lady in 1866",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edouard Manet",
+        "artistDisplayBio": "French, Paris 1832–1883 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Manet, Edouard",
+        "artistNationality": "French",
+        "artistBeginDate": "1832",
+        "artistEndDate": "1883",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+        "objectDate": "1866",
+        "objectBeginDate": 1866,
+        "objectEndDate": 1866,
+        "medium": "Oil on canvas",
+        "dimensions": "72 7/8 x 50 5/8 in. (185.1 x 128.6 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 185.1,
+              "Width": 128.6
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 10.16,
+              "Height": 204.4704,
+              "Width": 173.3553
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 15.24003,
+              "Height": 226.06046,
+              "Width": 170.18034
+            }
+          }
+        ],
+        "creditLine": "Gift of Erwin Davis, 1889",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-02T04:53:12.25Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436964",
+        "tags": [
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Parrots",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300250076",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q15548309"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q942523",
+        "isTimelineWork": true,
+        "GalleryNumber": "810"
+      },
+      {
+        "objectID": 436948,
+        "isHighlight": false,
+        "accessionNumber": "89.21.2",
+        "accessionYear": "1889",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-14936-027.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-027.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-davis_letter.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 162094,
+            "role": "Artist",
+            "name": "Edouard Manet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Boy with a Sword",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edouard Manet",
+        "artistDisplayBio": "French, Paris 1832–1883 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Manet, Edouard",
+        "artistNationality": "French",
+        "artistBeginDate": "1832",
+        "artistEndDate": "1883",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+        "objectDate": "1861",
+        "objectBeginDate": 1861,
+        "objectEndDate": 1861,
+        "medium": "Oil on canvas",
+        "dimensions": "51 5/8 x 36 3/4 in. (131.1 x 93.4 cm)",
+        "measurements": [
+          {
+            "elementName": "Glazing",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 131.76276,
+              "Width": 94.29769
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 131.1,
+              "Width": 93.3
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 10.16,
+              "Height": 157.4803,
+              "Width": 120.0152
+            }
+          }
+        ],
+        "creditLine": "Gift of Erwin Davis, 1889",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-04-11T04:52:34.303Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436948",
+        "tags": [
+          {
+            "term": "Swords",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300037048",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q12791"
+          },
+          {
+            "term": "Boys",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300247598",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3010"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q1844748",
+        "isTimelineWork": false,
+        "GalleryNumber": "810"
+      },
+      {
+        "objectID": 437655,
+        "isHighlight": false,
+        "accessionNumber": "1985.237",
+        "accessionYear": "1985",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT2165.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT2165.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162405,
+            "role": "Artist",
+            "name": "Georges Seurat",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500008873",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q34013",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Forest at Pontaubert",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Georges Seurat",
+        "artistDisplayBio": "French, Paris 1859–1891 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Seurat, Georges",
+        "artistNationality": "French",
+        "artistBeginDate": "1859",
+        "artistEndDate": "1891",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q34013",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500008873",
+        "objectDate": "1881",
+        "objectBeginDate": 1881,
+        "objectEndDate": 1881,
+        "medium": "Oil on canvas",
+        "dimensions": "31 1/8 x 24 5/8 in. (79.1 x 62.5 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 79.1,
+              "Width": 62.5
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 7.62,
+              "Height": 94.6152,
+              "Width": 78.7402
+            }
+          }
+        ],
+        "creditLine": "Purchase, Gift of Raymonde Paul, in memory of her brother, C. Michael Paul, by exchange, 1985",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-18T04:55:33.33Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437655",
+        "tags": [
+          {
+            "term": "Trees",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132410",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q10884"
+          },
+          {
+            "term": "Forests",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300387598",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q4421"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q3965263",
+        "isTimelineWork": false,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 436095,
+        "isHighlight": true,
+        "accessionNumber": "29.100.129",
+        "accessionYear": "1929",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-21027-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-21027-001.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161808,
+            "role": "Artist",
+            "name": "Honoré Daumier",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500117998",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q187506",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Third-Class Carriage",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Honoré Daumier",
+        "artistDisplayBio": "French, Marseilles 1808–1879 Valmondois",
+        "artistSuffix": "",
+        "artistAlphaSort": "Daumier, Honoré",
+        "artistNationality": "French",
+        "artistBeginDate": "1808",
+        "artistEndDate": "1879",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q187506",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500117998",
+        "objectDate": "1864",
+        "objectBeginDate": 1864,
+        "objectEndDate": 1864,
+        "medium": "Oil on canvas",
+        "dimensions": "25 3/4 x 35 1/2 in. (65.4 x 90.2 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 65.4,
+              "Width": 90.2
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 11.43,
+              "Height": 96.5202,
+              "Width": 120.6502
+            }
+          }
+        ],
+        "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-02-24T04:56:29.497Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436095",
+        "tags": [
+          {
+            "term": "Nursing",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300379905",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q174876"
+          },
+          {
+            "term": "Children",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025945",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7569"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Trains",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300212738",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q870"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q3228340",
+        "isTimelineWork": true,
+        "GalleryNumber": "802"
+      },
+      {
+        "objectID": 438819,
+        "isHighlight": false,
+        "accessionNumber": "29.100.54",
+        "accessionYear": "1929",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT862.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT862.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162094,
+            "role": "Artist",
+            "name": "Edouard Manet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Young Man in the Costume of a Majo",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edouard Manet",
+        "artistDisplayBio": "French, Paris 1832–1883 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Manet, Edouard",
+        "artistNationality": "French",
+        "artistBeginDate": "1832",
+        "artistEndDate": "1883",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+        "objectDate": "1863",
+        "objectBeginDate": 1863,
+        "objectEndDate": 1863,
+        "medium": "Oil on canvas",
+        "dimensions": "74 x 49 1/8 in. (188 x 124.8 cm)",
+        "measurements": null,
+        "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-04-25T04:53:17.59Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/438819",
+        "tags": [
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q113262",
+        "isTimelineWork": true,
+        "GalleryNumber": "810"
+      },
+      {
+        "objectID": 436121,
+        "isHighlight": true,
+        "accessionNumber": "29.100.128",
+        "accessionYear": "1929",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-25460-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-25460-001.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161821,
+            "role": "Artist",
+            "name": "Edgar Degas",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115194",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q46373",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "A Woman Seated beside a Vase of Flowers (Madame Paul Valpinçon?)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edgar Degas",
+        "artistDisplayBio": "French, Paris 1834–1917 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Degas, Edgar",
+        "artistNationality": "French",
+        "artistBeginDate": "1834",
+        "artistEndDate": "1917",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q46373",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115194",
+        "objectDate": "1865",
+        "objectBeginDate": 1865,
+        "objectEndDate": 1865,
+        "medium": "Oil on canvas",
+        "dimensions": "29 x 36 1/2 in. (73.7 x 92.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 73.7,
+              "Width": 92.7
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 12.065,
+              "Height": 97.7902,
+              "Width": 116.2052
+            }
+          },
+          {
+            "elementName": "Glazing",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 74.93015,
+              "Width": 93.66269
+            }
+          }
+        ],
+        "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-17T04:51:53.097Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436121",
+        "tags": [
+          {
+            "term": "Pitchers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300194765",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q132397"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Flowers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132399",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q506"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q3713914",
+        "isTimelineWork": true,
+        "GalleryNumber": "810"
+      },
+      {
+        "objectID": 436105,
+        "isHighlight": true,
+        "accessionNumber": "31.45",
+        "accessionYear": "1931",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-13139-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-13139-001.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-31_45_suppl_003.jpg",
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-31_45-2.jpg",
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-31_45-3.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 161811,
+            "role": "Artist",
+            "name": "Jacques Louis David",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115221",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q83155",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Death of Socrates",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Jacques Louis David",
+        "artistDisplayBio": "French, Paris 1748–1825 Brussels",
+        "artistSuffix": "",
+        "artistAlphaSort": "David, Jacques Louis",
+        "artistNationality": "French",
+        "artistBeginDate": "1748",
+        "artistEndDate": "1825",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q83155",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115221",
+        "objectDate": "1787",
+        "objectBeginDate": 1787,
+        "objectEndDate": 1787,
+        "medium": "Oil on canvas",
+        "dimensions": "51 x 77 1/4 in. (129.5 x 196.2 cm)",
+        "measurements": [
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 14.605029,
+              "Height": 168.27533,
+              "Width": 233.68047
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 129.5,
+              "Width": 196.2
+            }
+          }
+        ],
+        "creditLine": "Catharine Lorillard Wolfe Collection, Wolfe Fund, 1931",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-17T04:51:53.097Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436105",
+        "tags": [
+          {
+            "term": "Lyres",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300042114",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q201129"
+          },
+          {
+            "term": "Socrates",
+            "AAT_URL": "http://vocab.getty.edu/page/ulan/500260248",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q913"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q1752990",
+        "isTimelineWork": true,
+        "GalleryNumber": "634"
+      },
+      {
+        "objectID": 437393,
+        "isHighlight": false,
+        "accessionNumber": "14.40.651",
+        "accessionYear": "1914",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP145915.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP145915.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/ep/original/SFBathshebaMoreau.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 162297,
+            "role": "Artist",
+            "name": "Rembrandt (Rembrandt van Rijn)",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500011051",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q5598",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Toilet of Bathsheba",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Rembrandt (Rembrandt van Rijn)",
+        "artistDisplayBio": "Dutch, Leiden 1606–1669 Amsterdam",
+        "artistSuffix": "",
+        "artistAlphaSort": "Rembrandt (Rembrandt van Rijn)",
+        "artistNationality": "Dutch",
+        "artistBeginDate": "1606",
+        "artistEndDate": "1669",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5598",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500011051",
+        "objectDate": "1643",
+        "objectBeginDate": 1643,
+        "objectEndDate": 1643,
+        "medium": "Oil on wood",
+        "dimensions": "22 1/2 x 30 in. (57.2 x 76.2 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 57.2,
+              "Width": 76.2
+            }
+          }
+        ],
+        "creditLine": "Bequest of Benjamin Altman, 1913",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-11-17T04:57:18.463Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437393",
+        "tags": [
+          {
+            "term": "Female Nudes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300189568",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q40446"
+          },
+          {
+            "term": "Bathsheba",
+            "AAT_URL": "http://vocab.getty.edu/page/ia/901000627",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q272277"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19863030",
+        "isTimelineWork": false,
+        "GalleryNumber": "616"
+      },
+      {
+        "objectID": 436950,
+        "isHighlight": false,
+        "accessionNumber": "29.100.51",
+        "accessionYear": "1929",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-17679-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-17679-001.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162094,
+            "role": "Artist",
+            "name": "Edouard Manet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Dead Christ with Angels",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edouard Manet",
+        "artistDisplayBio": "French, Paris 1832–1883 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Manet, Edouard",
+        "artistNationality": "French",
+        "artistBeginDate": "1832",
+        "artistEndDate": "1883",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+        "objectDate": "1864",
+        "objectBeginDate": 1864,
+        "objectEndDate": 1864,
+        "medium": "Oil on canvas",
+        "dimensions": "70 5/8 x 59 in. (179.4 x 149.9 cm)",
+        "measurements": [
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 8.89,
+              "Height": 213.3604,
+              "Width": 181.6104
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 179.4,
+              "Width": 149.9
+            }
+          }
+        ],
+        "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-04-11T04:52:34.303Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436950",
+        "tags": [
+          {
+            "term": "Angels",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300379004",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q235113"
+          },
+          {
+            "term": "Christ",
+            "AAT_URL": "http://vocab.getty.edu/page/ia/901000087",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q642420"
+          },
+          {
+            "term": "Snakes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300250870",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q2102"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q2752079",
+        "isTimelineWork": true,
+        "GalleryNumber": "810"
+      },
+      {
+        "objectID": 435869,
+        "isHighlight": false,
+        "accessionNumber": "1993.400.1",
+        "accessionYear": "1993",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT1977.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1977.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161761,
+            "role": "Artist",
+            "name": "Paul Cézanne",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500004793",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q35548",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Antoine Dominique Sauveur Aubert (born 1817), the Artist's Uncle, as a Monk",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Paul Cézanne",
+        "artistDisplayBio": "French, Aix-en-Provence 1839–1906 Aix-en-Provence",
+        "artistSuffix": "",
+        "artistAlphaSort": "Cézanne, Paul",
+        "artistNationality": "French",
+        "artistBeginDate": "1839",
+        "artistEndDate": "1906",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q35548",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500004793",
+        "objectDate": "1866",
+        "objectBeginDate": 1866,
+        "objectEndDate": 1866,
+        "medium": "Oil on canvas",
+        "dimensions": "25 5/8 x 21 1/2 in. (65.1 x 54.6 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 65.1,
+              "Width": 54.6
+            }
+          }
+        ],
+        "creditLine": "The Walter H. and Leonore Annenberg Collection, Gift of Walter H. and Leonore Annenberg, 1993, Bequest of Walter H. Annenberg, 2002",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-02-28T04:56:07.323Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/435869",
+        "tags": [
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Cross",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300235443",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q40843"
+          },
+          {
+            "term": "Monks",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025765",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q733786"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911720",
+        "isTimelineWork": true,
+        "GalleryNumber": "823"
+      },
+      {
+        "objectID": 333914,
+        "isHighlight": false,
+        "accessionNumber": "29.100.199",
+        "accessionYear": "1929",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/dp/original/DP824210.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/dp/web-large/DP824210.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/dp/original/DP824212.jpg",
+          "https://images.metmuseum.org/CRDImages/dp/original/DR100.jpg",
+          "https://images.metmuseum.org/CRDImages/dp/original/DP138570.jpg",
+          "https://images.metmuseum.org/CRDImages/dp/original/DP818895.jpg",
+          "https://images.metmuseum.org/CRDImages/dp/original/DP818919.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 161808,
+            "role": "Artist",
+            "name": "Honoré Daumier",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500117998",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q187506",
+            "gender": ""
+          }
+        ],
+        "department": "Drawings and Prints",
+        "objectName": "Drawing",
+        "title": "A Man Reading in a Garden (recto); Preliminary sketch for a Man Reading in a Garden (verso)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Honoré Daumier",
+        "artistDisplayBio": "French, Marseilles 1808–1879 Valmondois",
+        "artistSuffix": "",
+        "artistAlphaSort": "Daumier, Honoré",
+        "artistNationality": "French",
+        "artistBeginDate": "1808",
+        "artistEndDate": "1879",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q187506",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500117998",
+        "objectDate": "ca. 1865",
+        "objectBeginDate": 1860,
+        "objectEndDate": 1870,
+        "medium": "Watercolor over black chalk, with pen and ink, brush and wash, and lithographic crayon.\r\nVerso: pen and brown ink, black gray wash, and lithographic crayon",
+        "dimensions": "13 5/16 x 10 5/8 in. (33.8 x 27cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 33.8,
+              "Width": 27
+            }
+          }
+        ],
+        "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Drawings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-02-16T04:57:51.813Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/333914",
+        "tags": [
+          {
+            "term": "Gardens",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008090",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1107656"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Reading",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300248178",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q199657"
+          }
+        ],
+        "objectWikidata_URL": "",
+        "isTimelineWork": false,
+        "GalleryNumber": ""
+      },
+      {
+        "objectID": 437124,
+        "isHighlight": false,
+        "accessionNumber": "30.95.250",
+        "accessionYear": "1930",
+        "isPublicDomain": false,
+        "primaryImage": "",
+        "primaryImageSmall": "",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162135,
+            "role": "Artist",
+            "name": "Claude Monet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Rouen Cathedral: The Portal (Sunlight)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Claude Monet",
+        "artistDisplayBio": "French, Paris 1840–1926 Giverny",
+        "artistSuffix": "",
+        "artistAlphaSort": "Monet, Claude",
+        "artistNationality": "French",
+        "artistBeginDate": "1840",
+        "artistEndDate": "1926",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+        "objectDate": "1894",
+        "objectBeginDate": 1894,
+        "objectEndDate": 1894,
+        "medium": "Oil on canvas",
+        "dimensions": "39 1/4 x 25 7/8 in. (99.7 x 65.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 99.7,
+              "Width": 65.7
+            }
+          }
+        ],
+        "creditLine": "Theodore M. Davis Collection, Bequest of Theodore M. Davis, 1915",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-18T04:55:33.33Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437124",
+        "tags": [
+          {
+            "term": "Cathedrals",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300007501",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q2977"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q17436671",
+        "isTimelineWork": true,
+        "GalleryNumber": "819"
+      },
+      {
+        "objectID": 437658,
+        "isHighlight": true,
+        "accessionNumber": "51.112.6",
+        "accessionYear": "1951",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP259921.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP259921.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162405,
+            "role": "Artist",
+            "name": "Georges Seurat",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500008873",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q34013",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Study for \"A Sunday on La Grande Jatte\"",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Georges Seurat",
+        "artistDisplayBio": "French, Paris 1859–1891 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Seurat, Georges",
+        "artistNationality": "French",
+        "artistBeginDate": "1859",
+        "artistEndDate": "1891",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q34013",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500008873",
+        "objectDate": "1884",
+        "objectBeginDate": 1884,
+        "objectEndDate": 1884,
+        "medium": "Oil on canvas",
+        "dimensions": "27 3/4 x 41 in. (70.5 x 104.1 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 70.5,
+              "Width": 104.1
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 6.0325,
+              "Height": 92.7102,
+              "Width": 127.0003
+            }
+          },
+          {
+            "elementName": "Glazing",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 72.70764,
+              "Width": 105.727715
+            }
+          }
+        ],
+        "creditLine": "Bequest of Sam A. Lewisohn, 1951",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-14T04:51:53.773Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437658",
+        "tags": [
+          {
+            "term": "Leisure",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300138173",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q180910"
+          },
+          {
+            "term": "Children",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025945",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7569"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Dogs",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300265714",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q144"
+          },
+          {
+            "term": "Monkeys",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300250028",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1367"
+          },
+          {
+            "term": "Rivers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008707",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q4022"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q3976307",
+        "isTimelineWork": true,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 436144,
+        "isHighlight": false,
+        "accessionNumber": "39.161",
+        "accessionYear": "1939",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-25462-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-25462-001.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161821,
+            "role": "Artist",
+            "name": "Edgar Degas",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115194",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q46373",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "James-Jacques-Joseph Tissot (1836–1902)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edgar Degas",
+        "artistDisplayBio": "French, Paris 1834–1917 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Degas, Edgar",
+        "artistNationality": "French",
+        "artistBeginDate": "1834",
+        "artistEndDate": "1917",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q46373",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115194",
+        "objectDate": "ca. 1867–68",
+        "objectBeginDate": 1867,
+        "objectEndDate": 1868,
+        "medium": "Oil on canvas",
+        "dimensions": "59 5/8 x 44 in. (151.4 x 111.8 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 151.4,
+              "Width": 111.8
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 7.62,
+              "Height": 173.9903,
+              "Width": 136.5253
+            }
+          }
+        ],
+        "creditLine": "Rogers Fund, 1939",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-03-29T10:36:46.263Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436144",
+        "tags": [
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Artists",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025103",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q483501"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q3937579",
+        "isTimelineWork": false,
+        "GalleryNumber": "810"
+      },
+      {
+        "objectID": 437654,
+        "isHighlight": true,
+        "accessionNumber": "61.101.17",
+        "accessionYear": "1961",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP375450_cropped.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP375450_cropped.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-61_101_17-fig7.jpg.jpg",
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-61_101_17-fig8.jpg.jpg",
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-61_101_17-fig9.jpg.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 162405,
+            "role": "Artist",
+            "name": "Georges Seurat",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500008873",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q34013",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Circus Sideshow (Parade de cirque)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Georges Seurat",
+        "artistDisplayBio": "French, Paris 1859–1891 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Seurat, Georges",
+        "artistNationality": "French",
+        "artistBeginDate": "1859",
+        "artistEndDate": "1891",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q34013",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500008873",
+        "objectDate": "1887–88",
+        "objectBeginDate": 1887,
+        "objectEndDate": 1888,
+        "medium": "Oil on canvas",
+        "dimensions": "39 1/4 x 59 in. (99.7 x 149.9 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 99.7,
+              "Width": 149.9
+            }
+          }
+        ],
+        "creditLine": "Bequest of Stephen C. Clark, 1960",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-31T04:54:53.58Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437654",
+        "tags": [
+          {
+            "term": "Musical Instruments",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300041620",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q34379"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Circus",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300069235",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q47928"
+          },
+          {
+            "term": "Musicians",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025666",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q639669"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q3823444",
+        "isTimelineWork": true,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 437348,
+        "isHighlight": false,
+        "accessionNumber": "26.46.2",
+        "accessionYear": "1926",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-14201-029.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-029.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162280,
+            "role": "Artist",
+            "name": "Pierre Puvis de Chavannes",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500008870",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q216873",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Drawing",
+        "title": "The River",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Pierre Puvis de Chavannes",
+        "artistDisplayBio": "French, Lyons 1824–1898 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Puvis de Chavannes, Pierre",
+        "artistNationality": "French",
+        "artistBeginDate": "1824",
+        "artistEndDate": "1898",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q216873",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500008870",
+        "objectDate": "ca. 1864",
+        "objectBeginDate": 1859,
+        "objectEndDate": 1869,
+        "medium": "Oil on paper, laid down on canvas",
+        "dimensions": "51 x 99 1/4 in. (129.5 x 252.1 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 129.5,
+              "Width": 252.1
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 12.7,
+              "Height": 168.9103,
+              "Width": 288.2906
+            }
+          }
+        ],
+        "creditLine": "Catharine Lorillard Wolfe Collection, Wolfe Fund, 1926",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Drawings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-04-25T04:47:08.37Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437348",
+        "tags": [
+          {
+            "term": "Female Nudes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300189568",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q40446"
+          },
+          {
+            "term": "Rivers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008707",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q4022"
+          },
+          {
+            "term": "Landscapes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163"
+          },
+          {
+            "term": "Bathing",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300343854",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q327651"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19912416",
+        "isTimelineWork": false,
+        "GalleryNumber": "800"
+      },
+      {
+        "objectID": 437345,
+        "isHighlight": false,
+        "accessionNumber": "26.46.1",
+        "accessionYear": "1926",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-14201-027.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-027.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162280,
+            "role": "Artist",
+            "name": "Pierre Puvis de Chavannes",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500008870",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q216873",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Drawing",
+        "title": "Cider",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Pierre Puvis de Chavannes",
+        "artistDisplayBio": "French, Lyons 1824–1898 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Puvis de Chavannes, Pierre",
+        "artistNationality": "French",
+        "artistBeginDate": "1824",
+        "artistEndDate": "1898",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q216873",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500008870",
+        "objectDate": "ca. 1864",
+        "objectBeginDate": 1859,
+        "objectEndDate": 1869,
+        "medium": "Oil on paper, laid down on canvas",
+        "dimensions": "51 x 99 1/4 in. (129.5 x 252.1 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 129.5,
+              "Width": 252.1
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 12.7,
+              "Height": 168.9103,
+              "Width": 288.2906
+            }
+          }
+        ],
+        "creditLine": "Catharine Lorillard Wolfe Collection, Wolfe Fund, 1926",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Drawings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-02-08T04:58:26.047Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437345",
+        "tags": [
+          {
+            "term": "Male Nudes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300189568",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q40446"
+          },
+          {
+            "term": "Apples",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300266417",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q89"
+          },
+          {
+            "term": "Children",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025945",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7569"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Working",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300412186",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q6958747"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19912302",
+        "isTimelineWork": false,
+        "GalleryNumber": "800"
+      },
+      {
+        "objectID": 437671,
+        "isHighlight": false,
+        "accessionNumber": "1976.201.19",
+        "accessionYear": "1976",
+        "isPublicDomain": false,
+        "primaryImage": "",
+        "primaryImageSmall": "",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162415,
+            "role": "Artist",
+            "name": "Paul Signac",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500008410",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q151573",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Jetty at Cassis, Opus 198",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Paul Signac",
+        "artistDisplayBio": "French, Paris 1863–1935 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Signac, Paul",
+        "artistNationality": "French",
+        "artistBeginDate": "1863",
+        "artistEndDate": "1935",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q151573",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500008410",
+        "objectDate": "1889",
+        "objectBeginDate": 1889,
+        "objectEndDate": 1889,
+        "medium": "Oil on canvas",
+        "dimensions": "18 1/4 x 25 5/8 in. (46.4 x 65.1 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 46.4,
+              "Width": 65.1
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 9.525,
+              "Height": 71.7551,
+              "Width": 90.8052
+            }
+          }
+        ],
+        "creditLine": "Bequest of Joan Whitney Payson, 1975",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-12-14T04:57:29.717Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437671",
+        "tags": [
+          {
+            "term": "Buildings",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300004789",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q41176"
+          },
+          {
+            "term": "Landscapes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19905454",
+        "isTimelineWork": false,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 435883,
+        "isHighlight": false,
+        "accessionNumber": "61.101.3",
+        "accessionYear": "1961",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-14936-049.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-049.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161761,
+            "role": "Artist",
+            "name": "Paul Cézanne",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500004793",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q35548",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Still Life with Apples and Pears",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Paul Cézanne",
+        "artistDisplayBio": "French, Aix-en-Provence 1839–1906 Aix-en-Provence",
+        "artistSuffix": "",
+        "artistAlphaSort": "Cézanne, Paul",
+        "artistNationality": "French",
+        "artistBeginDate": "1839",
+        "artistEndDate": "1906",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q35548",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500004793",
+        "objectDate": "ca. 1891–92",
+        "objectBeginDate": 1891,
+        "objectEndDate": 1892,
+        "medium": "Oil on canvas",
+        "dimensions": "17 5/8 x 23 1/8 in. (44.8 x 58.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 44.8,
+              "Width": 58.7
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 10.795,
+              "Height": 66.6751,
+              "Width": 81.2802
+            }
+          }
+        ],
+        "creditLine": "Bequest of Stephen C. Clark, 1960",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-10T04:51:59.04Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/435883",
+        "tags": [
+          {
+            "term": "Apples",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300266417",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q89"
+          },
+          {
+            "term": "Pears",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300375178",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q13099586"
+          },
+          {
+            "term": "Still Life",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015638",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q170571"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911925",
+        "isTimelineWork": false,
+        "GalleryNumber": "826"
+      },
+      {
+        "objectID": 436869,
+        "isHighlight": false,
+        "accessionNumber": "96.28",
+        "accessionYear": "1896",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP124813.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP124813.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/ep/original/DP124814.jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 107910,
+            "role": "Artist",
+            "name": "Frederic, Lord Leighton",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500030022",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q160252",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Lachrymae",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Frederic, Lord Leighton",
+        "artistDisplayBio": "British, Scarborough 1830–1896 London",
+        "artistSuffix": "",
+        "artistAlphaSort": "Leighton, Frederic, Lord",
+        "artistNationality": "British",
+        "artistBeginDate": "1830",
+        "artistEndDate": "1896",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q160252",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500030022",
+        "objectDate": "1894–95",
+        "objectBeginDate": 1894,
+        "objectEndDate": 1895,
+        "medium": "Oil on canvas",
+        "dimensions": "62 x 24 3/4 in. (157.5 x 62.9 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": "Weight",
+            "elementMeasurements": {
+              "Height": 157.5,
+              "Width": 62.9
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 15.24,
+              "Height": 195.5804,
+              "Width": 113.6652
+            }
+          },
+          {
+            "elementName": "Other",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Weight": 28.123016
+            }
+          }
+        ],
+        "creditLine": "Catharine Lorillard Wolfe Collection, Wolfe Fund, 1896",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-11-28T04:57:54.29Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436869",
+        "tags": [
+          {
+            "term": "Cypresses",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300343641",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q146911"
+          },
+          {
+            "term": "Evening",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300343633",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7725"
+          },
+          {
+            "term": "Wreaths",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300391223",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1201922"
+          },
+          {
+            "term": "Sadness",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300055166",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q169251"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19905166",
+        "isTimelineWork": true,
+        "GalleryNumber": "800"
+      },
+      {
+        "objectID": 436089,
+        "isHighlight": false,
+        "accessionNumber": "11.45.3",
+        "accessionYear": "1911",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT332111.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT332111.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161806,
+            "role": "Artist",
+            "name": "Charles-François Daubigny",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115164",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q252357",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Hamlet of Optevoz",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Charles-François Daubigny",
+        "artistDisplayBio": "French, Paris 1817–1878 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Daubigny, Charles-François",
+        "artistNationality": "French",
+        "artistBeginDate": "1817",
+        "artistEndDate": "1878",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q252357",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115164",
+        "objectDate": "ca. 1852",
+        "objectBeginDate": 1849,
+        "objectEndDate": 1857,
+        "medium": "Oil on canvas",
+        "dimensions": "22 3/4 x 36 1/2 in. (57.8 x 92.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 57.8,
+              "Width": 92.7
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 13.335,
+              "Height": 91.4402,
+              "Width": 124.4602
+            }
+          }
+        ],
+        "creditLine": "Bequest of Robert Graham Dun, 1900",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-24T04:55:43.463Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436089",
+        "tags": [
+          {
+            "term": "Cows",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300250120",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q830"
+          },
+          {
+            "term": "Towns",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008375",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3957"
+          },
+          {
+            "term": "Evening",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300343633",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7725"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19905735",
+        "isTimelineWork": false,
+        "GalleryNumber": "812"
+      },
+      {
+        "objectID": 437121,
+        "isHighlight": false,
+        "accessionNumber": "29.100.110",
+        "accessionYear": "1929",
+        "isPublicDomain": false,
+        "primaryImage": "",
+        "primaryImageSmall": "",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162135,
+            "role": "Artist",
+            "name": "Claude Monet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Four Trees",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Claude Monet",
+        "artistDisplayBio": "French, Paris 1840–1926 Giverny",
+        "artistSuffix": "",
+        "artistAlphaSort": "Monet, Claude",
+        "artistNationality": "French",
+        "artistBeginDate": "1840",
+        "artistEndDate": "1926",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q296",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500019484",
+        "objectDate": "1891",
+        "objectBeginDate": 1891,
+        "objectEndDate": 1891,
+        "medium": "Oil on canvas",
+        "dimensions": "32 1/4 x 32 1/8 in. (81.9 x 81.6 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 81.9,
+              "Width": 81.6
+            }
+          }
+        ],
+        "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-10-18T04:55:33.33Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/437121",
+        "tags": [
+          {
+            "term": "Rivers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008707",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q4022"
+          },
+          {
+            "term": "Trees",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132410",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q10884"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19905131",
+        "isTimelineWork": true,
+        "GalleryNumber": "819"
+      },
+      {
+        "objectID": 435871,
+        "isHighlight": false,
+        "accessionNumber": "57.181",
+        "accessionYear": "1957",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-14936-047.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-047.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161761,
+            "role": "Artist",
+            "name": "Paul Cézanne",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500004793",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q35548",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Gardanne",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Paul Cézanne",
+        "artistDisplayBio": "French, Aix-en-Provence 1839–1906 Aix-en-Provence",
+        "artistSuffix": "",
+        "artistAlphaSort": "Cézanne, Paul",
+        "artistNationality": "French",
+        "artistBeginDate": "1839",
+        "artistEndDate": "1906",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q35548",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500004793",
+        "objectDate": "1885–86",
+        "objectBeginDate": 1885,
+        "objectEndDate": 1886,
+        "medium": "Oil on canvas",
+        "dimensions": "31 1/2 x 25 1/4 in. (80 x 64.1 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 80,
+              "Width": 64.1
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 6.35,
+              "Height": 106.6802,
+              "Width": 88.9002
+            }
+          },
+          {
+            "elementName": "Glazing",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 80.645164,
+              "Width": 64.77013
+            }
+          }
+        ],
+        "creditLine": "Gift of Dr. and Mrs. Franz H. Hirschland, 1957",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-10T04:51:59.04Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/435871",
+        "tags": [
+          {
+            "term": "Towns",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008375",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3957"
+          },
+          {
+            "term": "Buildings",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300004789",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q41176"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911801",
+        "isTimelineWork": true,
+        "GalleryNumber": "826"
+      },
+      {
+        "objectID": 438821,
+        "isHighlight": true,
+        "accessionNumber": "51.112.2",
+        "accessionYear": "1951",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT1025.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1025.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161924,
+            "role": "Artist",
+            "name": "Paul Gauguin",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500011421",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q37693",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Ia Orana Maria (Hail Mary)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Paul Gauguin",
+        "artistDisplayBio": "French, Paris 1848–1903 Atuona, Hiva Oa, Marquesas Islands",
+        "artistSuffix": "",
+        "artistAlphaSort": "Gauguin, Paul",
+        "artistNationality": "French",
+        "artistBeginDate": "1848",
+        "artistEndDate": "1903",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q37693",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500011421",
+        "objectDate": "1891",
+        "objectBeginDate": 1891,
+        "objectEndDate": 1891,
+        "medium": "Oil on canvas",
+        "dimensions": "44 3/4 x 34 1/2 in. (113.7 x 87.6 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 113.6652,
+              "Width": 87.6302
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 8.89,
+              "Height": 135.2553,
+              "Width": 109.8552
+            }
+          }
+        ],
+        "creditLine": "Bequest of Sam A. Lewisohn, 1951",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-03-29T10:36:46.263Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/438821",
+        "tags": [
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Landscapes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163"
+          },
+          {
+            "term": "Angels",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300379004",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q235113"
+          },
+          {
+            "term": "Virgin Mary",
+            "AAT_URL": "http://vocab.getty.edu/page/ia/901000032",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q345"
+          },
+          {
+            "term": "Jesus",
+            "AAT_URL": "http://vocab.getty.edu/page/ia/901000087",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q302"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q1118465",
+        "isTimelineWork": true,
+        "GalleryNumber": "825"
+      },
+      {
+        "objectID": 435621,
+        "isHighlight": true,
+        "accessionNumber": "89.21.1",
+        "accessionYear": "1889",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-14201-049.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-049.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/ep/original/LC-davis_letter (2).jpg"
+        ],
+        "constituents": [
+          {
+            "constituentID": 161657,
+            "role": "Artist",
+            "name": "Jules Bastien-Lepage",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500015744",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q541859",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Joan of Arc",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Jules Bastien-Lepage",
+        "artistDisplayBio": "French, Damvillers 1848–1884 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Bastien-Lepage, Jules",
+        "artistNationality": "French",
+        "artistBeginDate": "1848",
+        "artistEndDate": "1884",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q541859",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500015744",
+        "objectDate": "1879",
+        "objectBeginDate": 1879,
+        "objectEndDate": 1879,
+        "medium": "Oil on canvas",
+        "dimensions": "100 x 110 in. (254 x 279.4 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 254,
+              "Width": 279.4
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 8.89,
+              "Height": 266.7005,
+              "Width": 298.4506
+            }
+          }
+        ],
+        "creditLine": "Gift of Erwin Davis, 1889",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-06-05T04:53:47.46Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/435621",
+        "tags": [
+          {
+            "term": "Gardens",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008090",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1107656"
+          },
+          {
+            "term": "Joan of Arc",
+            "AAT_URL": "http://vocab.getty.edu/page/ulan/500343198",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q7226"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q16651190",
+        "isTimelineWork": true,
+        "GalleryNumber": "827"
+      },
+      {
+        "objectID": 436965,
+        "isHighlight": false,
+        "accessionNumber": "1976.201.14",
+        "accessionYear": "1976",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-25465-001.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-25465-001.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162094,
+            "role": "Artist",
+            "name": "Edouard Manet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Monet Family in Their Garden at Argenteuil",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edouard Manet",
+        "artistDisplayBio": "French, Paris 1832–1883 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Manet, Edouard",
+        "artistNationality": "French",
+        "artistBeginDate": "1832",
+        "artistEndDate": "1883",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+        "objectDate": "1874",
+        "objectBeginDate": 1874,
+        "objectEndDate": 1874,
+        "medium": "Oil on canvas",
+        "dimensions": "24 x 39 1/4 in. (61 x 99.7 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 61,
+              "Width": 99.7
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 10.477521,
+              "Height": 85.725174,
+              "Width": 123.507744
+            }
+          }
+        ],
+        "creditLine": "Bequest of Joan Whitney Payson, 1975",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-03-29T10:36:46.263Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436965",
+        "tags": [
+          {
+            "term": "Gardens",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008090",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q1107656"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Family",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300435378",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8436"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19911640",
+        "isTimelineWork": true,
+        "GalleryNumber": "818"
+      },
+      {
+        "objectID": 435968,
+        "isHighlight": false,
+        "accessionNumber": "30.95.272",
+        "accessionYear": "1930",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT225534.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT225534.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161787,
+            "role": "Artist",
+            "name": "Camille Corot",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115390",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q148475",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Environs of Paris",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Camille Corot",
+        "artistDisplayBio": "French, Paris 1796–1875 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Corot, Camille",
+        "artistNationality": "French",
+        "artistBeginDate": "1796",
+        "artistEndDate": "1875",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q148475",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115390",
+        "objectDate": "1860s",
+        "objectBeginDate": 1860,
+        "objectEndDate": 1869,
+        "medium": "Oil on wood",
+        "dimensions": "13 1/2 x 20 1/4 in. (34.3 x 51.4 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 34.3,
+              "Width": 51.4
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 5.715,
+              "Height": 57.7851,
+              "Width": 74.9301
+            }
+          }
+        ],
+        "creditLine": "Theodore M. Davis Collection, Bequest of Theodore M. Davis, 1915",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2023-09-16T04:54:53.55Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/435968",
+        "tags": [
+          {
+            "term": "Paris",
+            "AAT_URL": "http://vocab.getty.edu/page/tgn/7008038",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q90"
+          },
+          {
+            "term": "Roads",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300008217",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q34442"
+          },
+          {
+            "term": "Landscapes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q20168285",
+        "isTimelineWork": false,
+        "GalleryNumber": ""
+      },
+      {
+        "objectID": 435874,
+        "isHighlight": false,
+        "accessionNumber": "1993.400.2",
+        "accessionYear": "1993",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT1943.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1943.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161761,
+            "role": "Artist",
+            "name": "Paul Cézanne",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500004793",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q35548",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The House with the Cracked Walls",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Paul Cézanne",
+        "artistDisplayBio": "French, Aix-en-Provence 1839–1906 Aix-en-Provence",
+        "artistSuffix": "",
+        "artistAlphaSort": "Cézanne, Paul",
+        "artistNationality": "French",
+        "artistBeginDate": "1839",
+        "artistEndDate": "1906",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q35548",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500004793",
+        "objectDate": "1892–94",
+        "objectBeginDate": 1892,
+        "objectEndDate": 1894,
+        "medium": "Oil on canvas",
+        "dimensions": "31 1/2 x 25 1/4 in. (80 x 64.1 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 80,
+              "Width": 64.1
+            }
+          }
+        ],
+        "creditLine": "The Walter H. and Leonore Annenberg Collection, Gift of Walter H. and Leonore Annenberg, 1993, Bequest of Walter H. Annenberg, 2002",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-02-28T04:56:07.323Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/435874",
+        "tags": [
+          {
+            "term": "Houses",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300005433",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3947"
+          },
+          {
+            "term": "Landscapes",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19905318",
+        "isTimelineWork": false,
+        "GalleryNumber": "823"
+      },
+      {
+        "objectID": 438815,
+        "isHighlight": true,
+        "accessionNumber": "07.122",
+        "accessionYear": "1907",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT49.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT49.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162302,
+            "role": "Artist",
+            "name": "Auguste Renoir",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115467",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q39931",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Madame Georges Charpentier (Marguérite-Louise Lemonnier, 1848–1904) and Her Children, Georgette-Berthe (1872–1945) and Paul-Émile-Charles (1875–1895)",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Auguste Renoir",
+        "artistDisplayBio": "French, Limoges 1841–1919 Cagnes-sur-Mer",
+        "artistSuffix": "",
+        "artistAlphaSort": "Renoir, Auguste",
+        "artistNationality": "French",
+        "artistBeginDate": "1841",
+        "artistEndDate": "1919",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q39931",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115467",
+        "objectDate": "1878",
+        "objectBeginDate": 1878,
+        "objectEndDate": 1878,
+        "medium": "Oil on canvas",
+        "dimensions": "60 1/2 x 74 7/8 in. (153.7 x 190.2 cm)",
+        "measurements": [
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 12.700026,
+              "Height": 203.20041,
+              "Width": 237.49048
+            }
+          },
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 190.18288,
+              "Width": 153.6703
+            }
+          }
+        ],
+        "creditLine": "Catharine Lorillard Wolfe Collection, Wolfe Fund, 1907",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-05-16T04:53:54.097Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/438815",
+        "tags": [
+          {
+            "term": "Interiors",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300391239",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q2998430"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Dogs",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300265714",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q144"
+          },
+          {
+            "term": "Boys",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300247598",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3010"
+          },
+          {
+            "term": "Girls",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300247581",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q3031"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q686105",
+        "isTimelineWork": true,
+        "GalleryNumber": "824"
+      },
+      {
+        "objectID": 436139,
+        "isHighlight": false,
+        "accessionNumber": "29.100.34",
+        "accessionYear": "1929",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DT840.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT840.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 161821,
+            "role": "Artist",
+            "name": "Edgar Degas",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500115194",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q46373",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "Dancers Practicing at the Barre",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edgar Degas",
+        "artistDisplayBio": "French, Paris 1834–1917 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Degas, Edgar",
+        "artistNationality": "French",
+        "artistBeginDate": "1834",
+        "artistEndDate": "1917",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q46373",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115194",
+        "objectDate": "1877",
+        "objectBeginDate": 1877,
+        "objectEndDate": 1877,
+        "medium": "Mixed media on canvas",
+        "dimensions": "29 3/4 x 32 in. (75.6 x 81.3 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 75.6,
+              "Width": 81.3
+            }
+          }
+        ],
+        "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-03-16T04:53:42.78Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436139",
+        "tags": [
+          {
+            "term": "Dancing",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300389779",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q43393537"
+          },
+          {
+            "term": "Dancers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025653",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q5716684"
+          },
+          {
+            "term": "Women",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+          },
+          {
+            "term": "Ballet",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300054145",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q41425"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19905112",
+        "isTimelineWork": true,
+        "GalleryNumber": "815"
+      },
+      {
+        "objectID": 436944,
+        "isHighlight": true,
+        "accessionNumber": "49.58.2",
+        "accessionYear": "1949",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/dp130799.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/dp130799.jpg",
+        "additionalImages": [],
+        "constituents": [
+          {
+            "constituentID": 162094,
+            "role": "Artist",
+            "name": "Edouard Manet",
+            "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+            "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+            "gender": ""
+          }
+        ],
+        "department": "European Paintings",
+        "objectName": "Painting",
+        "title": "The Spanish Singer",
+        "culture": "",
+        "period": "",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "Artist",
+        "artistPrefix": "",
+        "artistDisplayName": "Edouard Manet",
+        "artistDisplayBio": "French, Paris 1832–1883 Paris",
+        "artistSuffix": "",
+        "artistAlphaSort": "Manet, Edouard",
+        "artistNationality": "French",
+        "artistBeginDate": "1832",
+        "artistEndDate": "1883",
+        "artistGender": "",
+        "artistWikidata_URL": "https://www.wikidata.org/wiki/Q40599",
+        "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500010363",
+        "objectDate": "1860",
+        "objectBeginDate": 1860,
+        "objectEndDate": 1860,
+        "medium": "Oil on canvas",
+        "dimensions": "58 x 45 in. (147.3 x 114.3 cm)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 147.3,
+              "Width": 114.3
+            }
+          },
+          {
+            "elementName": "Frame",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Depth": 16.51,
+              "Height": 190.5004,
+              "Width": 151.1303
+            }
+          }
+        ],
+        "creditLine": "Gift of William Church Osborn, 1949",
+        "geographyType": "",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "Paintings",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2024-06-05T04:53:47.46Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/436944",
+        "tags": [
+          {
+            "term": "Music",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300435214",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q638"
+          },
+          {
+            "term": "Men",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+          },
+          {
+            "term": "Portraits",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+          },
+          {
+            "term": "Guitars",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300042025",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q6607"
+          },
+          {
+            "term": "Musicians",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025666",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q639669"
+          },
+          {
+            "term": "Singers",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300025684",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q177220"
+          }
+        ],
+        "objectWikidata_URL": "https://www.wikidata.org/wiki/Q2024709",
+        "isTimelineWork": true,
+        "GalleryNumber": "810"
+      }
+    ],
+    "totalResults": 49
+  }
