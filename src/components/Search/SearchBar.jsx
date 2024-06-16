@@ -134,17 +134,16 @@ export default function SearchBar() {
         Search
       </button>
 
-      <SearchFilter
-        filters={filters}
-        onFilterChange={handleFilterChange}
-        onApplyFilters={applyFilters}
-        onClearFilters={clearFilters}
-      />
-
       {isLoading ? (
         <p>Retrieving data...</p>
       ) : results && results.length > 0 ? (
         <div>
+          <SearchFilter
+            filters={filters}
+            onFilterChange={handleFilterChange}
+            onApplyFilters={applyFilters}
+            onClearFilters={clearFilters}
+          />
           <SearchResults results={results} totalResults={totalResults} />
         </div>
       ) : (
