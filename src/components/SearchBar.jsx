@@ -6,7 +6,7 @@ import { combinedFetchedDataToRender, convertCLEData, convertMETData } from "../
 import { ClevelandDataTest } from "../data/testClevelandData.js";
 
 export default function SearchBar() {
-  const [query, setQuery] = useState("vincent+von+gogh");
+  const [query, setQuery] = useState("vincent");
   const [results, setResults] = useState([]);
   const [totalResults, setTotalResults] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -51,15 +51,27 @@ export default function SearchBar() {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch()
+    }
+  }
+
   return (
-    <div className="input-wrapper">
+    <div className="realative w-full text-gray-600">
       <FaSearch id="search-icon" />
       <input
+        type="search"
+        name="search"
         placeholder="Enter Search Text Here"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button 
+        type="submit" 
+        className="absolute right-0 top-0 mt-3 mr-4" 
+        onClick={handleSearch}>Search</button>
 
       {isLoading ? (
         <p>Retrieving data...</p> // Display loading message
