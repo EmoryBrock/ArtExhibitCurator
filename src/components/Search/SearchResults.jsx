@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ArtworkListCard from './ArtworkListCard';
+import ArtworkListCard from '../ArtworkListCard';
 
 export default function SearchResults({ results = [], totalResults = 0 }) { // Destructure props
   console.log('SearchResults props:', { results, totalResults });

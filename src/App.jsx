@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './components/Header'
 import Home from './components/Home'
-import Search from './components/Search'
+import Search from './components/Search/SearchPage'
 import UserProfile from './components/UserProfile'
 import {Route, Routes} from 'react-router-dom'
 
