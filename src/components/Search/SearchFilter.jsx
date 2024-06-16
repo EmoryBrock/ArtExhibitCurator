@@ -40,8 +40,8 @@ export default function SearchFilter({ filters, onFilterChange, onApplyFilters, 
           <option value="desc">Z - A</option>
         </select>
       </label>
-      <button onClick={onApplyFilters}>Filter Results</button>
-      <button onClick={onClearFilters}>Clear Filters</button>
+      <button onClick={onApplyFilters}>Apply filters</button>
+      <button onClick={onClearFilters}>Clear filters</button>
     </div>
   );
 }
