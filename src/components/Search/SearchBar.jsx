@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import { getCLEArtDetailsGeneral, getMETArtDetails, getMETArtID } from "../../api";
+import { getCLEArtDetailsGeneral, getCLEArtDetailsByArtist, getMETArtDetails, getMETArtIDGeneral, getMETArtIDbyArtist, getMETArtIDbyTitle } from "../../api";
 import SearchResults from "./SearchResults";
 import SearchFilter from "./SearchFilter";
 import { combinedFetchedDataToRender, convertCLEData, convertMETData } from "../../utils";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
-  const [initialResults, setInitialResults] = useState([]); // Store initial results
+  const [searchType, setSearchType] = useState("general")
+  const [initialResults, setInitialResults] = useState([]);
   const [results, setResults] = useState([]);
   const [totalResults, setTotalResults] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -21,24 +22,62 @@ export default function SearchBar() {
     sort: "title",
     order: "asc",
   });
-
+  
   const handleSearch = async () => {
     setIsLoading(true);
     try {
       const queryString = query.split(" ").join("+");
-      const queryArtIdsMET = await getMETArtID(queryString);
-      const detailsPromisesMET = queryArtIdsMET.objectIDs
-        .slice(0, 5)
-        .map((id) => getMETArtDetails(id));
-      const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
-      const successfulDetailsMET = detailsResponsesMET
-        .filter((result) => result.status === "fulfilled" && result.value)
-        .map((result) => result.value);
 
-      let configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+      //API calls based on search type
+  let configDataSet1 = []
+  let configDataSet2 = []
 
-      const detailsResponseCLE = await getCLEArtDetailsGeneral(query);
-      let configDataSet2 = convertCLEData(detailsResponseCLE);
+  if (searchType === "general") {
+    const queryArtIdsMET = await getMETArtIDGeneral(queryString);
+    const detailsPromisesMET = queryArtIdsMET.objectIDs
+      .slice(0, 5)
+      .map((id) => getMETArtDetails(id));
+    const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
+    const successfulDetailsMET = detailsResponsesMET
+      .filter((result) => result.status === "fulfilled" && result.value)
+      .map((result) => result.value);
+
+    configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+    const detailsResponseCLE = await getCLEArtDetailsGeneral(query);
+    configDataSet2 = convertCLEData(detailsResponseCLE);
+
+  } else if (searchType === "artist") {
+    const queryArtIdsMET = await getMETArtIDbyArtist(queryString);
+    const detailsPromisesMET = queryArtIdsMET.objectIDs
+      .slice(0, 5)
+      .map((id) => getMETArtDetails(id));
+    const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
+    const successfulDetailsMET = detailsResponsesMET
+      .filter((result) => result.status === "fulfilled" && result.value)
+      .map((result) => result.value);
+      
+
+    configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+    const detailsResponseCLE = await getCLEArtDetailsByArtist(query);
+    configDataSet2 = convertCLEData(detailsResponseCLE);
+
+  } else if (searchType === "title") {
+    // error in fetching CLE API data
+    console.log(query, "if then title searchbar")
+    const queryArtIdsMET = await getMETArtIDbyTitle(queryString);
+    const detailsPromisesMET = queryArtIdsMET.objectIDs
+      .slice(0, 5)
+      .map((id) => getMETArtDetails(id));
+    const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
+    const successfulDetailsMET = detailsResponsesMET
+      .filter((result) => result.status === "fulfilled" && result.value)
+      .map((result) => result.value);
+      
+
+    configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+    const detailsResponseCLE = await getCLEArtDetailsByTitle(query);
+    configDataSet2 = convertCLEData(detailsResponseCLE);
+  }
 
       let dataToRender = combinedFetchedDataToRender(
         configDataSet1,
@@ -49,7 +88,7 @@ export default function SearchBar() {
       setResults(dataToRender);
       setTotalResults(Object.keys(dataToRender).length);
 
-      // Extract unique types and dates from results
+      // Extract unique types and dates from results to populate filter dropdowns
       const allTypes = Array.from(new Set(dataToRender.map(item => item.type)));
       const allDates = Array.from(new Set(dataToRender.map(item => item.date)));
 
@@ -126,6 +165,35 @@ export default function SearchBar() {
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyDown}
       />
+      <div className="radio-buttons">
+      <label>
+          <input
+            type="radio"
+            value="general"
+            checked={searchType === "general"}
+            onChange={(e) => setSearchType(e.target.value)}
+          />
+          General
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="artist"
+            checked={searchType === "artist"}
+            onChange={(e) => setSearchType(e.target.value)}
+          />
+          Artist
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="title"
+            checked={searchType === "title"}
+            onChange={(e) => setSearchType(e.target.value)}
+          />
+          Title
+        </label>
+      </div>
       <button
         type="submit"
         className="absolute right-0 top-0 mt-3 mr-4"
