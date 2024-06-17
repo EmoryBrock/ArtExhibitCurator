@@ -67,6 +67,6 @@ export const combinedFetchedDataToRender = (obj1, obj2) => {
 
   const combinedObj = [].concat(obj1, obj2);
 
-  console.log(combinedObj, "combined obj");
+  // console.log(combinedObj, "combined obj");
   return combinedObj;
 };

@@ -35,7 +35,7 @@ export default function SearchBar() {
   if (searchType === "general") {
     const queryArtIdsMET = await getMETArtIDGeneral(queryString);
     const detailsPromisesMET = queryArtIdsMET.objectIDs
-      .slice(0, 5)
+      .slice(0, 20)
       .map((id) => getMETArtDetails(id));
     const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
     const successfulDetailsMET = detailsResponsesMET
@@ -49,7 +49,7 @@ export default function SearchBar() {
   } else if (searchType === "artist") {
     const queryArtIdsMET = await getMETArtIDbyArtist(queryString);
     const detailsPromisesMET = queryArtIdsMET.objectIDs
-      .slice(0, 5)
+      .slice(0, 20)
       .map((id) => getMETArtDetails(id));
     const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
     const successfulDetailsMET = detailsResponsesMET
@@ -62,11 +62,11 @@ export default function SearchBar() {
     configDataSet2 = convertCLEData(detailsResponseCLE);
 
   } else if (searchType === "title") {
-    // error in fetching CLE API data
-    console.log(query, "if then title searchbar")
+    // error in fetching CLE API data to resolve
+    // console.log(query, "if then title searchbar")
     const queryArtIdsMET = await getMETArtIDbyTitle(queryString);
     const detailsPromisesMET = queryArtIdsMET.objectIDs
-      .slice(0, 5)
+      .slice(0, 20)
       .map((id) => getMETArtDetails(id));
     const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
     const successfulDetailsMET = detailsResponsesMET
@@ -81,7 +81,7 @@ export default function SearchBar() {
 
       let dataToRender = combinedFetchedDataToRender(
         configDataSet1,
-        configDataSet2.slice(0, 10)
+        configDataSet2.slice(0, 20)
       );
 
       setInitialResults(dataToRender); // Save initial results
