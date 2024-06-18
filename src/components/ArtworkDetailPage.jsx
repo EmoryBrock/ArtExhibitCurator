@@ -36,11 +36,19 @@ export default function ArtworkDetailPage() {
         return <div>Loading...</div>;
     }
 
-    console.log(data, "artwork data")
     return (
         <div>
-            <h1>Source ID: {sourceId}</h1>
-            {/* Add more fields to display if necessary */}
+            <h1>{data[0].title}</h1>
+            <img
+                  src={data[0].imageSmall}
+                  alt={data[0].title}
+                  className='w-full h-[200px] object-cover rounded-t lg'
+                />
+            <p>{data[0].artName}</p>
+            <p>{data[0].type}</p>  
+            <p>{data[0].medium}</p>  
+            <p>{data[0].date}</p>
+            <button>Add to collection</button>                
         </div>
     );
 }
