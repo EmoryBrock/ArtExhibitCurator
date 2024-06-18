@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 import ArtworkListCard from '../ArtworkListCard';
 
 export default function SearchResults({ results = [], totalResults = 0 }) { 
@@ -39,8 +40,9 @@ export default function SearchResults({ results = [], totalResults = 0 }) {
                       {result.artistName}
                     </span>
                   </p>
-                  <button>View more
-                  </button>
+                  <Link to={`/artwork/${result.source}${result.id}`} className='button-link'>
+                    View more
+                  </Link>
                   <button>Add to Collection</button>
                 </div>
               </div>

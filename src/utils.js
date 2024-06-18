@@ -1,4 +1,4 @@
-import { getMETAllArtworkIDs } from "./api";
+import { getCLEArtDetailsByID, getMETAllArtworkIDs, getMETArtDetails } from "./api";
 
 export const RandomArtID = async () => {
   const allIDsResponse = await getMETAllArtworkIDs();
@@ -10,63 +10,82 @@ export const RandomArtID = async () => {
   return randomArtID;
 };
 
-export const convertMETData = (METFetchedData) => {
-  let convertedData = [];
+const normalizeToArray = (data) => {
+  return Array.isArray(data) ? data : [data]}
 
-  METFetchedData.forEach((artwork) => {
+const convertArtData = (fetchedData, mapping) => {
+
+  const dataArray = normalizeToArray(fetchedData);
+
+  return dataArray.map((artwork) => {
     let objFormat = {};
 
-    objFormat.id = artwork.objectID;
-    objFormat.title = artwork.title;
-    objFormat.imageSmall = artwork.primaryImageSmall || "default image";
-    objFormat.imageBig = artwork.primaryImage || "default image 2";
-    objFormat.artistName = artwork.artistDisplayName;
-    objFormat.medium = artwork.medium;
-    objFormat.date = artwork.objectDate;
-    objFormat.type = artwork.objectName;
-    objFormat.source = "MET";
+    for (const [key, value] of Object.entries(mapping)) {
+      if (typeof value === "function") {
+        objFormat[key] = value(artwork);
+      } else {
+        objFormat[key] = value;
+      }
+    }
 
-    convertedData.push(objFormat);
+    return objFormat;
   });
+};
 
-  return convertedData;
+
+export const convertMETData = (METFetchedData) => {
+  const mapping = {
+    id: (artwork) => artwork.objectID,
+    title: (artwork) => artwork.title,
+    imageSmall: (artwork) => artwork.primaryImageSmall || "default image",
+    imageBig: (artwork) => artwork.primaryImage || "default image 2",
+    artistName: (artwork) => artwork.artistDisplayName,
+    medium: (artwork) => artwork.medium,
+    date: (artwork) => artwork.objectDate,
+    type: (artwork) => artwork.objectName,
+    source: "MET",
+  };
+
+  return convertArtData(METFetchedData, mapping);
 };
 
 export const convertCLEData = (CLEFetchedData) => {
   const artInfoData = CLEFetchedData.data;
-
-  let convertedData = [];
-
-  artInfoData.forEach((artwork) => {
-    let objFormat = {};
-
-    objFormat.id = artwork.id;
-    objFormat.title = artwork.title;
-    objFormat.imageSmall =
-      artwork.images && artwork.images.web ? artwork.images.web.url : "";
-    objFormat.imageBig =
-      artwork.images && artwork.images.print ? artwork.images.print.url : "";
-    objFormat.artistName =
+  const mapping = {
+    id: (artwork) => artwork.id,
+    title: (artwork) => artwork.title,
+    imageSmall: (artwork) =>
+      artwork.images && artwork.images.web ? artwork.images.web.url : "",
+    imageBig: (artwork) =>
+      artwork.images && artwork.images.print ? artwork.images.print.url : "",
+    artistName: (artwork) =>
       artwork.creators && artwork.creators.length > 0
         ? artwork.creators[0].description
-        : "Unknown Artist";
-    objFormat.medium = artwork.technique;
-    objFormat.date = artwork.creation_date;
-    objFormat.type = artwork.type;
-    objFormat.source = "CLE";
+        : "Unknown Artist",
+    medium: (artwork) => artwork.technique,
+    date: (artwork) => artwork.creation_date,
+    type: (artwork) => artwork.type,
+    source: "CLE",
+  };
 
-    convertedData.push(objFormat);
-  });
-
-  return convertedData;
+  return convertArtData(artInfoData, mapping);
 };
 
 export const combinedFetchedDataToRender = (obj1, obj2) => {
-  // console.log(obj1, "dataset 1 in utils")
-  // console.log(obj2, "dataset 2 in utils")
-
-  const combinedObj = [].concat(obj1, obj2);
-
-  // console.log(combinedObj, "combined obj");
-  return combinedObj;
+  return [...obj1, ...obj2];
 };
+
+export const fetchResultsBySourceAndId = async (source, id) => {
+  let mappedArtData;
+
+  if (source === "MET") {
+    const ArtData = await getMETArtDetails(id);
+    mappedArtData = await convertMETData(ArtData);    
+  } else {
+    const ArtData = await getCLEArtDetailsByID(id);
+    mappedArtData = await convertCLEData(ArtData);
+  }
+
+  return mappedArtData;
+};
+
