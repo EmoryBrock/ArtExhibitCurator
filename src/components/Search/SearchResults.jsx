@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 import ArtworkListCard from '../ArtworkListCard';
 
-export default function SearchResults({ results = [], totalResults = 0 }) { // Destructure props
+export default function SearchResults({ results = [], totalResults = 0 }) { 
   console.log('SearchResults props:', { results, totalResults });
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20;  // Adjust as needed
+  const itemsPerPage = 20;
 
   const totalPages = Math.ceil(totalResults / itemsPerPage);
 
@@ -19,15 +20,34 @@ export default function SearchResults({ results = [], totalResults = 0 }) { // D
   return (
     <div>
       {totalResults > 0 ? (
-        <div>
+        <>
           <p>Your search returned {totalResults} artworks</p>
-          <ul>
-            {currentResults.map(result => (
-              <li key={result.id}>
-                <ArtworkListCard results={result} />
-              </li>
+          <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
+            {currentResults.map((result, index) => (
+              <div
+                key={index}
+                className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'
+              >
+                <img
+                  src={result.imageSmall}
+                  alt={result.title}
+                  className='w-full h-[200px] object-cover rounded-t lg'
+                />
+                <div className='flex justify-between px-2 py-4'>
+                  <p className='font-bold'>{result.title}</p>
+                  <p>
+                    <span className='bg-[#000300] text-white p-1 rounded-full'>
+                      {result.artistName}
+                    </span>
+                  </p>
+                  <Link to={`/artwork/${result.source}${result.id}`} className='button-link'>
+                    View more
+                  </Link>
+                  <button>Add to Collection</button>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
           <div className="pagination-controls">
             {Array.from({ length: totalPages }, (_, index) => (
               <button
@@ -39,7 +59,7 @@ export default function SearchResults({ results = [], totalResults = 0 }) { // D
               </button>
             ))}
           </div>
-        </div>
+        </>
       ) : (
         <></>
       )}
