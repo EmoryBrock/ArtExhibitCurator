@@ -1,40 +1,35 @@
-import React, { useState, useEffect } from 'react'
-import { getMETArtID } from '../api';
+import React from 'react';
 
-export default function ArtworkListCard() {
-    const DataFetcher = () => {
-        const [data, setData] = useState([]);
-        const [loading, setLoading] = useState(true);
-        const [error, setError] = useState(null);
-      
-        useEffect(() => {
-          getMETArtID("vincent+van+gogh")
-            .then(response => {
-              // Limit the data to 10 entries
-              const limitedData = response.data.objectIDs.slice(0, 10);
-              setData(limitedData);
-              setLoading(false);
-            })
-            .catch(error => {
-              setError(error);
-              setLoading(false);
-            });
-        }, []);
-      
-        if (loading) return <p>Loading...</p>;
-        if (error) return <p>Error: {error.message}</p>;
-      
-        console.log(getMETArtID("vincent+van+gogh"), "data fetcher")
+export default function ArtworkListCard({ results }) { // Destructure props
+  const titleHref = results.title ? `/artwork/${results.id}` : "/#";
+  const btnHref = results.id ? `/artwork/${results.id}` : "#";
+  const Button = "View More Details"; // Assuming you want a button with this text
 
-        return (
-          <div>
-            <h1>Data from API</h1>
-            <ul>
-              {data.map(artID=> (
-                <li key={artID.objectIDs}>{artID.objectIDs}</li>
-              ))}
-            </ul>
-          </div>
-        );
-      };
-    }
+  return (
+    <div className="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+      {/* <img src={results.imageSmall} alt="" className="w-full" /> */}
+      <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+        <h3>
+          <a
+            href={titleHref} // link to individual card
+            className="mb-4 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
+          >
+            <p>{results.title}</p>
+            {results.date}
+          </a>
+        </h3>
+        {/* <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
+          {CardDescription}
+        </p> */}
+        {/* {Button && (
+          <a
+            href={btnHref} // link to individual card
+            className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6"
+          >
+            {Button}
+          </a> */}
+        {/* )} */}
+      </div>
+    </div>
+  );
+}
