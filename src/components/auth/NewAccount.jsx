@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signUp, firebase, auth } from "../../firebase";
+import { signUp } from "../../firebase";
 
 export default function NewAccount() {
   const [email, setEmail] = useState("");
@@ -15,7 +15,7 @@ export default function NewAccount() {
 
       const lastPage = localStorage.getItem("lastPage");
 
-      navigate(lastPage || "/sign-in");
+      navigate(lastPage ? lastPage : "/sign-in");
     } catch (error) {
       console.error("Error signing up:", error);
       // Add specific error handling: invalid email, blank email input, or other cases

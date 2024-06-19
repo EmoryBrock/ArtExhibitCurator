@@ -1,9 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile} from "firebase/auth"
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { getFirestore } from "firebase/firestore";
-import 'firebase/auth'
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -21,34 +20,34 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// export const auth = getAuth();
-export const auth = firebase.auth()
+export const auth = getAuth();
+
 // const storage = getStorage();
 export const db = getFirestore(app)
 
-export function signUp(email, password) {
+export const signUp = (email, password) => {
   return createUserWithEmailAndPassword(auth, email, password);
 }
 
-export function logIn(email, password) {
+export const logIn = (email, password) => {
   return signInWithEmailAndPassword(auth, email, password);
 }
 
-export function logOut() {
+export const logOut = () => {
   return signOut(auth);
 }
 
   // To store user avatar
-  export async function upload(file, currentUser, setLoading) {
-    const fileRef = ref(storage, currentUser.uid + '.png');
+  // export async function upload(file, currentUser, setLoading) {
+  //   const fileRef = ref(storage, currentUser.uid + '.png');
   
-    setLoading(true);
+  //   setLoading(true);
     
-    const snapshot = await uploadBytes(fileRef, file);
-    const photoURL = await getDownloadURL(fileRef);
+  //   const snapshot = await uploadBytes(fileRef, file);
+  //   const photoURL = await getDownloadURL(fileRef);
   
-    updateProfile(currentUser, {photoURL});
+  //   updateProfile(currentUser, {photoURL});
     
-    setLoading(false);
-    alert("Uploaded file!");
-  }
+  //   setLoading(false);
+  //   alert("Uploaded file!");
+  // }

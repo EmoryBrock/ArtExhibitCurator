@@ -21,7 +21,7 @@ export default function SingIn() {
 
         const lastPage = localStorage.getItem('lastPage')
 
-        navigate(lastPage || '/')
+        navigate(lastPage ? lastPage : "/")
       } catch (error) {
         console.log(error)
       }

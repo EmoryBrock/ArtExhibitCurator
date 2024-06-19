@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchResultsBySourceAndId } from '../utils';
 import { db } from '../firebase'
-import { doc, setDoc } from 'firebase/firestore'
-import { useAuth } from '../components/auth/AuthContext.jsx' //Disabled for development
+import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore'
+import { useAuth } from '../components/auth/AuthContext.jsx'
 
 export default function ArtworkDetailPage() {
     const { sourceId } = useParams();
