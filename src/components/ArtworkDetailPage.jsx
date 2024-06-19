@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchResultsBySourceAndId } from '../utils';
+import { db } from '../firebase'
+import { doc, setDoc } from 'firebase/firestore'
+import { useAuth } from '../components/auth/AuthContext.jsx' //Disabled for development
 
 export default function ArtworkDetailPage() {
     const { sourceId } = useParams();
+    const { currentUser } = useAuth()
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
 
@@ -28,6 +32,43 @@ export default function ArtworkDetailPage() {
         fetchData();
     }, [sourceId]);
 
+
+    const addToCollection = async () => {
+        if (!currentUser) {
+            console.error("User not logged in");
+            return;
+        }
+
+        const colName = "ArtowrkCollection1"; // Name of Exhibit Collection
+        const artworkData = data[0]; // Assuming you want to add the first item in the data array
+
+        try {
+            const docRef = doc(db, `ArtCollection/${currentUser.email}/${colName}/${artworkData.id}`);
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+                await updateDoc(docRef, artworkData);
+                alert("Artwork updated in collection!");
+            } else {
+                await setDoc(docRef, artworkData);
+                alert("Artwork added to collection!");
+            }
+        } catch (error) {
+            console.error("Error adding/updating artwork to/in collection:", error);
+            alert("Failed to add/update artwork in collection.");
+        }
+    };
+
+    if (error) {
+        return <div>Error: {error.message}</div>;
+    }
+
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+
+
+
     if (error) {
         return <div>Error: {error.message}</div>;
     }
@@ -48,7 +89,7 @@ export default function ArtworkDetailPage() {
             <p>{data[0].type}</p>  
             <p>{data[0].medium}</p>  
             <p>{data[0].date}</p>
-            <button>Add to collection</button>                
+            <button onClick={addToCollection}>Add to collection</button>                
         </div>
     );
 }
