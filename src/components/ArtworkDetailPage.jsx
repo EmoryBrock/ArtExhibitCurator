@@ -35,7 +35,7 @@ export default function ArtworkDetailPage() {
 
     const addToCollection = async () => {
         if (!currentUser) {
-            console.error("User not logged in");
+            alert("You need to be logged in in order to add this artwork");
             return;
         }
 
@@ -47,11 +47,10 @@ export default function ArtworkDetailPage() {
             const docSnap = await getDoc(docRef);
 
             if (docSnap.exists()) {
-                await updateDoc(docRef, artworkData);
-                alert("Artwork updated in collection!");
+                alert(`Artwork already exists in the collection ${colName}`)
             } else {
                 await setDoc(docRef, artworkData);
-                alert("Artwork added to collection!");
+                alert(`Artwork added to collection ${colName}`);
             }
         } catch (error) {
             console.error("Error adding/updating artwork to/in collection:", error);
