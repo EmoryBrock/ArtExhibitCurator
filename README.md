@@ -97,7 +97,7 @@ npm install react-icons --save
 
 _React Router_
 ```
-npm install react-router-dom 
+npm install react-router-dom@latest
 ```
 
 _TailwindCSS_

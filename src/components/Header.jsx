@@ -13,6 +13,9 @@ export default function Header() {
       <div>
         <Link to="/user">Profile</Link>
       </div>
+      <div>
+        <Link to="/sign-in">Sign in</Link>
+      </div>
     </>
   );
 }
