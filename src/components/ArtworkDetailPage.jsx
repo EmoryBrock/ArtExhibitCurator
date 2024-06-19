@@ -39,11 +39,11 @@ export default function ArtworkDetailPage() {
             return;
         }
 
-        const colName = "ArtowrkCollection1"; // Name of Exhibit Collection
+        const colName = "ArtworkCollection1"; // Name of Exhibit Collection
         const artworkData = data[0]; // Assuming you want to add the first item in the data array
 
         try {
-            const docRef = doc(db, `ArtCollection/${currentUser.email}/${colName}/${artworkData.id}`);
+            const docRef = doc(db, `ArtCollection/${currentUser.email}/${colName}/${artworkData.source}${artworkData.id}`);
             const docSnap = await getDoc(docRef);
 
             if (docSnap.exists()) {
