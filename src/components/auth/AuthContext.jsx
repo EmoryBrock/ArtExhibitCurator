@@ -9,11 +9,13 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user);
+            setIsLoggedIn(!!user)
             setLoading(false);
         });
 
@@ -21,7 +23,10 @@ export function AuthProvider({ children }) {
     }, []);
 
     const value = {
-        currentUser
+        currentUser,
+        isLoggedIn,
+        login:() => auth.signInWithEmailAndPassword(email, password),
+        logout: () => auth.signOut()
     };
 
     return (
