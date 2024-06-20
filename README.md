@@ -136,7 +136,9 @@ For a new user, the user will select Sign Up. On this screen, the user will need
 For a returning user, the user will select Sign In. On this screen the user will need to provide their username and password credentials and click on the Click Here to Proceed button.  From here, ArtiQuest will navigate the user to the **Profile** page.
 
 ### Home page
-<!-- On the Home page the user will have the ability to navigate across the entire site using the navigation bar.  Additionally the user can search for artwork by clicking on the *Search*. Below this is a List of artworks with cards showing the following information:
+On the Home page the user will have the ability to navigate across the entire site using the navigation bar.  Additionally the user can search for artwork by clicking on the *Search*. 
+
+<!-- Below this is a List of artworks with cards showing the following information:
 
 <ul>
 <li></li>
@@ -148,12 +150,13 @@ Each card is clickable and will take the user to a page with more information th
 
 To look for a particular artwork, the user can enter a search text into the search bar and choose the type of search - General, Title or Artist. Click "Search" and ArtiQuest will return a list of artworks related to the search terms. The user can click the artwork card to be taken to a page with more information about the artwork.
 
-### Profile
+### My Collection
+This is accessible when a user is logged in. This page contains the users curated collections. (TBC)
 
 <!-- Features and UX will be placed here once project phase is completed-->
 
-### My Collection
-
+### Profile
+This is accessible when a user is logged in. This page contains the user info. (TBC)
 <!-- Features and UX will be placed here once project phase is completed-->
 
 ## Links

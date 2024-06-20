@@ -8,6 +8,7 @@ import ArtworkDetailPage from './components/ArtworkDetailPage'
 import Collection from './components/Collection'
 import SignIn from './components/auth/SignIn'
 import NewAccount from './components/auth/NewAccount'
+import TestPage from './components/TestPage'
 
  function App() {
   return (
@@ -22,6 +23,7 @@ import NewAccount from './components/auth/NewAccount'
           <Route path='/collection' element={<Collection />}/>
           <Route path='/sign-in' element={<SignIn />}/>
           <Route path='/sign-up' element={<NewAccount />}/>
+          <Route path='testpage' element={<TestPage />}/>
         </Routes>
       </main>
     </>

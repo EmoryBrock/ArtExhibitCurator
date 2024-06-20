@@ -1,4 +1,5 @@
 import { getCLEArtDetailsByID, getMETAllArtworkIDs, getMETArtDetails } from "./api";
+import noImagePicture from './assets/img/No-Image-Placeholder.svg'
 
 export const RandomArtID = async () => {
   const allIDsResponse = await getMETAllArtworkIDs();
@@ -37,8 +38,8 @@ export const convertMETData = (METFetchedData) => {
   const mapping = {
     id: (artwork) => artwork.objectID,
     title: (artwork) => artwork.title,
-    imageSmall: (artwork) => artwork.primaryImageSmall || "default image",
-    imageBig: (artwork) => artwork.primaryImage || "default image 2",
+    imageSmall: (artwork) => artwork.primaryImageSmall || {noImagePicture},
+    imageBig: (artwork) => artwork.primaryImage || {noImagePicture},
     artistName: (artwork) => artwork.artistDisplayName,
     medium: (artwork) => artwork.medium,
     date: (artwork) => artwork.objectDate,
@@ -55,9 +56,9 @@ export const convertCLEData = (CLEFetchedData) => {
     id: (artwork) => artwork.id,
     title: (artwork) => artwork.title,
     imageSmall: (artwork) =>
-      artwork.images && artwork.images.web ? artwork.images.web.url : "",
+      artwork.images && artwork.images.web ? artwork.images.web.url : {noImagePicture},
     imageBig: (artwork) =>
-      artwork.images && artwork.images.print ? artwork.images.print.url : "",
+      artwork.images && artwork.images.print ? artwork.images.print.url : {noImagePicture},
     artistName: (artwork) =>
       artwork.creators && artwork.creators.length > 0
         ? artwork.creators[0].description
