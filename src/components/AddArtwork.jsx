@@ -1,27 +1,27 @@
-// AddArtwork.jsx
+import React, { useState } from 'react';
+import useUserCollections from '../hooks/useUserCollections';
 
-import React, { useState } from 'react'
-
-export default function AddArtwork({ addToCollection, handleNewCollection, collections, setSelectedCollection, onClose }) {
-    const [selectedCollection, setSelectedCollectionLocal] = useState('')
+export default function AddArtwork({ addToCollection, handleNewCollection, setSelectedCollection, onClose }) {
+    const [selectedCollectionLocal, setSelectedCollectionLocal] = useState('');
+    const collections = useUserCollections();
 
     const handleSelectChange = (e) => {
-        setSelectedCollectionLocal(e.target.value)
-        setSelectedCollection(e.target.value)
-    }
+        setSelectedCollectionLocal(e.target.value);
+        setSelectedCollection(e.target.value);
+    };
 
     return (
         <div className="overlay">
             <div className="popup">
                 <h2>Add Artwork to Collection</h2>
                 <select
-                    value={selectedCollection}
+                    value={selectedCollectionLocal}
                     onChange={handleSelectChange}
                 >
                     <option value="" disabled>Select a collection</option>
                     {collections.map((collection) => (
-                        <option key={collection} value={collection}>
-                            {collection}
+                        <option key={collection.id} value={collection.id}>
+                            {collection.exhibit_name}
                         </option>
                     ))}
                 </select>
@@ -30,5 +30,5 @@ export default function AddArtwork({ addToCollection, handleNewCollection, colle
                 <button onClick={onClose}>Close</button>
             </div>
         </div>
-    )
+    );
 }
