@@ -77,16 +77,22 @@ export const combinedFetchedDataToRender = (obj1, obj2) => {
 };
 
 export const fetchResultsBySourceAndId = async (source, id) => {
+  console.log(`Fetching art details from source: ${source}, with id: ${id}`);
   let mappedArtData;
 
-  if (source === "MET") {
-    const ArtData = await getMETArtDetails(id);
-    mappedArtData = await convertMETData(ArtData);    
-  } else {
-    const ArtData = await getCLEArtDetailsByID(id);
-    mappedArtData = await convertCLEData(ArtData);
+  try {
+    if (source === "MET") {
+      const ArtData = await getMETArtDetails(id);
+      console.log("MET Art Data:", ArtData);
+      mappedArtData = convertMETData(ArtData);
+    } else {
+      const ArtData = await getCLEArtDetailsByID(id);
+      console.log("CLE Art Data:", ArtData);
+      mappedArtData = convertCLEData(ArtData);
+    }
+  } catch (error) {
+    console.error(`Error fetching art details for source: ${source}, id: ${id}`, error);
   }
 
   return mappedArtData;
 };
-

@@ -2,34 +2,61 @@ import { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { useAuth } from '../components/auth/AuthContext';
+import { fetchResultsBySourceAndId } from '../utils';
 
-export default function useUserCollections () {
-    const { currentUser } = useAuth();
-    const [collections, setCollections] = useState([]);
+export default function useUserCollections() {
+  const { currentUser } = useAuth();
+  const [collections, setCollections] = useState([]);
 
-    useEffect(() => {
-        const getCollections = async () => {
-            try {
-                const ref = collection(db, 'ArtExhibit');
-                const q = query(ref, where('owner', '==', currentUser.email));
-                const querySnapshot = await getDocs(q);
-                
-                const userCollections = querySnapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
+  useEffect(() => {
+    const getCollections = async () => {
+      try {
+        const ref = collection(db, 'ArtExhibit');
+        const q = query(ref, where('owner', '==', currentUser.email));
+        const querySnapshot = await getDocs(q);
 
-                setCollections(userCollections);
-            } catch (error) {
-                console.error("Error fetching collections: ", error);
+        const userCollections = await Promise.all(querySnapshot.docs.map(async (doc) => {
+          const data = doc.data();
+          console.log("Raw data:", data);
+
+          const artworks = await Promise.all(data.artworkIDs.map(async (artworkID) => {
+            console.log(`Processing artworkID: ${artworkID}`);
+
+            // Assuming the source is the first three characters and the rest is the ID
+            let source, id;
+            if (artworkID.startsWith('MET')) {
+              source = 'MET';
+              id = artworkID.substring(3);
+            } else if (artworkID.startsWith('CLE')) {
+              source = 'CLE';
+              id = artworkID.substring(3);
+            } else {
+              console.error(`Invalid artworkID format: ${artworkID}`);
+              return null;
             }
-        };
 
-        if (currentUser && currentUser.email) {
-            getCollections();
-        }
-    }, [currentUser]);
+            console.log(`Fetching details for source: ${source}, id: ${id}`);
+            const artworkDetails = await fetchResultsBySourceAndId(source, id);
+            return artworkDetails[0];  // Assuming fetchResultsBySourceAndId returns an array
+          }));
 
-    return collections;
-};
+          return {
+            id: doc.id,
+            ...data,
+            artworks: artworks.filter(artwork => artwork !== null),  // Filter out any null entries
+          };
+        }));
 
+        setCollections(userCollections);
+      } catch (error) {
+        console.error("Error fetching collections: ", error);
+      }
+    };
+
+    if (currentUser && currentUser.email) {
+      getCollections();
+    }
+  }, [currentUser]);
+
+  return collections;
+}
