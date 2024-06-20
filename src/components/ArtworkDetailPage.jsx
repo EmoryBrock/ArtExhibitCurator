@@ -48,10 +48,9 @@ export default function ArtworkDetailPage() {
             return;
         }
     
-        const artworkID = `${sourceId}`; // Construct the artwork ID
+        const artworkID = `${sourceId}`;
     
         try {
-            // Reference to the selected collection document
             const collectionDocRef = doc(db, `ArtExhibit/${selectedCollection}`);
             const collectionDocSnap = await getDoc(collectionDocRef);
     
@@ -59,16 +58,14 @@ export default function ArtworkDetailPage() {
                 const existingArtworkIDs = collectionDocSnap.data().artworkIDs || [];
     
                 if (existingArtworkIDs.includes(artworkID)) {
-                    alert(`Artwork already exists in the collection`) //Need to refactor to add exhibit_name to alert
+                    alert(`Artwork already exists in the collection`);
                 } else {
                     const updatedArtworkIDs = [...existingArtworkIDs, artworkID];
                     await setDoc(collectionDocRef, { artworkIDs: updatedArtworkIDs }, { merge: true });
-                    alert(`Artwork added to collection`); //Need to refactor to add exhibit_name to alert
+                    alert(`Artwork added to collection`);
                 }
             } else {
-                // If the document does not exist, create it with the new artwork ID
-                await setDoc(collectionDocRef, { artworkIDs: [artworkID] });
-                alert(`Artwork added to collection`); //Need to refactor to add exhibit_name to alert
+                alert("Collection does not exist. Please create it first.");
             }
         } catch (error) {
             console.error("Error adding/updating artwork to/in collection:", error);
@@ -80,11 +77,17 @@ export default function ArtworkDetailPage() {
         const newCollection = prompt("Enter new collection name:");
         if (newCollection) {
             try {
-                const collectionRef = doc(db, `ArtCollection/${currentUser.email}/${newCollection}`);
-                await setDoc(collectionRef, { createdAt: new Date() });
+                const collectionRef = doc(db, `ArtExhibit/${newCollection}`);
+                await setDoc(collectionRef, {
+                    createdAt: new Date(),
+                    exhibit_name: newCollection,
+                    owner: currentUser.email,
+                    artworkIDs: [sourceId],
+                });
 
                 setSelectedCollection(newCollection);
                 setShowOverlay(false);
+                alert(`New collection '${newCollection}' created and artwork added`);
             } catch (error) {
                 console.error("Error creating new collection:", error);
                 alert("Failed to create new collection.");
