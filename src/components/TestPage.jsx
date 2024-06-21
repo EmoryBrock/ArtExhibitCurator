@@ -1,9 +1,18 @@
 import React from "react";
 import useUserCollections from "../hooks/useUserCollections";
+import { removeArtworkFromCollection } from '../utils'; 
 
 export default function TestPage() {
   const collections = useUserCollections();
-  console.log(collections, "fetched data");
+
+  const handleRemoveArtwork = async (collectionId, artworkID) => {
+    try {
+      await removeArtworkFromCollection(collectionId, artworkID);
+      console.log(`Artwork ${artworkID} successfully removed from collection ${collectionId}`);
+    } catch (error) {
+      console.error("Failed to remove artwork:", error);
+    }
+  };
 
   return (
     <div>
@@ -13,8 +22,6 @@ export default function TestPage() {
           <li key={index}>
             <strong>Exhibit Name:</strong> {collection.exhibit_name}
             <br />
-            {/* <strong>Artworks:</strong> {collection.artworkIDs ? collection.artworkIDs.join(", ") : "No artworks available"}
-            <br /> */}
             <ul>
               {Array.isArray(collection.artworks) ? (
                 collection.artworks.map((artwork, artworkIndex) => (
@@ -24,6 +31,7 @@ export default function TestPage() {
                     <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
                     <br />
                     <img src={artwork.imageSmall} alt={artwork.title} />
+                    <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}:${artwork.id}`)}>Remove</button>
                   </li>
                 ))
               ) : (

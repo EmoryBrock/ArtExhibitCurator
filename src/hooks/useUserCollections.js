@@ -17,12 +17,10 @@ export default function useUserCollections() {
 
         const userCollections = await Promise.all(querySnapshot.docs.map(async (doc) => {
           const data = doc.data();
-          console.log("Raw data:", data);
 
           const artworks = await Promise.all(data.artworkIDs.map(async (artworkID) => {
-            console.log(`Processing artworkID: ${artworkID}`);
 
-            // Assuming the source is the first three characters and the rest is the ID
+            // Parsing out sourceID for proper API call routing
             let source, id;
             if (artworkID.startsWith('MET')) {
               source = 'MET';
@@ -35,15 +33,15 @@ export default function useUserCollections() {
               return null;
             }
 
-            console.log(`Fetching details for source: ${source}, id: ${id}`);
+            // console.log(`Fetching details for source: ${source}, id: ${id}`);
             const artworkDetails = await fetchResultsBySourceAndId(source, id);
-            return artworkDetails[0];  // Assuming fetchResultsBySourceAndId returns an array
+            return artworkDetails[0]; 
           }));
 
           return {
             id: doc.id,
             ...data,
-            artworks: artworks.filter(artwork => artwork !== null),  // Filter out any null entries
+            artworks: artworks.filter(artwork => artwork !== null),
           };
         }));
 
