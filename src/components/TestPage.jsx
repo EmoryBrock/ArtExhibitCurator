@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import useUserCollections from "../hooks/useUserCollections";
 import { removeArtworkFromCollection } from '../utils'; 
 
 export default function TestPage() {
-  const collections = useUserCollections();
+  const initialCollections = useUserCollections();
+  const [collections, setCollections] = useState(initialCollections);
+
+  useEffect(() => {
+    setCollections(initialCollections);
+  }, [initialCollections]);
 
   const handleRemoveArtwork = async (collectionId, artworkID) => {
     try {
       await removeArtworkFromCollection(collectionId, artworkID);
       console.log(`Artwork ${artworkID} successfully removed from collection ${collectionId}`);
+      
+      // Update the state to trigger a re-render
+      setCollections(prevCollections => 
+        prevCollections.map(collection => 
+          collection.id === collectionId 
+            ? { ...collection, artworks: collection.artworks.filter(artwork => `${artwork.source}${artwork.id}` !== artworkID) }
+            : collection
+        )
+      );
     } catch (error) {
       console.error("Failed to remove artwork:", error);
     }
@@ -31,7 +45,7 @@ export default function TestPage() {
                     <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
                     <br />
                     <img src={artwork.imageSmall} alt={artwork.title} />
-                    <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}:${artwork.id}`)}>Remove</button>
+                    <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>
                   </li>
                 ))
               ) : (

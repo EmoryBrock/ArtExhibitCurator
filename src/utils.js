@@ -1,7 +1,7 @@
 import { getCLEArtDetailsByID, getMETAllArtworkIDs, getMETArtDetails } from "./api";
 import noImagePicture from './assets/img/No-Image-Placeholder.svg'
 import { db } from './firebase';
-import { doc, updateDoc, arrayRemove } from 'firebase/firestore'
+import { doc, getDoc, updateDoc, arrayRemove, arrayUnion } from 'firebase/firestore'
 
 export const RandomArtID = async () => {
   const allIDsResponse = await getMETAllArtworkIDs();
@@ -99,11 +99,46 @@ export const fetchResultsBySourceAndId = async (source, id) => {
 
 export const removeArtworkFromCollection = async (collectionId, artworkID) => {
   try {
+    // Document in Firestore
     const collectionRef = doc(db, 'ArtExhibit', collectionId);
-    await updateDoc(collectionRef, {
-      artworkIDs: arrayRemove(artworkID)
-    });
-    console.log(`Artwork ${artworkID} removed from collection ${collectionId}`);
+    // console.log(`Document reference: ${collectionRef.path}`);
+    // console.log(artworkID, "ID to be removed")
+
+    // Retrieve the current document data
+    const docSnapshot = await getDoc(collectionRef);
+    if (docSnapshot.exists()) {
+      const data = docSnapshot.data();
+      const currentArtworkIDs = data.artworkIDs || [];
+      console.log("Current artworkIDs:", currentArtworkIDs);
+
+      // Error-> if artworkID exists in the array
+      if (!currentArtworkIDs.includes(artworkID)) {
+        console.log(`Artwork ID ${artworkID} not found in the collection.`);
+        return;
+      }
+
+      // Create a new array with the selected artworkID removed [look to refactor]
+      const updatedArtworkIDs = currentArtworkIDs.filter(id => id !== artworkID);
+      // console.log("Updated artworkIDs:", updatedArtworkIDs);
+
+      // Update the document with the new array
+      await updateDoc(collectionRef, {
+        artworkIDs: updatedArtworkIDs
+      });
+
+      // Verify the update - for development testing
+      // const verifyDocSnapshot = await getDoc(collectionRef);
+      // if (verifyDocSnapshot.exists()) {
+      //   const verifyData = verifyDocSnapshot.data();
+      //   console.log("Verified artworkIDs after update:", verifyData.artworkIDs);
+      // } else {
+      //   console.log("Document does not exist after update.");
+      // }
+
+      console.log(`Artwork ${artworkID} removed from collection ${collectionId}`);
+    } else {
+      console.log("Document does not exist.");
+    }
   } catch (error) {
     console.error("Error removing artwork:", error);
     throw error; // Optionally rethrow or handle the error as needed
