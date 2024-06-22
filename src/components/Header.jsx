@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../components/auth/AuthContext";
 
 export default function Header() {
-  const { isLoggedIn, logout } = useAuth();
+  const { isLoggedIn, logout, currentUser } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -22,7 +22,7 @@ export default function Header() {
       {isLoggedIn ? (
         <>
           <div>
-            <Link to="/collection">My Collection</Link>
+              <Link to={`/collection/${currentUser.displayName}`}>My Exhibits</Link>
           </div>
           <div>
             <Link to="/user">Profile</Link>
