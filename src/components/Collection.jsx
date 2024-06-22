@@ -1,42 +1,84 @@
-import React, { useEffect, useState } from 'react'
-import {db} from '../firebase'
-import { getDocs, collection } from 'firebase/firestore'
+import React, { useState, useEffect } from "react";
+import useUserCollections from "../hooks/useUserCollections";
+import { removeArtworkFromCollection } from '../utils'; 
+import { Link, useParams } from "react-router-dom";
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../firebase";
+import { useAuth } from '../components/auth/AuthContext';
 
 export default function Collection() {
-  const [artCollection, setArtCollection] = useState([])
-
-  const artCollectionRef = collection(db, "ArtCollection")
+  const { collectionOwner } = useParams();
+  const initialCollections = useUserCollections(collectionOwner);
+  const [collections, setCollections] = useState(initialCollections);
+  const { currentUser } = useAuth();
 
   useEffect(() => {
-    const getArtCollection = async () => {
+    const sortedCollections = [...initialCollections].sort((a, b) => 
+      a.exhibit_name.localeCompare(b.exhibit_name)
+    );
+    setCollections(sortedCollections);
+  }, [initialCollections]);
 
-      try {
-      const data = await getDocs(artCollectionRef)
-      const filteredData = data.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }))
-      console.log(filteredData, "data returned from firebase")
-      setArtCollection(filteredData)
-      } catch (err) {
-        console.error(err)
-      }
+  const handleRemoveExhibit = async (id) => {
+    const exhibitDoc = doc(db, "ArtExhibit", id);
+    await deleteDoc(exhibitDoc);
+
+    setCollections(prevCollections => 
+      prevCollections.filter(collection => collection.id !== id)
+    );
+  };
+
+  const handleRemoveArtwork = async (collectionId, artworkID) => {
+    try {
+      await removeArtworkFromCollection(collectionId, artworkID);
+      console.log(`Artwork ${artworkID} successfully removed from collection ${collectionId}`);
+      
+      setCollections(prevCollections => 
+        prevCollections.map(collection => 
+          collection.id === collectionId 
+            ? { ...collection, artworks: collection.artworks.filter(artwork => `${artwork.source}${artwork.id}` !== artworkID) }
+            : collection
+        )
+      );
+    } catch (error) {
+      console.error("Failed to remove artwork:", error);
     }
+  };
 
-    getArtCollection()
-  }, [])
-
+  const canEdit = currentUser?.displayName === collectionOwner;
+  const isCollectionOwner = currentUser?.displayName === collectionOwner
+  const pageTitle = isCollectionOwner ? "My Art Exhibits" : <span>Art Exhibits curated by <strong>{collectionOwner}</strong></span>
 
   return (
-    <>
-      <div>Collection</div>
-      <div>
-        {artCollection.map((collection) => (
-          <div key={collection.id}>
-            <h1>{collection.colName}</h1>
-          </div>
+    <div>
+      <h1>{pageTitle}</h1>
+      <ul>
+        {collections.map((collection, index) => (
+          <li key={index}>
+            <strong>Exhibit Name:</strong> {collection.exhibit_name} 
+            {canEdit && <button onClick={() => handleRemoveExhibit(collection.id)}>Remove Exhibit</button>}
+            <br />
+            <ul>
+              {Array.isArray(collection.artworks) && collection.artworks.length > 0 ? (
+                collection.artworks.map((artwork, artworkIndex) => (
+                  <li key={artworkIndex}>
+                    <strong>Title:</strong> {artwork.title}
+                    <br />
+                    <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
+                    <br />
+                    <Link to={`/artwork/${artwork.source}${artwork.id}`}>
+                      <img src={artwork.imageSmall} alt={artwork.title} />
+                    </Link>
+                    {canEdit && <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>}
+                  </li>
+                ))
+              ) : (
+                <li>No artworks available</li>
+              )}
+            </ul>
+          </li>
         ))}
-      </div>
-    </>
-  )
+      </ul>
+    </div>
+  );
 }

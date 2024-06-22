@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react"
-import useUserCollections from "../hooks/useUserCollections"
-import { removeArtworkFromCollection } from '../utils' 
-import { Link } from "react-router-dom"
-import { doc, deleteDoc } from "firebase/firestore"
-import { db } from "../firebase"
-import { useAuth } from '../components/auth/AuthContext'
+import React, { useState, useEffect } from "react";
+import useUserCollections from "../hooks/useUserCollections";
+import { removeArtworkFromCollection } from '../utils'; 
+import { Link, useParams } from "react-router-dom";
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../firebase";
+import { useAuth } from '../components/auth/AuthContext';
 
 export default function TestPage() {
-  const initialCollections = useUserCollections()
-  const [collections, setCollections] = useState(initialCollections)
-  const { currentUser } = useAuth()
-  console.log(currentUser.email, "current email" )
-  console.log(currentUser.displayName, "current user info from Auth");
+  const { collectionOwner } = useParams();
+  const initialCollections = useUserCollections(collectionOwner);
+  const [collections, setCollections] = useState(initialCollections);
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     const sortedCollections = [...initialCollections].sort((a, b) => 
@@ -21,22 +20,19 @@ export default function TestPage() {
   }, [initialCollections]);
 
   const handleRemoveExhibit = async (id) => {
-    console.log(id, "input arg collection id")
-    const exhibitDoc = doc(db, "ArtExhibit", id)
-    await deleteDoc(exhibitDoc)
+    const exhibitDoc = doc(db, "ArtExhibit", id);
+    await deleteDoc(exhibitDoc);
 
-     // Update the state to trigger a re-render
+    // Update the state to trigger a re-render
     setCollections(prevCollections => 
       prevCollections.filter(collection => collection.id !== id)
-    )
-  }
-  
-
+    );
+  };
 
   const handleRemoveArtwork = async (collectionId, artworkID) => {
     try {
-      await removeArtworkFromCollection(collectionId, artworkID)
-      console.log(`Artwork ${artworkID} successfully removed from collection ${collectionId}`)
+      await removeArtworkFromCollection(collectionId, artworkID);
+      console.log(`Artwork ${artworkID} successfully removed from collection ${collectionId}`);
       
       // Update the state to trigger a re-render
       setCollections(prevCollections => 
@@ -45,20 +41,24 @@ export default function TestPage() {
             ? { ...collection, artworks: collection.artworks.filter(artwork => `${artwork.source}${artwork.id}` !== artworkID) }
             : collection
         )
-      )
+      );
     } catch (error) {
-      console.error("Failed to remove artwork:", error)
+      console.error("Failed to remove artwork:", error);
     }
-  }
+  };
+
+  const canEdit = currentUser?.displayName === collectionOwner;
+  const isCollectionOwner = currentUser?.displayName === collectionOwner
+  const pageTitle = isCollectionOwner ? "My Art Exhibits" : <span>Art Exhibits curated by <strong>{collectionOwner}</strong></span>
 
   return (
     <div>
-      <p> this is my {currentUser.displayName}</p>
-      <h1>Test Page My Collection draft</h1>
+      <h1>{pageTitle}</h1>
       <ul>
         {collections.map((collection, index) => (
           <li key={index}>
-            <strong>Exhibit Name:</strong> {collection.exhibit_name} <button onClick={() => handleRemoveExhibit(collection.id)}>Remove Exhibit</button>
+            <strong>Exhibit Name:</strong> {collection.exhibit_name} 
+            {canEdit && <button onClick={() => handleRemoveExhibit(collection.id)}>Remove Exhibit</button>}
             <br />
             <ul>
               {Array.isArray(collection.artworks) && collection.artworks.length > 0 ? (
@@ -69,10 +69,9 @@ export default function TestPage() {
                     <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
                     <br />
                     <Link to={`/artwork/${artwork.source}${artwork.id}`}>
-                    
-                    <img src={artwork.imageSmall} alt={artwork.title} />
-                  </Link>
-                    <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>
+                      <img src={artwork.imageSmall} alt={artwork.title} />
+                    </Link>
+                    {canEdit && <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>}
                   </li>
                 ))
               ) : (
@@ -83,5 +82,5 @@ export default function TestPage() {
         ))}
       </ul>
     </div>
-  )
+  );
 }

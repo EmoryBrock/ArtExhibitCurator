@@ -1,18 +1,16 @@
 import { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { useAuth } from '../components/auth/AuthContext';
 import { fetchResultsBySourceAndId } from '../utils';
 
-export default function useUserCollections() {
-  const { currentUser } = useAuth();
+export default function useUserCollections(collectionOwner) {
   const [collections, setCollections] = useState([]);
 
   useEffect(() => {
     const getCollections = async () => {
       try {
         const ref = collection(db, 'ArtExhibit');
-        const q = query(ref, where('owner', '==', currentUser.email));
+        const q = query(ref, where('owner', '==', collectionOwner));
         const querySnapshot = await getDocs(q);
 
         const userCollections = await Promise.all(querySnapshot.docs.map(async (doc) => {
@@ -33,7 +31,7 @@ export default function useUserCollections() {
               return null;
             }
 
-            // console.log(`Fetching details for source: ${source}, id: ${id}`);
+            // Fetching artwork details
             const artworkDetails = await fetchResultsBySourceAndId(source, id);
             return artworkDetails[0]; 
           }));
@@ -51,10 +49,10 @@ export default function useUserCollections() {
       }
     };
 
-    if (currentUser && currentUser.email) {
+    if (collectionOwner) {
       getCollections();
     }
-  }, [currentUser]);
+  }, [collectionOwner]);
 
   return collections;
 }

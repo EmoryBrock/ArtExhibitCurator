@@ -20,10 +20,11 @@ import TestPage from './components/TestPage'
           <Route path='/search' element={<Search />} />
           <Route path='/user' element={<UserProfile />} />
           <Route path='/artwork/:sourceId' element={<ArtworkDetailPage />}/>
-          <Route path='/collection' element={<Collection />}/>
+          <Route path='/collection/:collectionOwner' element={<Collection />}/>
           <Route path='/sign-in' element={<SignIn />}/>
           <Route path='/sign-up' element={<NewAccount />}/>
           <Route path='testpage' element={<TestPage />}/>
+          <Route path='testpage/:collectionOwner' element={<TestPage />}/>
         </Routes>
       </main>
     </>
