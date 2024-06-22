@@ -1,20 +1,38 @@
-import React, { useState, useEffect } from "react";
-import useUserCollections from "../hooks/useUserCollections";
-import { removeArtworkFromCollection } from '../utils'; 
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react"
+import useUserCollections from "../hooks/useUserCollections"
+import { removeArtworkFromCollection } from '../utils' 
+import { Link } from "react-router-dom"
+import { doc, deleteDoc } from "firebase/firestore"
+import { db } from "../firebase"
 
 export default function TestPage() {
-  const initialCollections = useUserCollections();
-  const [collections, setCollections] = useState(initialCollections);
+  const initialCollections = useUserCollections()
+  const [collections, setCollections] = useState(initialCollections)
 
   useEffect(() => {
-    setCollections(initialCollections);
+    const sortedCollections = [...initialCollections].sort((a, b) => 
+      a.exhibit_name.localeCompare(b.exhibit_name)
+    );
+    setCollections(sortedCollections);
   }, [initialCollections]);
+
+  const handleRemoveExhibit = async (id) => {
+    console.log(id, "input arg collection id")
+    const exhibitDoc = doc(db, "ArtExhibit", id)
+    await deleteDoc(exhibitDoc)
+
+     // Update the state to trigger a re-render
+    setCollections(prevCollections => 
+      prevCollections.filter(collection => collection.id !== id)
+    )
+  }
+  
+
 
   const handleRemoveArtwork = async (collectionId, artworkID) => {
     try {
-      await removeArtworkFromCollection(collectionId, artworkID);
-      console.log(`Artwork ${artworkID} successfully removed from collection ${collectionId}`);
+      await removeArtworkFromCollection(collectionId, artworkID)
+      console.log(`Artwork ${artworkID} successfully removed from collection ${collectionId}`)
       
       // Update the state to trigger a re-render
       setCollections(prevCollections => 
@@ -23,11 +41,11 @@ export default function TestPage() {
             ? { ...collection, artworks: collection.artworks.filter(artwork => `${artwork.source}${artwork.id}` !== artworkID) }
             : collection
         )
-      );
+      )
     } catch (error) {
-      console.error("Failed to remove artwork:", error);
+      console.error("Failed to remove artwork:", error)
     }
-  };
+  }
 
   return (
     <div>
@@ -35,10 +53,10 @@ export default function TestPage() {
       <ul>
         {collections.map((collection, index) => (
           <li key={index}>
-            <strong>Exhibit Name:</strong> {collection.exhibit_name}
+            <strong>Exhibit Name:</strong> {collection.exhibit_name} <button onClick={() => handleRemoveExhibit(collection.id)}>Remove Exhibit</button>
             <br />
             <ul>
-              {Array.isArray(collection.artworks) ? (
+              {Array.isArray(collection.artworks) && collection.artworks.length > 0 ? (
                 collection.artworks.map((artwork, artworkIndex) => (
                   <li key={artworkIndex}>
                     <strong>Title:</strong> {artwork.title}
@@ -60,5 +78,5 @@ export default function TestPage() {
         ))}
       </ul>
     </div>
-  );
+  )
 }

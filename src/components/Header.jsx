@@ -22,7 +22,7 @@ export default function Header() {
       {isLoggedIn ? (
         <>
           <div>
-            <Link to="/my-collection">My Collection</Link>
+            <Link to="/collection">My Collection</Link>
           </div>
           <div>
             <Link to="/user">Profile</Link>
