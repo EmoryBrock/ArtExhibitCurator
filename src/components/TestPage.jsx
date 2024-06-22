@@ -4,10 +4,14 @@ import { removeArtworkFromCollection } from '../utils'
 import { Link } from "react-router-dom"
 import { doc, deleteDoc } from "firebase/firestore"
 import { db } from "../firebase"
+import { useAuth } from '../components/auth/AuthContext'
 
 export default function TestPage() {
   const initialCollections = useUserCollections()
   const [collections, setCollections] = useState(initialCollections)
+  const { currentUser } = useAuth()
+  console.log(currentUser.email, "current email" )
+  console.log(currentUser.displayName, "current user info from Auth");
 
   useEffect(() => {
     const sortedCollections = [...initialCollections].sort((a, b) => 
@@ -49,6 +53,7 @@ export default function TestPage() {
 
   return (
     <div>
+      <p> this is my {currentUser.displayName}</p>
       <h1>Test Page My Collection draft</h1>
       <ul>
         {collections.map((collection, index) => (

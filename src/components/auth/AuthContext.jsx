@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { auth } from '../../firebase';
+import { auth, signUp } from '../../firebase';
+import { updateProfile } from 'firebase/auth';
 
 const AuthContext = React.createContext();
 
@@ -15,7 +16,7 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user);
-            setIsLoggedIn(!!user);  // Set isLoggedIn based on user state
+            setIsLoggedIn(!!user);
             setLoading(false);
         });
 
@@ -24,10 +25,25 @@ export function AuthProvider({ children }) {
 
     const login = (email, password) => auth.signInWithEmailAndPassword(email, password);
 
+    const signup = async (email, password, username) => {
+        try {
+            const userCredential = await signUp(email, password, username);
+            await updateProfile(auth.currentUser, {
+                displayName: username,
+            });
+            setCurrentUser(userCredential.user);
+            setIsLoggedIn(true);
+            return userCredential.user; // Ensure to return the user object
+        } catch (error) {
+            console.error("Error signing up:", error);
+            throw error; // Re-throw the error to be handled by the caller
+        }
+    };
+
     const logout = () => {
         auth.signOut().then(() => {
             setCurrentUser(null);
-            setIsLoggedIn(false);  // Update isLoggedIn state
+            setIsLoggedIn(false);
         }).catch((error) => {
             console.error("Error signing out: ", error);
         });
@@ -37,6 +53,7 @@ export function AuthProvider({ children }) {
         currentUser,
         isLoggedIn,
         login,
+        signup,
         logout
     };
 

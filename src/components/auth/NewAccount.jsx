@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { signUp } from "../../firebase";
 
 export default function NewAccount() {
+  const [username, setUsername] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export default function NewAccount() {
   const newUserAccount = async (e) => {
     e.preventDefault();
     try {
-      const userCredential = await signUp(email, password);
+      const userCredential = await signUp(email, password, username);
       console.log(userCredential, "register page");
 
       const lastPage = localStorage.getItem("lastPage");
@@ -27,11 +28,18 @@ export default function NewAccount() {
       <form onSubmit={newUserAccount}>
         <h2>Create New Account</h2>
         <input
+          type="text"
+          placeholder="Enter your username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
+        <input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required // Ensures email input is required
+          required
         />
         <input
           type="password"
