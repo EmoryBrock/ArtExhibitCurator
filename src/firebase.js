@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile} from "firebase/auth"
-import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,19 +23,41 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 export const db = getFirestore(app)
 
+// Unique Username check in db
+export const checkUsernameExists = async (username) => {
+  const usersRef = doc(db, "users", username);
+  const docSnap = await getDoc(usersRef);
+  return docSnap.exists();
+}
+
 export const signUp = async (email, password, username) => {
-  const userCredential = await createUserWithEmailAndPassword(auth, email, password, username)
-  await updateProfile(auth.currentUser, {displayName:username})
+  try {
+    // Check if username is taken
+    const isUsernameTaken = await checkUsernameExists(username);
+    if (isUsernameTaken) {
+      throw new Error("Username already exists, please use a different username.");
+    }
 
-  await setDoc(doc(db, "users", email),{
-    email: email,
-    username: username,
-    password: password,
-    avatar: null
-  });
+    if (username === "undefined") {
+      throw new Error("Please enter a username")
+    }
 
+    // Proceed with account create
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    await updateProfile(auth.currentUser, { displayName: username });
 
-  return userCredential
+    // Store data to user collection
+    await setDoc(doc(db, "users", username), {
+      email: email,
+      username: username,
+      password: password,
+      avatar: null
+    });
+
+    return userCredential;
+  } catch (error) {
+    throw error
+  }
 }
 
 export const logIn = (email, password) => {
