@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useUserCollections from "../hooks/useUserCollections";
 import { removeArtworkFromCollection } from '../utils'; 
+import { Link } from "react-router-dom";
 
 export default function TestPage() {
   const initialCollections = useUserCollections();
@@ -44,7 +45,10 @@ export default function TestPage() {
                     <br />
                     <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
                     <br />
+                    <Link to={`/artwork/${artwork.source}${artwork.id}`}>
+                    
                     <img src={artwork.imageSmall} alt={artwork.title} />
+                  </Link>
                     <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>
                   </li>
                 ))
