@@ -3,35 +3,49 @@ import { useNavigate } from "react-router-dom";
 import { signUp } from "../../firebase";
 
 export default function NewAccount() {
+  const [username, setUsername] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null)
   const navigate = useNavigate();
 
   const newUserAccount = async (e) => {
     e.preventDefault();
+    
+    if (!username) {
+      setError("Username is blank. Please provide a username.")
+      return
+    }
+
+
     try {
-      const userCredential = await signUp(email, password);
-      console.log(userCredential, "register page");
-
+      const userCredential = await signUp(email, password, username);
       const lastPage = localStorage.getItem("lastPage");
-
       navigate(lastPage ? lastPage : "/sign-in");
     } catch (error) {
-      console.error("Error signing up:", error);
-      // Add specific error handling: invalid email, blank email input, or other cases
+      alert(`${error}`);
+      setError(error.message || "Failed to sign up.");
     }
-  };
+  }
 
   return (
     <div className="sign-up--container">
       <form onSubmit={newUserAccount}>
         <h2>Create New Account</h2>
+        {error && <p className="error-message">{error}</p>}
+        <input
+          type="text"
+          placeholder="Enter your username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
         <input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required // Ensures email input is required
+          required
         />
         <input
           type="password"

@@ -43,7 +43,7 @@ export default function SearchResults({ results = [], totalResults = 0 }) {
                   <Link to={`/artwork/${result.source}${result.id}`} className='button-link'>
                     View more
                   </Link>
-                  <button>Add to Collection</button>
+                  {/* <button>Add to Collection</button> */}
                 </div>
               </div>
             ))}

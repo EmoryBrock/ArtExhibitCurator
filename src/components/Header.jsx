@@ -1,9 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {useAuth} from "../components/auth/AuthContext"
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../components/auth/AuthContext";
 
 export default function Header() {
-  const {isLoggedIn} = useAuth()
+  const { isLoggedIn, logout, currentUser } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
 
   return (
     <>
@@ -16,22 +22,24 @@ export default function Header() {
       {isLoggedIn ? (
         <>
           <div>
-            <Link to="/my-colllection">My Collection</Link>
+              <Link to={`/collection/${currentUser.displayName}`}>My Exhibits</Link>
           </div>
           <div>
-            <Link to="/sign-out">Sign Out</Link>
+            <Link to="/user">Profile</Link>
+          </div>
+          <div>
+            <a href="#" onClick={handleLogout}>
+              Sign Out
+            </a>
           </div>
         </>
       ) : (
         <>
-      <div>
-        <Link to="/user">Profile</Link>
-      </div>
-      <div>
-        <Link to="/sign-in">Sign in</Link>
-      </div>
+          <div>
+            <Link to="/sign-in">Sign In</Link>
+          </div>
+        </>
+      )}
     </>
-  )}
-  </>
-  )
+  );
 }

@@ -1,4 +1,7 @@
 import { getCLEArtDetailsByID, getMETAllArtworkIDs, getMETArtDetails } from "./api";
+import noImagePicture from './assets/img/No-Image-Placeholder.svg'
+import { db } from './firebase';
+import { doc, getDoc, updateDoc, arrayRemove, arrayUnion } from 'firebase/firestore'
 
 export const RandomArtID = async () => {
   const allIDsResponse = await getMETAllArtworkIDs();
@@ -37,8 +40,8 @@ export const convertMETData = (METFetchedData) => {
   const mapping = {
     id: (artwork) => artwork.objectID,
     title: (artwork) => artwork.title,
-    imageSmall: (artwork) => artwork.primaryImageSmall || "default image",
-    imageBig: (artwork) => artwork.primaryImage || "default image 2",
+    imageSmall: (artwork) => artwork.primaryImageSmall || noImagePicture,
+    imageBig: (artwork) => artwork.primaryImage || noImagePicture,
     artistName: (artwork) => artwork.artistDisplayName,
     medium: (artwork) => artwork.medium,
     date: (artwork) => artwork.objectDate,
@@ -55,9 +58,9 @@ export const convertCLEData = (CLEFetchedData) => {
     id: (artwork) => artwork.id,
     title: (artwork) => artwork.title,
     imageSmall: (artwork) =>
-      artwork.images && artwork.images.web ? artwork.images.web.url : "",
+      artwork.images && artwork.images.web ? artwork.images.web.url : noImagePicture,
     imageBig: (artwork) =>
-      artwork.images && artwork.images.print ? artwork.images.print.url : "",
+      artwork.images && artwork.images.print ? artwork.images.print.url : noImagePicture,
     artistName: (artwork) =>
       artwork.creators && artwork.creators.length > 0
         ? artwork.creators[0].description
@@ -76,16 +79,68 @@ export const combinedFetchedDataToRender = (obj1, obj2) => {
 };
 
 export const fetchResultsBySourceAndId = async (source, id) => {
+  // console.log(`Fetching art details from source: ${source}, with id: ${id}`);
   let mappedArtData;
 
-  if (source === "MET") {
-    const ArtData = await getMETArtDetails(id);
-    mappedArtData = await convertMETData(ArtData);    
-  } else {
-    const ArtData = await getCLEArtDetailsByID(id);
-    mappedArtData = await convertCLEData(ArtData);
+  try {
+    if (source === "MET") {
+      const ArtData = await getMETArtDetails(id);
+      mappedArtData = convertMETData(ArtData);
+    } else {
+      const ArtData = await getCLEArtDetailsByID(id);
+      mappedArtData = convertCLEData(ArtData);
+    }
+  } catch (error) {
+    console.error(`Error fetching art details for source: ${source}, id: ${id}`, error);
   }
 
   return mappedArtData;
 };
 
+export const removeArtworkFromCollection = async (collectionId, artworkID) => {
+  try {
+    // Document in Firestore
+    const collectionRef = doc(db, 'ArtExhibit', collectionId);
+    // console.log(`Document reference: ${collectionRef.path}`);
+    // console.log(artworkID, "ID to be removed")
+
+    // Retrieve the current document data
+    const docSnapshot = await getDoc(collectionRef);
+    if (docSnapshot.exists()) {
+      const data = docSnapshot.data();
+      const currentArtworkIDs = data.artworkIDs || [];
+      console.log("Current artworkIDs:", currentArtworkIDs);
+
+      // Error-> if artworkID exists in the array
+      if (!currentArtworkIDs.includes(artworkID)) {
+        console.log(`Artwork ID ${artworkID} not found in the collection.`);
+        return;
+      }
+
+      // Create a new array with the selected artworkID removed [look to refactor]
+      const updatedArtworkIDs = currentArtworkIDs.filter(id => id !== artworkID);
+      // console.log("Updated artworkIDs:", updatedArtworkIDs);
+
+      // Update the document with the new array
+      await updateDoc(collectionRef, {
+        artworkIDs: updatedArtworkIDs
+      });
+
+      // Verify the update - for development testing
+      // const verifyDocSnapshot = await getDoc(collectionRef);
+      // if (verifyDocSnapshot.exists()) {
+      //   const verifyData = verifyDocSnapshot.data();
+      //   console.log("Verified artworkIDs after update:", verifyData.artworkIDs);
+      // } else {
+      //   console.log("Document does not exist after update.");
+      // }
+
+      console.log(`Artwork ${artworkID} removed from collection ${collectionId}`);
+    } else {
+      console.log("Document does not exist.");
+    }
+  } catch (error) {
+    console.error("Error removing artwork:", error);
+    throw error; // Optionally rethrow or handle the error as needed
+  }
+};
