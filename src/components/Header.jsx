@@ -24,9 +24,9 @@ export default function Header() {
           <div>
               <Link to={`/collection/${currentUser.displayName}`}>My Exhibits</Link>
           </div>
-          <div>
+          {/* <div>
             <Link to="/user">Profile</Link>
-          </div>
+          </div> */}
           <div>
             <a href="#" onClick={handleLogout}>
               Sign Out

@@ -52,7 +52,7 @@ export default function SignIn() {
       navigate(lastPage ? lastPage : "/");
     } catch (error) {
       console.log(error);
-      setPasswordError("Invalid email or password."); // Optional: Show error if login fails
+      setPasswordError("Invalid email or password.");
     }
   };
 
