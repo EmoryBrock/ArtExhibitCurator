@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-indigo-100">
+      <header className="bg-indigo-200">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -26,7 +26,7 @@ export default function Header() {
                   />
                 </svg>
               </a> */}
-              <Link className="text-indigo-600 font-bold" >ArtiQuest</Link>
+              <Link className="text-indigo-600 font-bold size-6 align-middle" >ArtiQuest</Link>
             </div>
 
             <div className="md:flex md:items-center md:gap-12">
@@ -97,31 +97,3 @@ export default function Header() {
     </>
   );
 }
-/*
-<div>
-<Link to="/">ArtiQuest</Link>
-</div>
-<div>
-<Link to="/search">Search</Link>
-</div>
-{isLoggedIn ? (
-<>
-  <div>
-      <Link to={`/collection/${currentUser.displayName}`}>My Exhibits</Link>
-  </div>
-  {/* <div>
-    <Link to="/user">Profile</Link>
-  </div> }
-  <div>
-    <a href="#" onClick={handleLogout}>
-      Sign Out
-    </a>
-  </div>
-</>
-) : (
-<>
-  <div>
-    <Link to="/sign-in">Sign In</Link>
-  </div>
-</>
-)}*/

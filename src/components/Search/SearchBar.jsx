@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import { getCLEArtDetailsGeneral, getCLEArtDetailsByArtist, getMETArtDetails, getMETArtIDGeneral, getMETArtIDbyArtist, getMETArtIDbyTitle } from "../../api";
+import {
+  getCLEArtDetailsGeneral,
+  getCLEArtDetailsByArtist,
+  getCLEArtDetailsByTitle,
+  getMETArtDetails,
+  getMETArtIDGeneral,
+  getMETArtIDbyArtist,
+  getMETArtIDbyTitle,
+} from "../../api";
 import SearchResults from "./SearchResults";
 import SearchFilter from "./SearchFilter";
-import { combinedFetchedDataToRender, convertCLEData, convertMETData } from "../../utils";
+import {
+  combinedFetchedDataToRender,
+  convertCLEData,
+  convertMETData,
+} from "../../utils";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
-  const [searchType, setSearchType] = useState("general")
+  const [searchType, setSearchType] = useState("general");
   const [initialResults, setInitialResults] = useState([]);
   const [results, setResults] = useState([]);
   const [totalResults, setTotalResults] = useState(0);
@@ -22,62 +34,64 @@ export default function SearchBar() {
     sort: "title",
     order: "asc",
   });
-  
+
   const handleSearch = async () => {
     setIsLoading(true);
     try {
       const queryString = query.split(" ").join("+");
 
       //API calls based on search type
-  let configDataSet1 = []
-  let configDataSet2 = []
+      let configDataSet1 = [];
+      let configDataSet2 = [];
 
-  if (searchType === "general") {
-    const queryArtIdsMET = await getMETArtIDGeneral(queryString);
-    const detailsPromisesMET = queryArtIdsMET.objectIDs
-      .slice(0, 20)
-      .map((id) => getMETArtDetails(id));
-    const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
-    const successfulDetailsMET = detailsResponsesMET
-      .filter((result) => result.status === "fulfilled" && result.value)
-      .map((result) => result.value);
+      if (searchType === "general") {
+        const queryArtIdsMET = await getMETArtIDGeneral(queryString);
+        const detailsPromisesMET = queryArtIdsMET.objectIDs
+          .slice(0, 20)
+          .map((id) => getMETArtDetails(id));
+        const detailsResponsesMET = await Promise.allSettled(
+          detailsPromisesMET
+        );
+        const successfulDetailsMET = detailsResponsesMET
+          .filter((result) => result.status === "fulfilled" && result.value)
+          .map((result) => result.value);
 
-    configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
-    const detailsResponseCLE = await getCLEArtDetailsGeneral(query);
-    configDataSet2 = convertCLEData(detailsResponseCLE);
+        configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+        const detailsResponseCLE = await getCLEArtDetailsGeneral(query);
+        configDataSet2 = convertCLEData(detailsResponseCLE);
+      } else if (searchType === "artist") {
+        const queryArtIdsMET = await getMETArtIDbyArtist(queryString);
+        const detailsPromisesMET = queryArtIdsMET.objectIDs
+          .slice(0, 20)
+          .map((id) => getMETArtDetails(id));
+        const detailsResponsesMET = await Promise.allSettled(
+          detailsPromisesMET
+        );
+        const successfulDetailsMET = detailsResponsesMET
+          .filter((result) => result.status === "fulfilled" && result.value)
+          .map((result) => result.value);
 
-  } else if (searchType === "artist") {
-    const queryArtIdsMET = await getMETArtIDbyArtist(queryString);
-    const detailsPromisesMET = queryArtIdsMET.objectIDs
-      .slice(0, 20)
-      .map((id) => getMETArtDetails(id));
-    const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
-    const successfulDetailsMET = detailsResponsesMET
-      .filter((result) => result.status === "fulfilled" && result.value)
-      .map((result) => result.value);
-      
+        configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+        const detailsResponseCLE = await getCLEArtDetailsByArtist(query);
+        configDataSet2 = convertCLEData(detailsResponseCLE);
+      } else if (searchType === "title") {
+        // error in fetching CLE API data to resolve
+        // console.log(query, "if then title searchbar")
+        const queryArtIdsMET = await getMETArtIDbyTitle(queryString);
+        const detailsPromisesMET = queryArtIdsMET.objectIDs
+          .slice(0, 20)
+          .map((id) => getMETArtDetails(id));
+        const detailsResponsesMET = await Promise.allSettled(
+          detailsPromisesMET
+        );
+        const successfulDetailsMET = detailsResponsesMET
+          .filter((result) => result.status === "fulfilled" && result.value)
+          .map((result) => result.value);
 
-    configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
-    const detailsResponseCLE = await getCLEArtDetailsByArtist(query);
-    configDataSet2 = convertCLEData(detailsResponseCLE);
-
-  } else if (searchType === "title") {
-    // error in fetching CLE API data to resolve
-    // console.log(query, "if then title searchbar")
-    const queryArtIdsMET = await getMETArtIDbyTitle(queryString);
-    const detailsPromisesMET = queryArtIdsMET.objectIDs
-      .slice(0, 20)
-      .map((id) => getMETArtDetails(id));
-    const detailsResponsesMET = await Promise.allSettled(detailsPromisesMET);
-    const successfulDetailsMET = detailsResponsesMET
-      .filter((result) => result.status === "fulfilled" && result.value)
-      .map((result) => result.value);
-      
-
-    configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
-    const detailsResponseCLE = await getCLEArtDetailsByTitle(query);
-    configDataSet2 = convertCLEData(detailsResponseCLE);
-  }
+        configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+        const detailsResponseCLE = await getCLEArtDetailsByTitle(query);
+        configDataSet2 = convertCLEData(detailsResponseCLE);
+      }
 
       let dataToRender = combinedFetchedDataToRender(
         configDataSet1,
@@ -89,14 +103,17 @@ export default function SearchBar() {
       setTotalResults(Object.keys(dataToRender).length);
 
       // Extract unique types and dates from results to populate filter dropdowns
-      const allTypes = Array.from(new Set(dataToRender.map(item => item.type)));
-      const allDates = Array.from(new Set(dataToRender.map(item => item.date)));
+      const allTypes = Array.from(
+        new Set(dataToRender.map((item) => item.type))
+      );
+      const allDates = Array.from(
+        new Set(dataToRender.map((item) => item.date))
+      );
 
       setFilters({
         types: allTypes,
         dates: allDates,
       });
-
     } catch (error) {
       console.error("Error fetching data", error);
       console.error("Error details:", error.response || error.message);
@@ -155,53 +172,87 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="relative w-full text-gray-600">
-      <FaSearch id="search-icon" />
-      <input
-        type="search"
-        name="search"
-        placeholder="Enter Search Text Here"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-      />
-      <div className="radio-buttons">
-      <label>
+    <div className="relative bg-indigo-100 text-gray-600 pt-6">
+      <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
+        <div className="relative flex items-center">
           <input
-            type="radio"
-            value="general"
-            checked={searchType === "general"}
-            onChange={(e) => setSearchType(e.target.value)}
+            type="text"
+            name="search"
+            placeholder="Search for..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+            className="w-full rounded-md border-gray-200 py-2.5 pl-4 pr-10 shadow-sm text-lg"
           />
-          General
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="artist"
-            checked={searchType === "artist"}
-            onChange={(e) => setSearchType(e.target.value)}
-          />
-          Artist
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="title"
-            checked={searchType === "title"}
-            onChange={(e) => setSearchType(e.target.value)}
-          />
-          Title
-        </label>
+          <button
+            type="submit"
+            className="absolute right-0 top-0 mt-2.5 mr-2"
+            onClick={handleSearch}
+          >
+            <FaSearch />
+          </button>
+        </div>
+        <fieldset className="grid grid-cols-3 gap-4 py-3">
+          <legend className="sr-only">Search Type</legend>
+          <div>
+            <label
+              htmlFor="general"
+              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 has-[:checked]:border-blue-500 has-[:checked]:ring-1 has-[:checked]:ring-blue-500"
+            >
+              <div>
+                <p className="text-gray-700">Search Any Fields</p>
+              </div>
+              <input
+                type="radio"
+                name="searchType"
+                value="general"
+                id="general"
+                checked={searchType === "general"}
+                onChange={(e) => setSearchType(e.target.value)}
+                className="size-5 border-gray-300 text-blue-500"
+              />
+            </label>
+          </div>
+          <div>
+            <label
+              htmlFor="artist"
+              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 has-[:checked]:border-blue-500 has-[:checked]:ring-1 has-[:checked]:ring-blue-500"
+            >
+              <div>
+                <p className="text-gray-700">Search by Artist</p>
+              </div>
+              <input
+                type="radio"
+                name="searchType"
+                value="artist"
+                id="artist"
+                checked={searchType === "artist"}
+                onChange={(e) => setSearchType(e.target.value)}
+                className="size-5 border-gray-300 text-blue-500"
+              />
+            </label>
+          </div>
+          <div>
+            <label
+              htmlFor="title"
+              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 has-[:checked]:border-blue-500 has-[:checked]:ring-1 has-[:checked]:ring-blue-500"
+            >
+              <div>
+                <p className="text-gray-700">Search by Title</p>
+              </div>
+              <input
+                type="radio"
+                name="searchType"
+                value="title"
+                id="title"
+                checked={searchType === "title"}
+                onChange={(e) => setSearchType(e.target.value)}
+                className="size-5 border-gray-300 text-blue-500"
+              />
+            </label>
+          </div>
+        </fieldset>
       </div>
-      <button
-        type="submit"
-        className="absolute right-0 top-0 mt-3 mr-4"
-        onClick={handleSearch}
-      >
-        Search
-      </button>
-
       {isLoading ? (
         <p>Retrieving data...</p>
       ) : results && results.length > 0 ? (
@@ -220,3 +271,34 @@ export default function SearchBar() {
     </div>
   );
 }
+
+/*
+<div className="radio-buttons py-3">
+<label>
+  <input
+    type="radio"
+    value="general"
+    checked={searchType === "general"}
+    onChange={(e) => setSearchType(e.target.value)}
+  />
+  General
+</label>
+<label>
+  <input
+    type="radio"
+    value="artist"
+    checked={searchType === "artist"}
+    onChange={(e) => setSearchType(e.target.value)}
+  />
+  Artist
+</label>
+<label>
+  <input
+    type="radio"
+    value="title"
+    checked={searchType === "title"}
+    onChange={(e) => setSearchType(e.target.value)}
+  />
+  Title
+</label>
+</div>*/
