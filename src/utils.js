@@ -75,7 +75,9 @@ export const convertCLEData = (CLEFetchedData) => {
 };
 
 export const combinedFetchedDataToRender = (obj1, obj2) => {
-  return [...obj1, ...obj2];
+  const arrayCheckObj1 = Array.isArray(obj1) ? obj1: []
+  const arrayCheckObj2 = Array.isArray(obj2) ? obj2: []
+  return [...arrayCheckObj1, ...arrayCheckObj2];
 };
 
 export const fetchResultsBySourceAndId = async (source, id) => {

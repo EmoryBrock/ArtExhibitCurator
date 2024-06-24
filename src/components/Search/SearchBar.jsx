@@ -22,7 +22,9 @@ export default function SearchBar() {
   const [searchType, setSearchType] = useState("general");
   const [initialResults, setInitialResults] = useState([]);
   const [results, setResults] = useState([]);
+  const [searchUsed, setSearchUsed] = useState(false);
   const [totalResults, setTotalResults] = useState(0);
+  const [noResults, setNoResults] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [filters, setFilters] = useState({
     types: [],
@@ -46,49 +48,59 @@ export default function SearchBar() {
 
       if (searchType === "general") {
         const queryArtIdsMET = await getMETArtIDGeneral(queryString);
-        const detailsPromisesMET = queryArtIdsMET.objectIDs
-          .slice(0, 20)
-          .map((id) => getMETArtDetails(id));
-        const detailsResponsesMET = await Promise.allSettled(
-          detailsPromisesMET
-        );
-        const successfulDetailsMET = detailsResponsesMET
-          .filter((result) => result.status === "fulfilled" && result.value)
-          .map((result) => result.value);
+        if (queryArtIdsMET.objectIDs === null) {
+          configDataSet1 = {};
+        } else {
+          const detailsPromisesMET = queryArtIdsMET.objectIDs
+            .slice(0, 20)
+            .map((id) => getMETArtDetails(id));
+          const detailsResponsesMET = await Promise.allSettled(
+            detailsPromisesMET
+          );
+          const successfulDetailsMET = detailsResponsesMET
+            .filter((result) => result.status === "fulfilled" && result.value)
+            .map((result) => result.value);
 
-        configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+          configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+        }
         const detailsResponseCLE = await getCLEArtDetailsGeneral(query);
         configDataSet2 = convertCLEData(detailsResponseCLE);
       } else if (searchType === "artist") {
         const queryArtIdsMET = await getMETArtIDbyArtist(queryString);
-        const detailsPromisesMET = queryArtIdsMET.objectIDs
-          .slice(0, 20)
-          .map((id) => getMETArtDetails(id));
-        const detailsResponsesMET = await Promise.allSettled(
-          detailsPromisesMET
-        );
-        const successfulDetailsMET = detailsResponsesMET
-          .filter((result) => result.status === "fulfilled" && result.value)
-          .map((result) => result.value);
+        if (queryArtIdsMET.objectIDs === null) {
+          configDataSet1 = {};
+        } else {
+          const detailsPromisesMET = queryArtIdsMET.objectIDs
+            .slice(0, 20)
+            .map((id) => getMETArtDetails(id));
+          const detailsResponsesMET = await Promise.allSettled(
+            detailsPromisesMET
+          );
+          const successfulDetailsMET = detailsResponsesMET
+            .filter((result) => result.status === "fulfilled" && result.value)
+            .map((result) => result.value);
 
-        configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+          configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+        }
         const detailsResponseCLE = await getCLEArtDetailsByArtist(query);
         configDataSet2 = convertCLEData(detailsResponseCLE);
       } else if (searchType === "title") {
-        // error in fetching CLE API data to resolve
-        // console.log(query, "if then title searchbar")
         const queryArtIdsMET = await getMETArtIDbyTitle(queryString);
-        const detailsPromisesMET = queryArtIdsMET.objectIDs
-          .slice(0, 20)
-          .map((id) => getMETArtDetails(id));
-        const detailsResponsesMET = await Promise.allSettled(
-          detailsPromisesMET
-        );
-        const successfulDetailsMET = detailsResponsesMET
-          .filter((result) => result.status === "fulfilled" && result.value)
-          .map((result) => result.value);
+        if (queryArtIdsMET.objectIDs === null) {
+          configDataSet1 = {};
+        } else {
+          const detailsPromisesMET = queryArtIdsMET.objectIDs
+            .slice(0, 20)
+            .map((id) => getMETArtDetails(id));
+          const detailsResponsesMET = await Promise.allSettled(
+            detailsPromisesMET
+          );
+          const successfulDetailsMET = detailsResponsesMET
+            .filter((result) => result.status === "fulfilled" && result.value)
+            .map((result) => result.value);
 
-        configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+          configDataSet1 = convertMETData(successfulDetailsMET.filter(Boolean));
+        }
         const detailsResponseCLE = await getCLEArtDetailsByTitle(query);
         configDataSet2 = convertCLEData(detailsResponseCLE);
       }
@@ -100,7 +112,9 @@ export default function SearchBar() {
 
       setInitialResults(dataToRender); // Save initial results
       setResults(dataToRender);
+      setSearchUsed(true);
       setTotalResults(Object.keys(dataToRender).length);
+      setNoResults(dataToRender.length === 0);
 
       // Extract unique types and dates from results to populate filter dropdowns
       const allTypes = Array.from(
@@ -253,52 +267,17 @@ export default function SearchBar() {
           </div>
         </fieldset>
       </div>
-      {isLoading ? (
-        <p>Retrieving data...</p>
-      ) : results && results.length > 0 ? (
-        <div>
-          <SearchFilter
-            filters={filters}
-            onFilterChange={handleFilterChange}
-            onApplyFilters={applyFilters}
-            onClearFilters={clearFilters}
-          />
-          <SearchResults results={results} totalResults={totalResults} />
-        </div>
-      ) : (
-        <p>No results found.</p>
-      )}
+      <SearchResults
+        searchUsed={searchUsed}
+        results={results}
+        totalResults={totalResults}
+        isLoading={isLoading}
+        noResults={noResults}
+        filters={filters}
+        handleFilterChange={handleFilterChange}
+        applyFilters={applyFilters}
+        clearFilters={clearFilters}
+      />
     </div>
   );
 }
-
-/*
-<div className="radio-buttons py-3">
-<label>
-  <input
-    type="radio"
-    value="general"
-    checked={searchType === "general"}
-    onChange={(e) => setSearchType(e.target.value)}
-  />
-  General
-</label>
-<label>
-  <input
-    type="radio"
-    value="artist"
-    checked={searchType === "artist"}
-    onChange={(e) => setSearchType(e.target.value)}
-  />
-  Artist
-</label>
-<label>
-  <input
-    type="radio"
-    value="title"
-    checked={searchType === "title"}
-    onChange={(e) => setSearchType(e.target.value)}
-  />
-  Title
-</label>
-</div>*/
