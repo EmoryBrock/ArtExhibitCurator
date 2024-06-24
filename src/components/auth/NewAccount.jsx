@@ -11,7 +11,7 @@ export default function NewAccount() {
 
   useEffect(() => {
     const lastPage = window.location.pathname;
-    if (lastPage !== "/sign-in") {
+    if (lastPage !== "/sign-in" && lastPage !== "/sign-up") {
       localStorage.setItem("lastPage", lastPage);
     }
   }, []);
@@ -50,11 +50,11 @@ export default function NewAccount() {
     if (!isValid) return;
 
     try {
-      console.log("Attempting to sign up...");
+      // console.log("Attempting to sign up...");
       const userCredential = await signUp(email, password, username);
-      console.log("Sign up successful", userCredential);
+      // console.log("Sign up successful", userCredential);
       const lastPage = localStorage.getItem("lastPage");
-      console.log("Navigating to", lastPage ? lastPage : "/sign-in");
+      // console.log("Navigating to", lastPage ? lastPage : "/sign-in");
       navigate(lastPage ? lastPage : "/sign-in");
     } catch (error) {
       // console.error("Sign up failed", error);
