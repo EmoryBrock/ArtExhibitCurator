@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SearchFilter from './SearchFilter'; // Import if needed
+import LoadingSpinner from '../LoadingSpinner';
 
 export default function SearchResults({
   searchUsed,
   results = [],
   totalResults,
   isLoading,
-  noResults,
   filters,
   handleFilterChange,
   applyFilters,
@@ -26,9 +26,9 @@ export default function SearchResults({
 
   if (isLoading) {
     return (
-      <div className="bg-white pt-5 w-full text-center front-large text-lg">
-    <p>Retrieving data...</p>
-    </div>)
+      <div className="bg-white">
+        <LoadingSpinner />
+      </div>)
   }
 
   if (searchUsed && results.length === 0) {

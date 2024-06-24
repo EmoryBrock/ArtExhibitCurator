@@ -24,7 +24,6 @@ export default function SearchBar() {
   const [results, setResults] = useState([]);
   const [searchUsed, setSearchUsed] = useState(false);
   const [totalResults, setTotalResults] = useState(0);
-  const [noResults, setNoResults] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [filters, setFilters] = useState({
     types: [],
@@ -114,7 +113,6 @@ export default function SearchBar() {
       setResults(dataToRender);
       setSearchUsed(true);
       setTotalResults(Object.keys(dataToRender).length);
-      setNoResults(dataToRender.length === 0);
 
       // Extract unique types and dates from results to populate filter dropdowns
       const allTypes = Array.from(
@@ -272,7 +270,6 @@ export default function SearchBar() {
         results={results}
         totalResults={totalResults}
         isLoading={isLoading}
-        noResults={noResults}
         filters={filters}
         handleFilterChange={handleFilterChange}
         applyFilters={applyFilters}
