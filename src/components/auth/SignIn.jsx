@@ -5,7 +5,8 @@ import { logIn } from "../../firebase";
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [emailError, setEmailError] = useState("")
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,15 +23,26 @@ export default function SignIn() {
 
   const signIn = async (e) => {
     e.preventDefault();
+    let isValid = true;
+
     if (email === "") {
       setEmailError("Email address is required.");
-      return;
+      isValid = false;
     } else if (!validateEmail(email)) {
       setEmailError("Please enter a valid email address.");
-      return;
+      isValid = false;
     } else {
       setEmailError("");
     }
+
+    if (password === "") {
+      setPasswordError("Password is required.");
+      isValid = false;
+    } else {
+      setPasswordError("");
+    }
+
+    if (!isValid) return;
 
     try {
       const userCredential = await logIn(email, password);
@@ -40,6 +52,7 @@ export default function SignIn() {
       navigate(lastPage ? lastPage : "/");
     } catch (error) {
       console.log(error);
+      setPasswordError("Invalid email or password."); // Optional: Show error if login fails
     }
   };
 
@@ -55,13 +68,12 @@ export default function SignIn() {
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Sign in to your account
           </h2>
-          {emailError && (
-                  <p className="mt-2 text-sm text-red-600">{emailError}</p>
-                )}
+          {emailError && <p className="mt-2 text-sm text-center text-red-600">{emailError}</p>}
+          {passwordError && <p className="mt-2 text-sm text-center text-red-600">{passwordError}</p>}
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6" id="UserSignIn" onSubmit={signIn}>
             <div>
               <label
                 htmlFor="email"
@@ -73,7 +85,7 @@ export default function SignIn() {
                 <input
                   id="email"
                   name="email"
-                  type="email"
+                  type="text"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   // autoComplete="email"
