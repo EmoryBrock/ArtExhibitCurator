@@ -12,11 +12,11 @@ module.exports = {
       keyframes: {
         bounce: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-6px)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
         'bounce2': {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-3px)' },
+          '50%': { transform: 'translateY(-4px)' },
         },
       },
       animation: {

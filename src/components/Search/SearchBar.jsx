@@ -115,6 +115,7 @@ export default function SearchBar() {
       setTotalResults(Object.keys(dataToRender).length);
 
       // Extract unique types and dates from results to populate filter dropdowns
+      console.log(dataToRender, "data to render");
       const allTypes = Array.from(
         new Set(dataToRender.map((item) => item.type))
       );

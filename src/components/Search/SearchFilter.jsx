@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SearchFilter({ filters, onFilterChange, onApplyFilters, onClearFilters }) {
   return (
-    <div className="border-2 p-3">
+    <div className="border-2 p-3 rounded-md">
       <p className="font-semibold pb-3">Results Filters</p>
       <div>
         <label>
@@ -58,7 +58,7 @@ export default function SearchFilter({ filters, onFilterChange, onApplyFilters, 
     </div>
   );
 
-/* component code to implement a vertical filter
+/* component code to implement a vertical filter system with ability to select multiple values
 
 {
   Heads up! 👋
