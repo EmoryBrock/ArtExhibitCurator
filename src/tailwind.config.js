@@ -6,5 +6,28 @@ module.exports = {
     './pages/**/*.{html,js}',
     './components/**/*.{html,js}',
     './index.html',
-  ]
+  ],
+  theme: {
+    extend: {
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'bounce2': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-4px)' },
+        },
+      },
+      animation: {
+        'bounce': 'bounce 0.5s infinite',
+        'bounce2': 'bounce2 0.5s infinite',
+      },
+    },
+  },
+  variants: {},
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
+
 }

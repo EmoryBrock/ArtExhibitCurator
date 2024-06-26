@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SearchFilter from './Search/SearchFilter';
-import LoadingSpinner from './LoadingSpinner';
-import ArtworkListCard from './ArtworkListCard';
+import SearchFilter from './SearchFilter';
+import LoadingSpinner from '../LoadingSpinner';
+import ArtworkListCard from '../ArtworkListCard';
 
 export default function SearchResults({
   searchUsed,
-  initialResults, // Assume initialResults is fetched elsewhere, possibly from props or context
+  results = [],
   totalResults,
   isLoading,
   filters,
@@ -14,19 +14,15 @@ export default function SearchResults({
   applyFilters,
   clearFilters,
 }) {
-  const [results, setResults] = useState(initialResults); // Initialize results from props
   const [currentPage, setCurrentPage] = useState(1);
   const [currentResults, setCurrentResults] = useState([]);
 
   const itemsPerPage = 20;
 
   useEffect(() => {
-    if (searchUsed) {
-      const startIndex = (currentPage - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-      setCurrentResults(results.slice(startIndex, endIndex));
-    }
-  }, [searchUsed, currentPage, results, itemsPerPage]);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    setCurrentResults(results.slice(startIndex, startIndex + itemsPerPage));
+  }, [results, currentPage, itemsPerPage]);
 
   const handleClick = (pageNumber) => {
     setCurrentPage(pageNumber);

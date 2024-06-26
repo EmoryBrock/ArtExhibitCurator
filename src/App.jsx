@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css'
 import {Route, Routes} from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
@@ -9,6 +9,7 @@ import Collection from './components/Collection'
 import SignIn from './components/auth/SignIn'
 import NewAccount from './components/auth/NewAccount'
 import TestPage from './components/TestPage'
+import LandingPage from './components/LandingPage'
 
  function App() {
   return (
@@ -16,7 +17,7 @@ import TestPage from './components/TestPage'
       <Header />
       <main>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<LandingPage />} />
           <Route path='/search' element={<Search />} />
           {/* <Route path='/user' element={<UserProfile />} /> */}
           <Route path='/artwork/:sourceId' element={<ArtworkDetailPage />}/>

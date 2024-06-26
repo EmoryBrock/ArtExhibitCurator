@@ -1,35 +1,38 @@
-import React from 'react';
+import React from "react";
 
-export default function ArtworkListCard({ results }) { // Destructure props
-  const titleHref = results.title ? `/artwork/${results.id}` : "/#";
-  const btnHref = results.id ? `/artwork/${results.id}` : "#";
-  const Button = "View More Details"; // Assuming you want a button with this text
+// CSS code by Kouakou Marius - https://tailwindcomponents.com/component/airbnb-card
 
+export default function ArtworkListCard({ result }) {
   return (
-    <div className="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
-      {/* <img src={results.imageSmall} alt="" className="w-full" /> */}
-      <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
-        <h3>
-          <a
-            href={titleHref} // link to individual card
-            className="mb-4 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-          >
-            <p>{results.title}</p>
-            {results.date}
-          </a>
-        </h3>
-        {/* <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
-          {CardDescription}
-        </p> */}
-        {/* {Button && (
-          <a
-            href={btnHref} // link to individual card
-            className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6"
-          >
-            {Button}
-          </a> */}
-        {/* )} */}
+    <div className="block rounded-lg bg-white shadow-lg">
+      <div
+        className="relative overflow-hidden bg-cover bg-no-repeat"
+        data-te-ripple-init
+        data-te-ripple-color="light"
+      >
+        <img
+          className="rounded-t-lg w-full h-64 object-cover"
+          src={result.imageSmall}
+          alt={result.title}
+        />
+        <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+      </div>
+
+      <div className="p-4">
+        <h5 className="mb-2 text-lg font-bold leading-tight text-neutral-800 dark:text-neutral-50">
+          {result.title}
+        </h5>
+        <p className="mb-1 text-sm text-neutral-600 dark:text-neutral-200">
+          by {result.artistName}
+        </p>
+        <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-200">
+          {result.date}
+        </p>
+        <h5 className="text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50">
+          click to view more info
+        </h5>
       </div>
     </div>
   );
 }
+
