@@ -13,20 +13,18 @@ export default function AddArtwork({
 }) {
   const [selectedCollectionLocal, setSelectedCollectionLocal] = useState("");
   const [newCollectionName, setNewCollectionName] = useState("");
-  const collections = useUserCollections();
+  const collections = useUserCollections(currentUser);
 
-  // Ensure collections are sorted correctly
+  useEffect(() => {
+    if (collections.length > 0 && !selectedCollectionLocal) {
+      setSelectedCollectionLocal(collections[0].id);
+      setSelectedCollection(collections[0].id);
+    }
+  }, [collections, selectedCollectionLocal, setSelectedCollection]);
+
   const sortedCollections = collections
     .slice()
     .sort((a, b) => a.exhibit_name.localeCompare(b.exhibit_name));
-
-  // Effect to set default value for selectedCollectionLocal if it is not set
-  useEffect(() => {
-    if (sortedCollections.length > 0 && !selectedCollectionLocal) {
-      setSelectedCollectionLocal(sortedCollections[0].id);
-      setSelectedCollection(sortedCollections[0].id);
-    }
-  }, [sortedCollections, selectedCollectionLocal, setSelectedCollection]);
 
   const handleSelectChange = (e) => {
     setSelectedCollectionLocal(e.target.value);
@@ -41,7 +39,6 @@ export default function AddArtwork({
       currentUser,
       sourceId
     );
-    // Clear new collection name input
     setNewCollectionName("");
   };
 

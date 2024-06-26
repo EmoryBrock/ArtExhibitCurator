@@ -3,21 +3,22 @@ import { db } from '../firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { fetchResultsBySourceAndId } from '../utils';
 
-export default function useUserCollections(collectionOwner) {
+export default function useUserCollections(currentUser) {
   const [collections, setCollections] = useState([]);
 
   useEffect(() => {
     const getCollections = async () => {
+      if (!currentUser) return;
+
       try {
         const ref = collection(db, 'ArtExhibit');
-        const q = query(ref, where('owner', '==', collectionOwner));
+        const q = query(ref, where('owner', '==', currentUser.displayName));
         const querySnapshot = await getDocs(q);
 
         const userCollections = await Promise.all(querySnapshot.docs.map(async (doc) => {
           const data = doc.data();
 
           const artworks = await Promise.all(data.artworkIDs.map(async (artworkID) => {
-
             // Parsing out sourceID for proper API call routing
             let source, id;
             if (artworkID.startsWith('MET')) {
@@ -49,10 +50,8 @@ export default function useUserCollections(collectionOwner) {
       }
     };
 
-    if (collectionOwner) {
-      getCollections();
-    }
-  }, [collectionOwner]);
+    getCollections();
+  }, [currentUser]);
 
   return collections;
 }
