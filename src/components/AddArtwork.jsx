@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useUserCollections from "../hooks/useUserCollections";
 import { handleNewCollection } from "../utils";
+import CollectionForm from "./CollectionForm";
 
 export default function AddArtwork({
   addToCollection,
@@ -14,9 +15,18 @@ export default function AddArtwork({
   const [newCollectionName, setNewCollectionName] = useState("");
   const collections = useUserCollections();
 
+  // Ensure collections are sorted correctly
   const sortedCollections = collections
     .slice()
     .sort((a, b) => a.exhibit_name.localeCompare(b.exhibit_name));
+
+  // Effect to set default value for selectedCollectionLocal if it is not set
+  useEffect(() => {
+    if (sortedCollections.length > 0 && !selectedCollectionLocal) {
+      setSelectedCollectionLocal(sortedCollections[0].id);
+      setSelectedCollection(sortedCollections[0].id);
+    }
+  }, [sortedCollections, selectedCollectionLocal, setSelectedCollection]);
 
   const handleSelectChange = (e) => {
     setSelectedCollectionLocal(e.target.value);
@@ -31,6 +41,8 @@ export default function AddArtwork({
       currentUser,
       sourceId
     );
+    // Clear new collection name input
+    setNewCollectionName("");
   };
 
   return (
@@ -60,71 +72,27 @@ export default function AddArtwork({
         </h2>
         <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
-            <div
+            <CollectionForm
               id="newCollection"
-              className="rounded-2xl border border-gray-200 p-6 shadow-sm sm:order-last sm:px-8 lg:p-12 flex flex-col justify-center items-center"
-            >
-              <div className="text-center">
-                <h2 className="text-lg font-medium text-gray-900">
-                  Create a New Collection
-                </h2>
-                <p className="text-sm text-gray-800">
-                  Enter the collection name below
-                </p>
-              </div>
-              <div>
-                <div className="relative">
-                  <label htmlFor="newCollectionName" className="sr-only">
-                    New Collection Name
-                  </label>
-                  <input
-                    type="text"
-                    id="newCollectionName"
-                    value={newCollectionName}
-                    onChange={(e) => setNewCollectionName(e.target.value)}
-                    placeholder="Enter new collection name"
-                    className="w-full rounded-md border-gray-600 pe-10 shadow-sm sm:text-sm py-4"
-                  />
-                </div>
-              </div>
-              <button
-                className="inline-block rounded border border-indigo-600 px-12 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500 mt-4"
-                onClick={handleNewCollectionClick}
-              >
-                Create Collection
-              </button>
-            </div>
+              title="Create a New Collection"
+              description="Enter the collection name below"
+              inputId="newCollectionName"
+              inputValue={newCollectionName}
+              onInputChange={(e) => setNewCollectionName(e.target.value)}
+              inputPlaceholder="Enter new collection name"
+              buttonText="Create Collection"
+              onButtonClick={handleNewCollectionClick}
+            />
 
-            <div
+            <CollectionForm
               id="currentCollection"
-              className="rounded-2xl border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12 flex flex-col justify-center items-center"
-            >
-              <div className="text-center">
-                <h2 className="text-lg font-medium text-gray-900">
-                  Add to Existing Collection
-                </h2>
-              </div>
-              <select
-                value={selectedCollectionLocal}
-                onChange={handleSelectChange}
-                className="w-full rounded-md border-gray-600 shadow-sm sm:text-sm py-4 mt-4"
-              >
-                <option value="" disabled>
-                  Select a collection
-                </option>
-                {sortedCollections.map((collection) => (
-                  <option key={collection.id} value={collection.id}>
-                    {collection.exhibit_name}
-                  </option>
-                ))}
-              </select>
-              <button
-                className="inline-block rounded border border-indigo-600 px-12 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500 mt-4"
-                onClick={addToCollection}
-              >
-                Add Artwork
-              </button>
-            </div>
+              title="Add to Existing Collection"
+              selectValue={selectedCollectionLocal}
+              onSelectChange={handleSelectChange}
+              selectOptions={sortedCollections}
+              buttonText="Add Artwork"
+              onButtonClick={addToCollection}
+            />
           </div>
         </div>
       </div>
