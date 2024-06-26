@@ -1,89 +1,133 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import SearchFilter from './Search/SearchFilter';
-import LoadingSpinner from './LoadingSpinner';
-import ArtworkListCard from './ArtworkListCard';
+import React, { useState } from "react";
+import useUserCollections from "../hooks/useUserCollections";
+import { handleNewCollection } from "../utils";
 
-export default function SearchResults({
-  searchUsed,
-  initialResults, // Assume initialResults is fetched elsewhere, possibly from props or context
-  totalResults,
-  isLoading,
-  filters,
-  handleFilterChange,
-  applyFilters,
-  clearFilters,
+export default function AddArtwork({
+  addToCollection,
+  setSelectedCollection,
+  onClose,
+  currentUser,
+  sourceId,
+  setShowOverlay
 }) {
-  const [results, setResults] = useState(initialResults); // Initialize results from props
-  const [currentPage, setCurrentPage] = useState(1);
-  const [currentResults, setCurrentResults] = useState([]);
+  const [selectedCollectionLocal, setSelectedCollectionLocal] = useState("");
+  const [newCollectionName, setNewCollectionName] = useState("");
+  const collections = useUserCollections();
 
-  const itemsPerPage = 20;
+  const sortedCollections = collections
+    .slice()
+    .sort((a, b) => a.exhibit_name.localeCompare(b.exhibit_name));
 
-  useEffect(() => {
-    if (searchUsed) {
-      const startIndex = (currentPage - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-      setCurrentResults(results.slice(startIndex, endIndex));
-    }
-  }, [searchUsed, currentPage, results, itemsPerPage]);
-
-  const handleClick = (pageNumber) => {
-    setCurrentPage(pageNumber);
+  const handleSelectChange = (e) => {
+    setSelectedCollectionLocal(e.target.value);
+    setSelectedCollection(e.target.value);
   };
 
-  if (isLoading) {
-    return (
-      <div className="bg-white">
-        <LoadingSpinner />
-      </div>
+  const handleNewCollectionClick = async () => {
+    await handleNewCollection(
+      newCollectionName,
+      setSelectedCollection,
+      setShowOverlay,
+      currentUser,
+      sourceId
     );
-  }
-
-  if (searchUsed && results.length === 0) {
-    return (
-      <div className="bg-white pt-8 w-full text-center font-medium text-lg">
-        <p>No results found</p>
-      </div>
-    );
-  }
+  };
 
   return (
-    searchUsed && results.length > 0 && (
-      <div className="bg-white flex pt-5 w-full">
-        <div id="searchfilter" className="pl-5 pr-3">
-          <SearchFilter
-            filters={filters}
-            onFilterChange={handleFilterChange}
-            onApplyFilters={applyFilters}
-            onClearFilters={clearFilters}
-          />
-        </div>
-        <div className="flex-auto">
-          <div>
-            <p className="text-center font-semibold">Your search returned {totalResults} artworks</p>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 pt-4 pr-6">
-              {currentResults.map((result, index) => (
-                <Link key={index} to={`/artwork/${result.source}${result.id}`}>
-                  <ArtworkListCard result={result} />
-                </Link>
-              ))}
+    <div className="overlay">
+      <div className="popup relative rounded-lg bg-white p-8 shadow-xl">
+        <button
+          className="absolute top-2 right-2 text-red-500 hover:text-red-700 focus:outline-none"
+          onClick={onClose}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <h2 className="m-2 pb-4 text-lg text-gray-800 text-center">
+          Add Artwork to Collection
+        </h2>
+        <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
+            <div
+              id="newCollection"
+              className="rounded-2xl border border-gray-200 p-6 shadow-sm sm:order-last sm:px-8 lg:p-12 flex flex-col justify-center items-center"
+            >
+              <div className="text-center">
+                <h2 className="text-lg font-medium text-gray-900">
+                  Create a New Collection
+                </h2>
+                <p className="text-sm text-gray-800">
+                  Enter the collection name below
+                </p>
+              </div>
+              <div>
+                <div className="relative">
+                  <label htmlFor="newCollectionName" className="sr-only">
+                    New Collection Name
+                  </label>
+                  <input
+                    type="text"
+                    id="newCollectionName"
+                    value={newCollectionName}
+                    onChange={(e) => setNewCollectionName(e.target.value)}
+                    placeholder="Enter new collection name"
+                    className="w-full rounded-md border-gray-600 pe-10 shadow-sm sm:text-sm py-4"
+                  />
+                </div>
+              </div>
+              <button
+                className="inline-block rounded border border-indigo-600 px-12 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500 mt-4"
+                onClick={handleNewCollectionClick}
+              >
+                Create Collection
+              </button>
             </div>
-            <div className="pagination-controls">
-              {Array.from({ length: Math.ceil(totalResults / itemsPerPage) }, (_, index) => (
-                <button
-                  key={index + 1}
-                  onClick={() => handleClick(index + 1)}
-                  disabled={currentPage === index + 1}
-                  className={`mx-1 px-3 py-1 border rounded ${currentPage === index + 1 ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'}`}
-                >
-                  {index + 1}
-                </button>
-              ))}
+
+            <div
+              id="currentCollection"
+              className="rounded-2xl border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12 flex flex-col justify-center items-center"
+            >
+              <div className="text-center">
+                <h2 className="text-lg font-medium text-gray-900">
+                  Add to Existing Collection
+                </h2>
+              </div>
+              <select
+                value={selectedCollectionLocal}
+                onChange={handleSelectChange}
+                className="w-full rounded-md border-gray-600 shadow-sm sm:text-sm py-4 mt-4"
+              >
+                <option value="" disabled>
+                  Select a collection
+                </option>
+                {sortedCollections.map((collection) => (
+                  <option key={collection.id} value={collection.id}>
+                    {collection.exhibit_name}
+                  </option>
+                ))}
+              </select>
+              <button
+                className="inline-block rounded border border-indigo-600 px-12 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500 mt-4"
+                onClick={addToCollection}
+              >
+                Add Artwork
+              </button>
             </div>
           </div>
         </div>
       </div>
-    )
+    </div>
   );
 }

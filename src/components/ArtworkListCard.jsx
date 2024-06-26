@@ -4,7 +4,7 @@ import React from "react";
 
 export default function ArtworkListCard({ result }) {
   return (
-    <div className="block rounded-lg bg-white shadow-lg">
+    <article className="block rounded-lg bg-white shadow-lg">
       <div
         className="relative overflow-hidden bg-cover bg-no-repeat"
         data-te-ripple-init
@@ -19,20 +19,20 @@ export default function ArtworkListCard({ result }) {
       </div>
 
       <div className="p-4">
-        <h5 className="mb-2 text-lg font-bold leading-tight text-neutral-800 dark:text-neutral-50">
+        <h2 className="mb-2 text-lg font-bold leading-tight text-neutral-800 dark:text-neutral-50">
           {result.title}
-        </h5>
+        </h2>
         <p className="mb-1 text-sm text-neutral-600 dark:text-neutral-200">
           by {result.artistName}
         </p>
         <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-200">
           {result.date}
         </p>
-        <h5 className="text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50">
+        <p className="text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50">
           click to view more info
-        </h5>
+        </p>
       </div>
-    </div>
+    </article>
   );
 }
 

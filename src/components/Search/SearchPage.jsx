@@ -6,10 +6,12 @@ export default function Search () {
 
   return (
     <>
-    <div className='search-bar-container'>
-      <SearchBar />
-    </div>
-    <div><SearchResults /></div>
+      <section className='search-bar-container' aria-label="Search Bar">
+        <SearchBar />
+      </section>
+      <section aria-label="Search Results">
+        <SearchResults />
+      </section>
     </>
   )
 }

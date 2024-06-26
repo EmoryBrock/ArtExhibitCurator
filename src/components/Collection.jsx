@@ -68,37 +68,3 @@ export default function Collection() {
     </div>
   );
 }
-
-// return (
-//   <div>
-//     <h1>{pageTitle}</h1>
-//     <ul>
-//       {collections.map((collection, index) => (
-//         <li key={index}>
-//           <strong>Exhibit Name:</strong> {collection.exhibit_name} 
-//           {canEdit && <button onClick={() => handleRemoveExhibit(collection.id)}>Remove Exhibit</button>}
-//           <br />
-//           <ul>
-//             {Array.isArray(collection.artworks) && collection.artworks.length > 0 ? (
-//               collection.artworks.map((artwork, artworkIndex) => (
-//                 <li key={artworkIndex}>
-//                   <strong>Title:</strong> {artwork.title}
-//                   <br />
-//                   <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
-//                   <br />
-//                   <Link to={`/artwork/${artwork.source}${artwork.id}`}>
-//                     <img src={artwork.imageSmall} alt={artwork.title} />
-//                   </Link>
-//                   {canEdit && <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>}
-//                 </li>
-//               ))
-//             ) : (
-//               <li>No artworks available</li>
-//             )}
-//           </ul>
-//         </li>
-//       ))}
-//     </ul>
-//   </div>
-// );
-// }
