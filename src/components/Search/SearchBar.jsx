@@ -155,6 +155,7 @@ export default function SearchBar() {
         !selectedFilters.type || item.type === selectedFilters.type;
       const matchesDate =
         !selectedFilters.date || item.date === selectedFilters.date;
+      setSearchUsed(!searchUsed)
       return matchesType && matchesDate;
     });
 

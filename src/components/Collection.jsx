@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { useAuth } from '../components/auth/AuthContext';
+import ExhibitCard from "./ExhibitCard";
 
 export default function Collection() {
   const { collectionOwner } = useParams();
@@ -46,39 +47,58 @@ export default function Collection() {
   };
 
   const canEdit = currentUser?.displayName === collectionOwner;
-  const isCollectionOwner = currentUser?.displayName === collectionOwner
-  const pageTitle = isCollectionOwner ? "My Art Exhibits" : <span>Art Exhibits curated by <strong>{collectionOwner}</strong></span>
+  const isCollectionOwner = currentUser?.displayName === collectionOwner;
+  const pageTitle = isCollectionOwner ? "My Art Exhibits" : <span>Art Exhibits curated by <strong className="text-indigo">{collectionOwner}</strong></span>;
 
   return (
     <div>
-      <h1>{pageTitle}</h1>
+      <p className="mt-8 text-center font-semibold text-3xl">{pageTitle}</p>
       <ul>
         {collections.map((collection, index) => (
           <li key={index}>
-            <strong>Exhibit Name:</strong> {collection.exhibit_name} 
-            {canEdit && <button onClick={() => handleRemoveExhibit(collection.id)}>Remove Exhibit</button>}
-            <br />
-            <ul>
-              {Array.isArray(collection.artworks) && collection.artworks.length > 0 ? (
-                collection.artworks.map((artwork, artworkIndex) => (
-                  <li key={artworkIndex}>
-                    <strong>Title:</strong> {artwork.title}
-                    <br />
-                    <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
-                    <br />
-                    <Link to={`/artwork/${artwork.source}${artwork.id}`}>
-                      <img src={artwork.imageSmall} alt={artwork.title} />
-                    </Link>
-                    {canEdit && <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>}
-                  </li>
-                ))
-              ) : (
-                <li>No artworks available</li>
-              )}
-            </ul>
+            <ExhibitCard 
+              collection={collection} 
+              canEdit={canEdit}
+              handleRemoveArtwork={handleRemoveArtwork}
+              handleRemoveExhibit={handleRemoveExhibit}
+            />
           </li>
         ))}
       </ul>
     </div>
   );
 }
+
+// return (
+//   <div>
+//     <h1>{pageTitle}</h1>
+//     <ul>
+//       {collections.map((collection, index) => (
+//         <li key={index}>
+//           <strong>Exhibit Name:</strong> {collection.exhibit_name} 
+//           {canEdit && <button onClick={() => handleRemoveExhibit(collection.id)}>Remove Exhibit</button>}
+//           <br />
+//           <ul>
+//             {Array.isArray(collection.artworks) && collection.artworks.length > 0 ? (
+//               collection.artworks.map((artwork, artworkIndex) => (
+//                 <li key={artworkIndex}>
+//                   <strong>Title:</strong> {artwork.title}
+//                   <br />
+//                   <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
+//                   <br />
+//                   <Link to={`/artwork/${artwork.source}${artwork.id}`}>
+//                     <img src={artwork.imageSmall} alt={artwork.title} />
+//                   </Link>
+//                   {canEdit && <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>}
+//                 </li>
+//               ))
+//             ) : (
+//               <li>No artworks available</li>
+//             )}
+//           </ul>
+//         </li>
+//       ))}
+//     </ul>
+//   </div>
+// );
+// }

@@ -23,7 +23,7 @@ export default function SearchResults({
   useEffect(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     setCurrentResults(results.slice(startIndex, startIndex + itemsPerPage));
-  }, [results, currentPage]);
+  }, [searchUsed]);
 
   const handleClick = (pageNumber) => {
     setCurrentPage(pageNumber);

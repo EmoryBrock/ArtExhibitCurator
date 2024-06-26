@@ -26,7 +26,7 @@ export default function Header() {
                   />
                 </svg>
               </a> */}
-              <Link className="text-indigo-600 font-bold size-6 align-middle" >ArtiQuest</Link>
+              <Link className="text-indigo-600 font-bold size-6 align-middle" to="/" >ArtiQuest</Link>
             </div>
 
             <div className="md:flex md:items-center md:gap-12">
