@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { logIn } from "../../firebase";
+import { logIn } from "../../config/firebase";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");

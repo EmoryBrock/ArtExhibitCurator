@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchResultsBySourceAndId } from "../utils.js";
-import { db } from "../firebase";
+import { db } from "../firebase.js";
 import { doc, getDoc, setDoc } from "firebase/firestore";
-import { useAuth } from "../components/auth/AuthContext.jsx";
-import AddArtwork from "./AddArtwork";
-import useUserCollections from "../hooks/useUserCollections";
-import LoadingSpinner from "./LoadingSpinner.jsx";
+import { useAuth } from "../components/auth/AuthContext.js";
+import AddArtwork from "./AddArtwork.js";
+import useUserCollections from "../hooks/useUserCollections.js";
+import LoadingSpinner from "./LoadingSpinner.js";
 
 export default function ArtworkDetailPage() {
   const { sourceId } = useParams();
