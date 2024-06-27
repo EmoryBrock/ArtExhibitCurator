@@ -15,9 +15,9 @@ export default function LoadingSpinner() {
             <p className='text-xl font-semibold text-gray-700'>
                 Loading...
             </p>
-            <p className='text-lg text-gray-500'>
+            {/* <p className='text-lg text-gray-500'>
                 Searching my art resources
-            </p>
+            </p> */}
         </div>
     </div>
   )

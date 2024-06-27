@@ -188,7 +188,7 @@ export default function SearchBar() {
   return (
     <div className="relative bg-indigo-100 text-gray-600 pt-6">
       <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center">
+        <section className="relative flex items-center" aria-label="Search Bar">
           <input
             type="text"
             name="search"
@@ -202,16 +202,17 @@ export default function SearchBar() {
             type="submit"
             className="absolute right-0 top-0 mt-2.5 mr-2"
             onClick={handleSearch}
+            aria-label="Search"
           >
             <FaSearch />
           </button>
-        </div>
+        </section>
         <fieldset className="grid grid-cols-3 gap-4 py-3">
           <legend className="sr-only">Search Type</legend>
           <div>
             <label
               htmlFor="general"
-              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 has-[:checked]:border-blue-500 has-[:checked]:ring-1 has-[:checked]:ring-blue-500"
+              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 checked:border-blue-500 checked:ring-1 checked:ring-blue-500"
             >
               <div>
                 <p className="text-gray-700">Search Any Fields</p>
@@ -230,7 +231,7 @@ export default function SearchBar() {
           <div>
             <label
               htmlFor="artist"
-              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 has-[:checked]:border-blue-500 has-[:checked]:ring-1 has-[:checked]:ring-blue-500"
+              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 checked:border-blue-500 checked:ring-1 checked:ring-blue-500"
             >
               <div>
                 <p className="text-gray-700">Search by Artist</p>
@@ -249,7 +250,7 @@ export default function SearchBar() {
           <div>
             <label
               htmlFor="title"
-              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 has-[:checked]:border-blue-500 has-[:checked]:ring-1 has-[:checked]:ring-blue-500"
+              className="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 checked:border-blue-500 checked:ring-1 checked:ring-blue-500"
             >
               <div>
                 <p className="text-gray-700">Search by Title</p>
@@ -267,16 +268,18 @@ export default function SearchBar() {
           </div>
         </fieldset>
       </div>
-      <SearchResults
-        searchUsed={searchUsed}
-        results={results}
-        totalResults={totalResults}
-        isLoading={isLoading}
-        filters={filters}
-        handleFilterChange={handleFilterChange}
-        applyFilters={applyFilters}
-        clearFilters={clearFilters}
-      />
+      <section aria-live="polite">
+        <SearchResults
+          searchUsed={searchUsed}
+          results={results}
+          totalResults={totalResults}
+          isLoading={isLoading}
+          filters={filters}
+          handleFilterChange={handleFilterChange}
+          applyFilters={applyFilters}
+          clearFilters={clearFilters}
+        />
+      </section>
     </div>
   );
 }

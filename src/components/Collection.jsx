@@ -1,35 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import useUserCollections from "../hooks/useUserCollections";
 import { removeArtworkFromCollection } from '../utils'; 
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { useAuth } from '../components/auth/AuthContext';
 import ExhibitCard from "./ExhibitCard";
+import useUserNames from "../hooks/useUserNames";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function Collection() {
   const { collectionOwner } = useParams();
-  const initialCollections = useUserCollections(collectionOwner);
-  const [collections, setCollections] = useState(initialCollections);
+  const { userIds, loading: userNamesLoading, error: userNamesError } = useUserNames();
+  const normalizedCollectionOwner = useMemo(() => ({ displayName: collectionOwner }), [collectionOwner]);
   const { currentUser } = useAuth();
 
+  const [collections, setCollections] = useState([]);
+  const { collections: initialCollections, loading: collectionsLoading, error: collectionsError } = useUserCollections(normalizedCollectionOwner);
+
   useEffect(() => {
-    const sortedCollections = [...initialCollections].sort((a, b) => 
-      a.exhibit_name.localeCompare(b.exhibit_name)
-    );
-    setCollections(sortedCollections);
+    console.log("Component mounted");
+    if (initialCollections && initialCollections.length > 0) {
+      console.log("Initial collections loaded:", initialCollections);
+      const sortedCollections = [...initialCollections].sort((a, b) => 
+        a.exhibit_name.localeCompare(b.exhibit_name)
+      );
+      setCollections(sortedCollections);
+    }
   }, [initialCollections]);
 
-  const handleRemoveExhibit = async (id) => {
+  const handleRemoveExhibit = useCallback(async (id) => {
     const exhibitDoc = doc(db, "ArtExhibit", id);
     await deleteDoc(exhibitDoc);
 
     setCollections(prevCollections => 
       prevCollections.filter(collection => collection.id !== id)
     );
-  };
+  }, []);
 
-  const handleRemoveArtwork = async (collectionId, artworkID) => {
+  const handleRemoveArtwork = useCallback(async (collectionId, artworkID) => {
     try {
       await removeArtworkFromCollection(collectionId, artworkID);
       console.log(`Artwork ${artworkID} successfully removed from collection ${collectionId}`);
@@ -44,7 +53,29 @@ export default function Collection() {
     } catch (error) {
       console.error("Failed to remove artwork:", error);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    console.log("Collections state updated:", collections);
+  }, [collections]);
+
+  if (userNamesLoading || collectionsLoading) {
+    return <div><LoadingSpinner /></div>;
+  }
+
+  if (userNamesError) {
+    return <div>Error: {userNamesError}</div>;
+  }
+
+  if (!userIds.includes(collectionOwner)) {
+    console.log(`User ${collectionOwner} not found in userIds:`, userIds);
+    return <div>Unable to locate a user with the username: {collectionOwner}</div>;
+  }
+
+  if (collectionsError) {
+    console.error("Error fetching collections:", collectionsError);
+    return <div>Error: {collectionsError}</div>;
+  }
 
   const canEdit = currentUser?.displayName === collectionOwner;
   const isCollectionOwner = currentUser?.displayName === collectionOwner;
@@ -68,37 +99,3 @@ export default function Collection() {
     </div>
   );
 }
-
-// return (
-//   <div>
-//     <h1>{pageTitle}</h1>
-//     <ul>
-//       {collections.map((collection, index) => (
-//         <li key={index}>
-//           <strong>Exhibit Name:</strong> {collection.exhibit_name} 
-//           {canEdit && <button onClick={() => handleRemoveExhibit(collection.id)}>Remove Exhibit</button>}
-//           <br />
-//           <ul>
-//             {Array.isArray(collection.artworks) && collection.artworks.length > 0 ? (
-//               collection.artworks.map((artwork, artworkIndex) => (
-//                 <li key={artworkIndex}>
-//                   <strong>Title:</strong> {artwork.title}
-//                   <br />
-//                   <strong>Artist:</strong> {artwork.artistName || "Unknown Artist"}
-//                   <br />
-//                   <Link to={`/artwork/${artwork.source}${artwork.id}`}>
-//                     <img src={artwork.imageSmall} alt={artwork.title} />
-//                   </Link>
-//                   {canEdit && <button onClick={() => handleRemoveArtwork(collection.id, `${artwork.source}${artwork.id}`)}>Remove</button>}
-//                 </li>
-//               ))
-//             ) : (
-//               <li>No artworks available</li>
-//             )}
-//           </ul>
-//         </li>
-//       ))}
-//     </ul>
-//   </div>
-// );
-// }

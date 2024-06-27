@@ -154,7 +154,7 @@ export const handleNewCollection = async (newCollectionName, setSelectedCollecti
       await setDoc(collectionRef, {
         createdAt: new Date(),
         exhibit_name: newCollectionName,
-        owner: currentUser.email,
+        owner: currentUser.displayName,
         artworkIDs: [sourceId],
       });
 

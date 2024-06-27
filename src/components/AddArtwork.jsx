@@ -1,89 +1,102 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import SearchFilter from './Search/SearchFilter';
-import LoadingSpinner from './LoadingSpinner';
-import ArtworkListCard from './ArtworkListCard';
+import React, { useState, useEffect } from "react";
+import useUserCollections from "../hooks/useUserCollections";
+import { handleNewCollection } from "../utils";
+import CollectionForm from "./CollectionForm";
 
-export default function SearchResults({
-  searchUsed,
-  initialResults, // Assume initialResults is fetched elsewhere, possibly from props or context
-  totalResults,
-  isLoading,
-  filters,
-  handleFilterChange,
-  applyFilters,
-  clearFilters,
+export default function AddArtwork({
+  addToCollection,
+  setSelectedCollection,
+  onClose,
+  currentUser,
+  sourceId,
+  setShowOverlay
 }) {
-  const [results, setResults] = useState(initialResults); // Initialize results from props
-  const [currentPage, setCurrentPage] = useState(1);
-  const [currentResults, setCurrentResults] = useState([]);
-
-  const itemsPerPage = 20;
+  const [selectedCollectionLocal, setSelectedCollectionLocal] = useState("");
+  const [newCollectionName, setNewCollectionName] = useState("");
+  const { collections } = useUserCollections(currentUser);
 
   useEffect(() => {
-    if (searchUsed) {
-      const startIndex = (currentPage - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-      setCurrentResults(results.slice(startIndex, endIndex));
+    if (collections.length > 0 && !selectedCollectionLocal) {
+      setSelectedCollectionLocal(collections[0].id);
+      setSelectedCollection(collections[0].id);
     }
-  }, [searchUsed, currentPage, results, itemsPerPage]);
+  }, [collections, selectedCollectionLocal, setSelectedCollection]);
 
-  const handleClick = (pageNumber) => {
-    setCurrentPage(pageNumber);
+  const handleSelectChange = (e) => {
+    setSelectedCollectionLocal(e.target.value);
+    setSelectedCollection(e.target.value);
   };
 
-  if (isLoading) {
-    return (
-      <div className="bg-white">
-        <LoadingSpinner />
-      </div>
+  const handleNewCollectionClick = async () => {
+    await handleNewCollection(
+      newCollectionName,
+      setSelectedCollection,
+      setShowOverlay,
+      currentUser,
+      sourceId
     );
-  }
+    setNewCollectionName("");
+  };
 
-  if (searchUsed && results.length === 0) {
-    return (
-      <div className="bg-white pt-8 w-full text-center font-medium text-lg">
-        <p>No results found</p>
-      </div>
-    );
-  }
+  const selectOptions = collections.map((col, index) => ({
+    key: index,
+    value: col.id,
+    label: col.exhibit_name, // Adjust this according to your collection object structure
+  }));
 
   return (
-    searchUsed && results.length > 0 && (
-      <div className="bg-white flex pt-5 w-full">
-        <div id="searchfilter" className="pl-5 pr-3">
-          <SearchFilter
-            filters={filters}
-            onFilterChange={handleFilterChange}
-            onApplyFilters={applyFilters}
-            onClearFilters={clearFilters}
-          />
-        </div>
-        <div className="flex-auto">
-          <div>
-            <p className="text-center font-semibold">Your search returned {totalResults} artworks</p>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 pt-4 pr-6">
-              {currentResults.map((result, index) => (
-                <Link key={index} to={`/artwork/${result.source}${result.id}`}>
-                  <ArtworkListCard result={result} />
-                </Link>
-              ))}
-            </div>
-            <div className="pagination-controls">
-              {Array.from({ length: Math.ceil(totalResults / itemsPerPage) }, (_, index) => (
-                <button
-                  key={index + 1}
-                  onClick={() => handleClick(index + 1)}
-                  disabled={currentPage === index + 1}
-                  className={`mx-1 px-3 py-1 border rounded ${currentPage === index + 1 ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'}`}
-                >
-                  {index + 1}
-                </button>
-              ))}
-            </div>
+    <div className="overlay">
+      <div className="popup relative rounded-lg bg-white p-8 shadow-xl">
+        <button
+          className="absolute top-2 right-2 text-red-500 hover:text-red-700 focus:outline-none"
+          onClick={onClose}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <h2 className="m-2 pb-4 text-lg text-gray-800 text-center">
+          Add Artwork to Collection
+        </h2>
+        <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
+            <CollectionForm
+              id="newCollection"
+              title="Create a New Collection"
+              description="Enter the collection name below"
+              inputId="newCollectionName"
+              inputValue={newCollectionName}
+              onInputChange={(e) => setNewCollectionName(e.target.value)}
+              inputPlaceholder="Enter new collection name"
+              buttonText="Create Collection"
+              onButtonClick={handleNewCollectionClick}
+            />
+
+            {collections.length > 0 && (
+              <CollectionForm
+                id="currentCollection"
+                title="Add to Existing Collection"
+                selectValue={selectedCollectionLocal}
+                onSelectChange={handleSelectChange}
+                selectOptions={selectOptions}
+                buttonText="Add Artwork"
+                onButtonClick={addToCollection}
+              />
+            )}
           </div>
         </div>
       </div>
-    )
+    </div>
   );
 }

@@ -1,10 +1,28 @@
 import React from 'react'
+import useUserNames from '../hooks/useUserNames';
 
 export default function TestPage() {
+  const { userIds, loading, error } = useUserNames();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
-    <div>TestPage</div>
-  )
-}
+    <div>
+      <h2>User IDs:</h2>
+      <ul>
+        {userIds.map((id, index) => (
+          <li key={index}>{id}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 
 
