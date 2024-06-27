@@ -13,7 +13,7 @@ export default function AddArtwork({
 }) {
   const [selectedCollectionLocal, setSelectedCollectionLocal] = useState("");
   const [newCollectionName, setNewCollectionName] = useState("");
-  const collections = useUserCollections(currentUser);
+  const collections = useUserCollections(currentUser); //call to retrieve info from db
 
   useEffect(() => {
     if (collections.length > 0 && !selectedCollectionLocal) {

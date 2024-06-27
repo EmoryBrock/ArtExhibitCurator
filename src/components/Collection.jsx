@@ -8,8 +8,10 @@ import { useAuth } from '../components/auth/AuthContext';
 import ExhibitCard from "./ExhibitCard";
 
 export default function Collection() {
-  const { collectionOwner } = useParams();
-  const initialCollections = useUserCollections(collectionOwner);
+  const {collectionOwner} = useParams();
+  const normalizedCollectionOwner = {displayName: collectionOwner}
+
+  const initialCollections = useUserCollections(normalizedCollectionOwner);
   const [collections, setCollections] = useState(initialCollections);
   const { currentUser } = useAuth();
 

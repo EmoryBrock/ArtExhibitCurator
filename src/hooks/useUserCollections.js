@@ -5,9 +5,11 @@ import { fetchResultsBySourceAndId } from '../utils';
 
 export default function useUserCollections(currentUser) {
   const [collections, setCollections] = useState([]);
+  console.log(currentUser, "in useUser")
 
   useEffect(() => {
     const getCollections = async () => {
+
       if (!currentUser) return;
 
       try {
