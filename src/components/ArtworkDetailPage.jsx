@@ -1,7 +1,7 @@
 // ArtworkDetailPage.jsx
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { fetchResultsBySourceAndId, handleNewCollection } from "../utils.js";
+import { fetchResultsBySourceAndId } from "../utils.js";
 import { db } from "../firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useAuth } from "../components/auth/AuthContext.jsx";
@@ -12,7 +12,10 @@ import LoadingSpinner from "./LoadingSpinner.jsx";
 export default function ArtworkDetailPage() {
   const { sourceId } = useParams();
   const { currentUser } = useAuth();
-  const collections = useUserCollections();
+
+  // Use destructuring to get collections, loading, and error from useUserCollections
+  const { collections, loading, error: collectionsError } = useUserCollections();
+
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [showOverlay, setShowOverlay] = useState(false);
@@ -87,11 +90,11 @@ export default function ArtworkDetailPage() {
     setShowOverlay(false);
   };
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
+  if (error || collectionsError) {
+    return <div>Error: {error?.message || collectionsError?.message}</div>;
   }
 
-  if (!data) {
+  if (!data || loading) {
     return <LoadingSpinner />;
   }
 

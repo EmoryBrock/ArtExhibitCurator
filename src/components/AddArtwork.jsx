@@ -13,7 +13,7 @@ export default function AddArtwork({
 }) {
   const [selectedCollectionLocal, setSelectedCollectionLocal] = useState("");
   const [newCollectionName, setNewCollectionName] = useState("");
-  const collections = useUserCollections(currentUser); //call to retrieve info from db
+  const { collections } = useUserCollections(currentUser);
 
   useEffect(() => {
     if (collections.length > 0 && !selectedCollectionLocal) {
@@ -21,10 +21,6 @@ export default function AddArtwork({
       setSelectedCollection(collections[0].id);
     }
   }, [collections, selectedCollectionLocal, setSelectedCollection]);
-
-  const sortedCollections = collections
-    .slice()
-    .sort((a, b) => a.exhibit_name.localeCompare(b.exhibit_name));
 
   const handleSelectChange = (e) => {
     setSelectedCollectionLocal(e.target.value);
@@ -41,6 +37,12 @@ export default function AddArtwork({
     );
     setNewCollectionName("");
   };
+
+  const selectOptions = collections.map((col, index) => ({
+    key: index,
+    value: col.id,
+    label: col.exhibit_name, // Adjust this according to your collection object structure
+  }));
 
   return (
     <div className="overlay">
@@ -81,15 +83,17 @@ export default function AddArtwork({
               onButtonClick={handleNewCollectionClick}
             />
 
-            <CollectionForm
-              id="currentCollection"
-              title="Add to Existing Collection"
-              selectValue={selectedCollectionLocal}
-              onSelectChange={handleSelectChange}
-              selectOptions={sortedCollections}
-              buttonText="Add Artwork"
-              onButtonClick={addToCollection}
-            />
+            {collections.length > 0 && (
+              <CollectionForm
+                id="currentCollection"
+                title="Add to Existing Collection"
+                selectValue={selectedCollectionLocal}
+                onSelectChange={handleSelectChange}
+                selectOptions={selectOptions}
+                buttonText="Add Artwork"
+                onButtonClick={addToCollection}
+              />
+            )}
           </div>
         </div>
       </div>
