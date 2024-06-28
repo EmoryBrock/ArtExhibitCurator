@@ -133,9 +133,17 @@ The show card for each artwork displays the following information:
 <li>date of artwork</li>
 </ul>
 
-Each card is clickable and will take the user to a page with more information that artwork. -->
+Each card is clickable and will take the user to a page with more information that artwork.
+
 ### My Collection
-This is accessible when a user is logged in. This page contains the users curated collections. (TBC)
+This page contains the a user's curated collections displayed as exhibits. The exhibits are organised as follows:
+
+<ul>
+<li> Exhibit Name (defined by user)</li>
+<li> Artwork show cards as detailed in the Search description</li>
+</ul>
+
+When logged in, a user can remove artwork from an exhibit using the remove button and also delete the entire exhibit with the "Remove Exhibit" button.
 
 
 ### Future Considerations
