@@ -21,6 +21,8 @@ This web application was created with the objective of using collate art informa
  - [Search](#search)
  - [My Collections](#my-collections)
 
+[Future Considerations](#future-considerations)
+
 [Links](#links)
 
 
