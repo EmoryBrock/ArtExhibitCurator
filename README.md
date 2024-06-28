@@ -2,7 +2,7 @@
 
 ## Project Background
 
-This web application was created with the objective of using collate art information from multiple sources and allow a user to create their own collection/exhibitions. An online version of ArtiQuest may be found at [insert link here]
+This web application was created with the objective of using collate art information from multiple sources and allow a user to create their own collection/exhibitions. An online version of ArtiQuest may be found at [[https://artiquest.netlify.app](https://artiquest.netlify.app)]
 ------
 ## Table Of Contents
 
