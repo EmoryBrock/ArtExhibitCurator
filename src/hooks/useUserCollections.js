@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import { db } from '../firebase';
+import { db } from '../config/firebase.js';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { fetchResultsBySourceAndId } from '../utils';
+import { fetchResultsBySourceAndId } from '../utils/utils.js';
 
 export default function useUserCollections(currentUser) {
   const [collections, setCollections] = useState([]);

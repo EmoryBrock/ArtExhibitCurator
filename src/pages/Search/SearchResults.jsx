@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SearchFilter from './SearchFilter';
-import LoadingSpinner from '../LoadingSpinner';
-import ArtworkListCard from '../ArtworkListCard';
+import LoadingSpinner from '../../components/LoadingSpinner.jsx';
+import ArtworkListCard from '../../components/ArtworkListCard.jsx';
 
 export default function SearchResults({
   searchUsed,

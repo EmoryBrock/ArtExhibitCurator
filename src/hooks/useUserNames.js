@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { db } from '../firebase';
+import { db } from '../config/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
 export default function useUserNames() {

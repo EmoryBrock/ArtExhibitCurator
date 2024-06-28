@@ -1,13 +1,13 @@
 // ArtworkDetailPage.jsx
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { fetchResultsBySourceAndId } from "../utils.js";
-import { db } from "../firebase.js";
+import { fetchResultsBySourceAndId } from "../../utils/utils.js";
+import { db } from "../../config/firebase.js";
 import { doc, getDoc, setDoc } from "firebase/firestore";
-import { useAuth } from "../components/auth/AuthContext.js";
-import AddArtwork from "./AddArtwork.js";
-import useUserCollections from "../hooks/useUserCollections.js";
-import LoadingSpinner from "./LoadingSpinner.js";
+import { useAuth } from "../../context/AuthContext.jsx";
+import AddArtwork from "../../components/AddArtwork.jsx";
+import useUserCollections from "../../hooks/useUserCollections.js";
+import LoadingSpinner from "../../components/LoadingSpinner.jsx";
 
 export default function ArtworkDetailPage() {
   const { sourceId } = useParams();

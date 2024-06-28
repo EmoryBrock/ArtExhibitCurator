@@ -1,12 +1,12 @@
 import './index.css'
 import {Route, Routes} from 'react-router-dom'
-import Header from './components/Header'
-import Search from './pages/Search/'
+import Header from './components/Header.jsx'
+import Search from './pages/Search/SearchPage.jsx'
 // import UserProfile from './components/UserProfile'
-import ArtworkDetailPage from './components/ArtworkDetailPage'
-import Collection from './components/Collection'
-import SignIn from './components/auth/SignIn'
-import NewAccount from './components/auth/NewAccount'
+import ArtworkDetailPage from './pages/ArtworkDetail/ArtworkDetailPage.jsx'
+import Collection from './pages/Collection/Collection.jsx'
+import SignIn from './pages/Login/SignIn.jsx'
+import NewAccount from './pages/Signup/NewAccount.jsx'
 import LandingPage from './pages/Home/LandingPage'
 
  function App() {
