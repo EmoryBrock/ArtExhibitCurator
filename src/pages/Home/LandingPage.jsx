@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../assets/img/museum-show-painting-pictures-art-gallery-727235-pxherecom.jpg";
+// import bgImage from "../../assets/img/museum-show-painting-pictures-art-gallery-727235-pxherecom.jpg"
 
 export default function LandingPage() {
   return (

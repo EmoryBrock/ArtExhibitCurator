@@ -8,14 +8,14 @@ import {
   getMETArtIDGeneral,
   getMETArtIDbyArtist,
   getMETArtIDbyTitle,
-} from "../../api";
+} from "../../config/api";
 import SearchResults from "./SearchResults";
-import SearchFilter from "./SearchFilter";
+// import SearchFilter from "./SearchFilter";
 import {
   combinedFetchedDataToRender,
   convertCLEData,
   convertMETData,
-} from "../../utils";
+} from "../../utils/utils.js";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");

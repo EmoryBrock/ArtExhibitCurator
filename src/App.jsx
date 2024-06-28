@@ -1,15 +1,13 @@
 import './index.css'
 import {Route, Routes} from 'react-router-dom'
-import Header from './components/Header'
-import Home from './components/Home'
-import Search from './components/Search/SearchPage'
+import Header from './components/Header.jsx'
+import Search from './pages/Search/SearchPage.jsx'
 // import UserProfile from './components/UserProfile'
-import ArtworkDetailPage from './components/ArtworkDetailPage'
-import Collection from './components/Collection'
-import SignIn from './components/auth/SignIn'
-import NewAccount from './components/auth/NewAccount'
-import TestPage from './components/TestPage'
-import LandingPage from './components/LandingPage'
+import ArtworkDetailPage from './pages/ArtworkDetail/ArtworkDetailPage.jsx'
+import Collection from './pages/Collection/Collection.jsx'
+import SignIn from './pages/Login/SignIn.jsx'
+import NewAccount from './pages/Signup/NewAccount.jsx'
+import LandingPage from './pages/Home/LandingPage'
 
  function App() {
   return (
@@ -24,7 +22,6 @@ import LandingPage from './components/LandingPage'
           <Route path='/collection/:collectionOwner' element={<Collection />}/>
           <Route path='/sign-in' element={<SignIn />}/>
           <Route path='/sign-up' element={<NewAccount />}/>
-          <Route path='testpage' element={<TestPage />}/>
         </Routes>
       </main>
     </>

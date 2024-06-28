@@ -1,7 +1,7 @@
-import { getCLEArtDetailsByID, getMETAllArtworkIDs, getMETArtDetails } from "./api";
-import noImagePicture from './assets/img/No-Image-Placeholder.svg'
-import { db } from './firebase';
-import { doc, getDoc, updateDoc, setDoc, arrayRemove, arrayUnion } from 'firebase/firestore'
+import { getCLEArtDetailsByID, getMETAllArtworkIDs, getMETArtDetails } from "../config/api.js";
+import noImagePicture from '../assets/img/No-Image-Placeholder.svg'
+import { db } from '../config/firebase';
+import { doc, getDoc, updateDoc, setDoc } from 'firebase/firestore'
 
 export const RandomArtID = async () => {
   const allIDsResponse = await getMETAllArtworkIDs();
@@ -154,7 +154,7 @@ export const handleNewCollection = async (newCollectionName, setSelectedCollecti
       await setDoc(collectionRef, {
         createdAt: new Date(),
         exhibit_name: newCollectionName,
-        owner: currentUser.email,
+        owner: currentUser.displayName,
         artworkIDs: [sourceId],
       });
 

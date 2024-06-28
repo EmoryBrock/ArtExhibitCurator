@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import useUserCollections from "../hooks/useUserCollections";
-import { removeArtworkFromCollection } from '../utils'; 
+import useUserCollections from "../../hooks/useUserCollections.js";
+import { removeArtworkFromCollection } from '../../utils/utils.js'; 
 import { useParams } from "react-router-dom";
 import { doc, deleteDoc } from "firebase/firestore";
-import { db } from "../firebase";
-import { useAuth } from '../components/auth/AuthContext';
-import ExhibitCard from "./ExhibitCard";
-import useUserNames from "../hooks/useUserNames";
-import LoadingSpinner from "./LoadingSpinner";
+import { db } from "../../config/firebase.js";
+import { useAuth } from '../../context/AuthContext.jsx';
+import ExhibitCard from "../../components/ExhibitCard.jsx";
+import useUserNames from "../../hooks/useUserNames";
+import LoadingSpinner from "../../components/LoadingSpinner.jsx";
 
 export default function Collection() {
   const { collectionOwner } = useParams();

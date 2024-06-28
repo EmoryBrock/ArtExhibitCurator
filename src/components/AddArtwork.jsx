@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import useUserCollections from "../hooks/useUserCollections";
-import { handleNewCollection } from "../utils";
+import useUserCollections from "../hooks/useUserCollections.js";
+import { handleNewCollection } from "../utils/utils.js";
 import CollectionForm from "./CollectionForm";
 
 export default function AddArtwork({
